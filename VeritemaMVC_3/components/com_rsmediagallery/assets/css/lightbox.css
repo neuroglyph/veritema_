@@ -1,0 +1,117 @@
+#jquery-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	width: 100%;
+	height: 500px;
+}
+#jquery-lightbox {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10000;
+	text-align: center;
+	line-height: 0;
+}
+#lightbox-container-navigation-box {
+	margin: 0 auto;
+	position: relative;
+}
+#jquery-lightbox a img { border: none; }
+#lightbox-container-image-box {
+	position: relative;
+	width: 250px;
+	height: 250px;
+	margin: 0 auto;
+}
+#lightbox-container-image { padding: 10px; }
+#lightbox-loading {
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	top: 40%;
+	left: 0%;
+	height: 25%;
+	width: 100%;
+	text-align: center;
+	line-height: 0;
+}
+#lightbox-nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+}
+.lightbox-nav-btnBlank {
+	background-image: url("../images/blank.gif") !important;
+	background-repeat: no-repeat !important;
+}
+#lightbox-container-image-box > #lightbox-nav { left: 0; }
+#lightbox-nav a { outline: none;}
+#lightbox-nav-btnPrev, #lightbox-nav-btnNext {
+	position: absolute;
+	zoom: 1;
+	display: block;
+	top: 48%;
+	
+	height: 13px;
+	padding: 10px;
+	width: 9px;
+	z-index: 999;
+	
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#lightbox-nav-btnPrev { 
+	background-image: url("../images/arrow-left.png");
+	left: 0; 
+}
+#lightbox-nav-btnNext { 
+	background-image: url("../images/arrow-right.png");
+	right: 0; 
+}
+#lightbox-container-image-data-box {
+	margin: 0 auto;
+	line-height: 1.4em;
+	overflow: auto;
+	width: 100%;
+	padding: 0 10px 0;
+}
+#lightbox-container-image-data {
+	padding: 0 0 10px; 
+}
+#lightbox-container-image-data #lightbox-image-details { 
+	font-size: 11px;
+}	
+
+#lightbox-image-details-currentNumber {
+	display: block; 
+	clear: left; 
+	padding-bottom: 1.0em;	
+}			
+a#lightbox-secNav-btnClose {
+	font-size: 11px;
+	font-weight: bold;
+}
+
+a#lightbox-secNav-btnClose:hover {
+	background: none;
+}
+
+#lightbox-btnClose {
+	left: 13px;
+	padding: 2px 5px;
+	position: absolute;
+	top: 13px;
+	z-index: 5;
+	line-height: 100%;
+}

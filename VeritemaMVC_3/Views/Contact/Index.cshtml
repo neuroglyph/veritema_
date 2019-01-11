@@ -1,0 +1,99 @@
+﻿<div style="margin-left: 30px;" class="panel panel-default col-lg-8 col-md-8">
+    <div class="panel-body">
+        <div id="msgbox" class="alert alert-info" role="alert"></div>
+        <div>
+            <form class="form-horizontal" id="form_submit">
+                <fieldset>
+                    <legend>Contact Us</legend>
+                    <div class="form-group row">
+                        <label for="name" class="col-xs-2 col-form-label">Name:</label>
+                        <div class="col-xs-10">
+                            <input class="form-control" type="text" id="Name" name="Name" placeholder="Name">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="email" class="col-xs-2 col-form-label">Email:</label>
+                        <div class="col-xs-10">
+                            <input type="text" class="form-control" id="Email" name="Email" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="telephone" class="col-xs-2 col-form-label">Telephone</label>
+                        <div class="col-xs-10">
+                            <input class="form-control" type="tel" id="Telephone" name="Telephone" placeholder="Telephone">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="subject" class="col-xs-2 col-form-label">Subject:</label>
+                        <div class="col-xs-10">
+                            <input class="form-control" type="text" id="Subject" name="Subject" placeholder="Subject">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="col-xs-2 col-form-label">Message:</label>
+                        <textarea class="form-control" id="Message" name="Message" rows="5"></textarea>
+                    </div>
+                    <div class="form-actions pull-right">
+                        <a id="btnform_submit" class="btn btn-primary btn-sm" href="#">Submit</a>
+                    </div>
+                </fieldset>
+            </form>
+            </div>
+        </div>
+</div>
+<div id="msgbox" class="warning">
+
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#msgbox').removeClass('alert-success alert-warning alert-danger');
+        $('#msgbox').text('Please complete the following fields.')
+        $("#headerBreadCrumbs").text('');
+        $("#headerBreadCrumbs").append("<li><a href='/Home'>Home</a></li>");
+        $("#headerBreadCrumbs").append("<li>Contact</li>");
+        $("#btnform_submit").click(function () {
+
+            // check fields
+            if (($('#Name').val() == '') ||  ($('#Email').val() == '') ||  ($('#Telephone').val() == '') ||  ($('#Message').val() == '')) {
+                $('#msgbox').text('Please complete all fields before submitting so that we may be able to respond in a timely fashion.');
+                $('#msgbox').removeClass('alert-info alert-success alert-warning');
+                $('#msgbox').addClass('alert-danger');
+                return false;
+            }
+            else {
+                $('#msgbox').text('Thank you for your interest. A representative will contact you shortly.')
+                $('#msgbox').removeClass('alert-danger');
+                $('#msgbox').addClass('alert-success');
+
+            } 
+            $.ajax({
+                type: 'GET',
+                url: '@Url.Action("Submit", "Contact")',
+                data:  $("#form_submit").serialize(),
+                success: function (data) { alert('Thank you for your message, a representative will respond shortly.'); },
+                error: function (jqXHR, exception) {
+                    var msg = '';
+                    if (jqXHR.status === 0) {
+                        msg = 'Not connect.\n Verify Network.';
+                    } else if (jqXHR.status == 404) {
+                        msg = 'Requested page not found. [404]';
+                    } else if (jqXHR.status == 500) {
+                        msg = 'Internal Server Error [500].';
+                    } else if (exception === 'parsererror') {
+                        msg = 'Requested JSON parse failed.';
+                    } else if (exception === 'timeout') {
+                        msg = 'Time out error.';
+                    } else if (exception === 'abort') {
+                        msg = 'Ajax request aborted.';
+                    } else {
+                        msg = 'Uncaught Error.\n' + jqXHR.responseText;
+                    }
+                    $('#msgbox').text(msg);
+                },
+                contentType: "application/json",
+                dataType: 'json'
+            });
+        });
+    });
+</script>

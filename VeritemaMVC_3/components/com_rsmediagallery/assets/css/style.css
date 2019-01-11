@@ -1,0 +1,369 @@
+/* main container */
+
+div#rsmg_main {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 1.4em;
+	position: relative;
+	float: left;
+	width:100%;
+}
+
+.rsmg_fullwidth {
+	width: 100%;
+}
+
+/* album style  */
+
+
+#rsmg_albums li div.rsmg_album_container a img {
+	margin:0px;
+	padding:0px;
+	display:inline-block;
+	float:left;
+}
+#rsmg_albums li div.rsmg_album_container a img.rsmg_clear_left {
+	clear:left;
+}
+#rsmg_albums li div.rsmg_album_container a{
+	display:block;
+	overflow:hidden;
+	text-decoration:none;
+	text-align:center;
+	
+}
+#rsmg_albums li div.rsmg_album_container a.rsmg_album_inner_container{
+	border-radius:3px;
+}
+
+#rsmg_albums li div.rsmg_album_container a.rsmg_album_inner_container {
+	webkit-transition: opacity .3s ease;
+	-moz-transition: opacity .3s ease;
+	-o-transition: opacity .3s ease;
+	transition: opacity .3s ease;
+}
+#rsmg_albums li div.rsmg_album_container a.rsmg_album_inner_container:hover,
+#rsmg_albums li div.rsmg_album_container a.rsmg_album_inner_container:focus {
+	-webkit-transition: opacity .3s ease;
+	-moz-transition: opacity .3s ease;
+	-o-transition: opacity .3s ease;
+	transition: opacity .3s ease;
+	
+}
+#rsmg_albums li div.rsmg_album_container a.rsmg_title {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 7px;
+    overflow: hidden;
+    padding: 7px 0;
+    text-align: center;
+	clear:both;
+}
+#rsmg_albums li div.rsmg_album_container a.rsmg_title:hover {
+	background:none !important;
+}
+#rsmg_albums li div.rsmg_album_container {
+	border-radius: 3px;
+    float: left;
+    font-size: 11px;
+    overflow: hidden;
+    padding: 10px;
+    text-align: center;
+}
+
+#rsmg_albums li.rsmg_album_buttons a{
+	display:inline-block;
+	font-size:18px;
+	line-height:24px;
+}
+
+#rsmg_albums li.rsmg_album_buttons a.rsmg_title{
+	display:inline-block;
+	padding: 4px 12px;
+	cursor:pointer;
+	border-radius:4px;
+}
+
+/* end album style  */
+
+/* gallery - list */	
+
+div#rsmg_main ul#rsmg_gallery {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+/* media gallery animated fitlers */
+div#rsmg_main ul#rsmg_gallery_filters {
+	list-style-type:none;
+	margin-left:0px;
+	padding:0px;
+}
+div#rsmg_main ul#rsmg_gallery_filters li {
+	display:inline-block;
+	padding: 4px 12px;
+	margin-left:1%;
+	cursor:pointer;
+	border-radius:4px;
+}
+div#rsmg_main ul#rsmg_gallery_filters li:first-child {
+	margin-left:0px;
+}
+
+/* end filters */
+
+
+ul#rsmg_gallery li div.rsmg_item_container {
+	text-align: center;
+	float: left;
+	padding: 10px;
+	font-size: 11px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	overflow: hidden;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+ul#rsmg_gallery li span.rsmg_item_description {
+	display: block;
+	/*height: 64px;*/
+	overflow: hidden;
+}
+
+ul#rsmg_gallery li div.rsmg_item_container a {
+	text-decoration: none;
+}
+	
+ul#rsmg_gallery li div.rsmg_item_container a:hover,
+ul#rsmg_gallery li div.rsmg_item_container a:focus,
+ul#rsmg_gallery li div.rsmg_item_container a:active {
+	background: none;
+}
+	
+ul#rsmg_gallery li div.rsmg_item_container a.rsmg_title {
+	text-align: center;
+	padding: 7px 0 0 0;	
+	display: block;
+	font-weight: bold;	
+	font-size: 12px;
+	margin-bottom: 7px;
+	padding-bottom: 7px;
+	border-bottom: 1px dotted #cccccc;
+	overflow: hidden;
+}
+
+/* gallery ajax loader image */
+
+ul#rsmg_gallery li#rsmg_loader_container {
+	height: 96px;
+}
+
+ul#rsmg_gallery li#rsmg_loader_container div{
+	height: 96px;
+	background: none;
+	background: url(../images/loader.gif) no-repeat center center;
+	box-shadow: none;
+	border: none;
+}
+
+div#rsmg_loader_container {
+	text-align: center;
+}
+
+div#rsmg_loader_container img {
+	margin: 0 auto;
+}
+
+/* load more */
+
+#rsmg_main a.rsmg_big_button {
+    border-radius: 3px 3px 3px 3px;
+    padding: 8px 0 9px;
+    text-align: center;
+	text-decoration: none;
+	clear: both;   
+	display: block;
+	font-size: 11px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+	
+#rsmg_main a:hover.rsmg_big_button,
+#rsmg_main a:focus.rsmg_big_button,
+#rsmg_main a:active.rsmg_big_button {
+    cursor: pointer;
+}
+
+/* image layout + lightbox */
+
+div#rsmg_image_container {
+	top: 20px;
+	padding: 10px;
+	font-size: 11px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+div#rsmg_image_container a {
+	text-decoration: none;
+}
+
+#jquery-lightbox h2.rsmg_title,	
+div#rsmg_image_container h2.rsmg_title {
+	text-align: center;
+	padding: 7px 0 0 0;	
+	display: block;
+	font-weight: bold;	
+	font-size: 12px;
+}
+
+#jquery-lightbox p.rsmg_tags,
+div#rsmg_image_container p.rsmg_tags {
+	border-top: 1px dotted #cccccc;
+	padding-top: 7px;
+	margin-top: 7px;
+	text-align: left;
+}
+
+p.rsmg_tags strong {
+	font-weight: bold;
+}
+	
+div#rsmg_thumb_container > img {
+	position: relative;
+	z-index: 4;
+	margin: 0 auto;
+}
+
+div#rsmg_thumb_container {
+	position: relative;
+	text-align: center;
+}
+
+div#rsmg_thumb_container .rsmg_back {
+	position: absolute;
+	z-index: 5;
+	top: 13px;
+	left: 13px;
+	padding: 2px 5px;
+}
+
+div#rsmg_thumb_container .rsmg_back a {
+	font-size: 11px;
+	font-weight: bold;
+}
+
+div#rsmg_thumb_container .rsmg_back a:hover,
+div#rsmg_thumb_container .rsmg_back a:focus,
+div#rsmg_thumb_container .rsmg_back a:active {
+	background: none;
+}
+
+/* toolbox - views, download, created & modified dates */
+
+#lightbox-image-details-caption .rsmg_toolbox,
+div#rsmg_thumb_container .rsmg_toolbox {
+	padding: 2px 5px 2px 20px;
+	float: left;
+	margin-right: 5px;
+	font-weight: bold;
+	font-size: 11px;
+}
+
+#lightbox-image-details-caption .rsmg_views,
+div#rsmg_thumb_container .rsmg_views {
+	background-repeat: no-repeat;
+	background-position: 5px center;
+}
+
+#lightbox-image-details-caption .rsmg_download,
+div#rsmg_thumb_container .rsmg_download {
+	background-repeat: no-repeat;
+	background-position: 5px center;
+}
+
+#lightbox-image-details-caption .rsmg_calendar,
+div#rsmg_thumb_container .rsmg_calendar {
+	background-image: url(../images/calendar.png);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+}
+
+#lightbox-image-details-caption .rsmg_download a,
+div#rsmg_thumb_container .rsmg_download a {
+	color: #D20303;
+}
+
+#lightbox-image-details-caption .rsmg_download a:hover,
+#lightbox-image-details-caption .rsmg_download a:focus,
+#lightbox-image-details-caption .rsmg_download a:active,
+div#rsmg_thumb_container .rsmg_download a:hover,
+div#rsmg_thumb_container .rsmg_download a:focus,
+div#rsmg_thumb_container .rsmg_download a:active {
+	background: none;
+}
+
+#rsmg_loading {	
+	position: absolute;
+	top: 50%;
+	height: 50%;
+	z-index: 1;
+}
+
+/* footer */
+
+div#rsmg_footer {
+	text-align: center !important;
+	opacity: 0.5;
+	font-size: 11px;
+}
+
+/* elements */
+
+/* clear */
+
+.rsmg_clear {
+	width: 100%;
+	clear: both;
+	display: block;
+	height: 1px;
+	line-height: 1px;
+	font-size: 1px;
+}
+
+.rsmg_float_left {
+	float: left;
+}
+
+.rsmg_float_right {
+	float: right;
+}
+
+.rsmg_spacer {
+	display: block;
+	height: 7px;
+	width: 100%;
+	clear: both;
+}
+
+/* hacks for the image layout */
+
+.rsmg_hidden_from_view {
+	position: absolute !important;
+	left: -10000px;
+	top: -10000px;
+}
+
+#rsmg_force_show .rsmg_hidden_from_view {
+	position: relative !important;
+	left: 0px;
+	top: 0px;
+}
+	
+#rsmg_force_show .rsmg_hidden_from_view #rsmg_thumb_container > img {
+	width: 100%;
+}

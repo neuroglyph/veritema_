@@ -1,0 +1,240 @@
+#rsmg_main {
+	color: #424242;
+}
+
+ul#rsmg_gallery li div.rsmg_item_container {
+	border: 1px solid #cccccc;
+	background: #fff;
+	box-shadow: 5px 5px 0 #dedede;
+}
+
+ul#rsmg_gallery li div.rsmg_item_container a {
+	color: #a00000;
+}
+
+#rsmg_main a.rsmg_big_button {
+	background: none repeat scroll 0 0 #E3E3E3;
+    border: 1px solid #BBBBBB;
+	box-shadow: 0 0 1px 1px #F6F6F6 inset;
+    color: #333333;
+	text-shadow: 0 1px 0 #FFFFFF;
+}
+
+#rsmg_main a:hover.rsmg_big_button,
+#rsmg_main a:focus.rsmg_big_button,
+#rsmg_main a:active.rsmg_big_button
+{
+	background: none repeat scroll 0 0 #D9D9D9;
+    box-shadow: 0 0 1px 1px #EAEAEA inset;
+    color: #222222;
+    cursor: pointer;
+}
+
+div#rsmg_image_container {
+	border: 1px solid #cccccc;
+	background: #fff;
+	box-shadow: 5px 5px 0 #dedede;
+}
+
+div#rsmg_image_container a {
+	color: #a00000;
+}
+
+div#rsmg_image_container a:hover,
+div#rsmg_image_container a:focus,
+div#rsmg_image_container a:active
+{
+	color: #d20303;
+}
+
+ul#rsmg_gallery li div.rsmg_item_container a:hover,
+ul#rsmg_gallery li div.rsmg_item_container a:focus,
+ul#rsmg_gallery li div.rsmg_item_container a:active {
+	color: #d20303;
+}
+
+div#rsmg_thumb_container .rsmg_back {
+	background: #fff;
+	border: 1px solid #cccccc;
+}
+
+div#rsmg_thumb_container .rsmg_back a {
+	color: #727272;
+}
+
+#lightbox-image-details-caption .rsmg_toolbox,
+div#rsmg_thumb_container .rsmg_toolbox {
+	border: 1px solid #cccccc;
+	color: #727272;
+	background-color: #fff;
+}
+
+#lightbox-image-details-caption .rsmg_views,
+div#rsmg_thumb_container .rsmg_views {
+	background-image: url(../images/eye-light.png);
+}
+
+#lightbox-image-details-caption .rsmg_download,
+div#rsmg_thumb_container .rsmg_download {
+	background-image: url(../images/download-light.png);
+}
+
+#lightbox-image-details-caption .rsmg_download a,
+div#rsmg_thumb_container .rsmg_download a {
+	color: #D20303;
+}
+
+p.rsmg_tags strong {
+	color: #d20303;
+}
+
+/* media gallery animated fitlers */
+ul#rsmg_gallery_filters li {
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+	background-color: #006dcc;
+	background-image: -moz-linear-gradient(top,#08c,#0044cc);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#08c),to(#0044cc));
+	background-image: -webkit-linear-gradient(top,#08c,#0044cc);
+	background-image: -o-linear-gradient(top,#08c,#0044cc);
+	background-image: linear-gradient(to bottom,#08c,#0044cc);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0043cc', GradientType=0);
+	border-color: #0044cc #0044cc #002a80;
+	border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+	*background-color: #0044cc;
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+
+}
+ul#rsmg_gallery_filters li:hover,
+ul#rsmg_gallery_filters li:focus {
+	color: #fff;
+	background-color: #0044cc;
+	*background-color: #003bb3;
+	text-decoration: none;
+	background-position: 0 -15px;
+	-webkit-transition: background-position .1s linear;
+	-moz-transition: background-position .1s linear;
+	-o-transition: background-position .1s linear;
+	transition: background-position .1s linear;
+}
+ul#rsmg_gallery_filters li:active,
+ul#rsmg_gallery_filters li.active,
+ul#rsmg_gallery_filters li.disabled,
+ul#rsmg_gallery_filters li[disabled] {
+	color: #fff;
+	background-color: #51a351;
+	*background-color: #499249;
+	text-decoration: none;
+	background-position: 0 -40px;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	transition: none;
+}
+/* end filters */
+
+/* album style  */
+
+#rsmg_albums li div.rsmg_album_container a.rsmg_album_inner_container {
+	opacity:0.7;
+	background: #CCCCCC;
+}
+#rsmg_albums li div.rsmg_album_container a.rsmg_album_inner_container:hover,
+#rsmg_albums li div.rsmg_album_container a.rsmg_album_inner_container:focus {
+	opacity:1;
+}
+
+#rsmg_albums li div.rsmg_album_container a.rsmg_title {
+	border-bottom: 1px dotted #CCCCCC;
+	color: #A00000;
+}
+#rsmg_albums li div.rsmg_album_container {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 5px 5px 0 #DEDEDE;
+}
+
+/* buttons */
+
+#rsmg_albums li.rsmg_album_buttons a.rsmg_title {
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+	background-color: #006dcc;
+	background-image: -moz-linear-gradient(top,#08c,#0044cc);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#08c),to(#0044cc));
+	background-image: -webkit-linear-gradient(top,#08c,#0044cc);
+	background-image: -o-linear-gradient(top,#08c,#0044cc);
+	background-image: linear-gradient(to bottom,#08c,#0044cc);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0043cc', GradientType=0);
+	border-color: #0044cc #0044cc #002a80;
+	border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+	*background-color: #0044cc;
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+#rsmg_albums li.rsmg_album_buttons a.rsmg_title:hover,
+#rsmg_albums li.rsmg_album_buttons a.rsmg_title:focus,
+#rsmg_albums li.rsmg_album_buttons a.rsmg_title:active,
+#rsmg_albums li.rsmg_album_buttons a.rsmg_title.active,
+#rsmg_albums li.rsmg_album_buttons a.rsmg_title.disabled,
+#rsmg_albums li.rsmg_album_buttons a.rsmg_title[disabled] {
+	color: #fff;
+	background-color: #0044cc;
+	*background-color: #003bb3;
+	text-decoration: none;
+	background-position: 0 -15px;
+	-webkit-transition: background-position .1s linear;
+	-moz-transition: background-position .1s linear;
+	-o-transition: background-position .1s linear;
+	transition: background-position .1s linear;
+}
+#rsmg_albums li.rsmg_album_buttons a.rsmg_title:active,
+#rsmg_albums li.rsmg_album_buttons a.rsmg_title.active {
+	background-color: #003399 \9;
+}
+
+/* end album style  */
+
+/* lightbox */
+
+#jquery-overlay {
+	background: #000;
+}
+
+#lightbox-nav-btnPrev, #lightbox-nav-btnNext {
+	background-color: #fff !important;
+	border: 1px solid #CCCCCC;
+	box-shadow: 2px 2px 0 #dedede;
+}
+
+#lightbox-nav-btnPrev:hover, #lightbox-nav-btnNext:hover,
+#lightbox-nav-btnPrev:active, #lightbox-nav-btnNext:active,
+#lightbox-nav-btnPrev:focus, #lightbox-nav-btnNext:focus {
+	background-color: #f7f7f7 !important;
+}
+
+#lightbox-container-image-box {
+	background-color: #fff;
+}
+
+#lightbox-container-image-data-box {
+	background-color: #fff;
+}
+
+#lightbox-container-image-data {
+	color: #666;
+}
+
+#lightbox-loading {
+	background-image: url("../images/lightbox-loader-light.gif");
+}
+
+#lightbox-btnClose {
+	background: none repeat scroll 0 0 #fff;
+	border: 1px solid #CCCCCC;
+}
+
+a#lightbox-secNav-btnClose {
+	color: #d20303;
+}

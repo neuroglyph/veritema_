@@ -1,0 +1,6 @@
+﻿CREATE TABLE [v].[EventType]
+(
+	[Id] CHAR NOT NULL CONSTRAINT PK_EventType PRIMARY KEY,
+	[Name] VARCHAR(128) NOT NULL,
+	[Description] VARCHAR(1024) NULL
+)

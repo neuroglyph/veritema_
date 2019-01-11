@@ -1,0 +1,7 @@
+﻿CREATE TABLE [v].[EventAttendance]
+(
+	[Id] INT NOT NULL CONSTRAINT PK_EventAttendance PRIMARY KEY,
+	[EventId] BIGINT NOT NULL CONSTRAINT FK_EventAttendance_Event REFERENCES v.[Event](Id),
+	[PersonId] INT NOT NULL CONSTRAINT FK_EventAttendance_Person REFERENCES v.[Person](Id),
+	[Added] DATETIMEOFFSET NOT NULL DEFAULT(SYSDATETIMEOFFSET())
+)

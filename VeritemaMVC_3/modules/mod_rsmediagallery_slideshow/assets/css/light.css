@@ -1,0 +1,34 @@
+div.rsmg_carousel_container .rsmg_carousel_image {
+	border: 1px solid #cccccc;
+	background: #fff;
+	box-shadow: 5px 5px 0 #dedede;
+}
+
+div.rsmg_carousel_container a,
+div.rsmg_carousel_container p.rsmg_title a {
+	color: #A00000; 
+}
+
+div.rsmg_carousel_wrapper a.bx-prev,
+div.rsmg_carousel_wrapper a.bx-next {
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+	box-shadow: 2px 2px 0 #dedede;
+}
+
+div.rsmg_carousel_container div.rsmg_carousel_pager a {
+	background: #fff;
+	color: #000000; 
+	border: 1px solid #CCCCCC;
+	box-shadow: 1px 1px 0 #DEDEDE;
+}
+
+div.rsmg_carousel_container div.rsmg_carousel_pager a:hover {
+	background: #efefef;
+}
+
+div.rsmg_carousel_container div.rsmg_carousel_pager a.pager-active {
+	background: #c50202;
+	color: #fff;
+	border: 1px solid #ee3232;
+}

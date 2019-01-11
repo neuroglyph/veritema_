@@ -1,0 +1,46 @@
+ Volume in drive C has no label.
+ Volume Serial Number is 9EA6-1DAE
+
+ Directory of C:\projects\VeritemaMVC_3\VeritemaMVC_3\images\gallery
+
+10/13/2016  09:51 PM    <DIR>          .
+10/13/2016  09:51 PM    <DIR>          ..
+08/28/2016  09:52 PM             7,640 0f526586519f225d43ca002854105df3.jpg
+08/28/2016  09:52 PM             6,800 215cdd6eaab579d86f2e88df8c1ad2a5.jpg
+08/28/2016  09:52 PM            10,868 27735cd69cff585fe318d602fc66b89b.jpg
+08/28/2016  09:52 PM             4,199 2993f9d9587c89e139ce07b009d28cf2.jpg
+08/28/2016  09:52 PM            13,866 29e2ea24d5cf094be6a6a9c3493af492.jpg
+08/28/2016  09:52 PM             8,127 31ee7b22e888fe5c6a0ef5d15117edeb.jpg
+08/28/2016  09:52 PM             7,991 368506c8c2c855cdd307492dc60b6c20.jpg
+08/28/2016  09:52 PM            11,360 3a513c26c8031e48d6332d31e390f671.jpg
+08/28/2016  09:52 PM            12,375 3daf58ee8d68dc8b61c7bd3a14784a0c.jpg
+08/28/2016  09:52 PM            11,139 476be63d6580028db0fb5acebaf0fc5b.jpg
+08/28/2016  09:52 PM            11,067 493b54706c492f96b105f6068f9aff15.jpg
+08/28/2016  09:52 PM            15,371 5039ff0ded7836b094aaa06125ed503f.jpg
+08/28/2016  09:52 PM             9,937 50ef65a9443d9ba10ade2b6fefde55a3.jpg
+08/28/2016  09:52 PM             9,894 5124d7c9ac6ddca073be6a475cb94566.jpg
+08/28/2016  09:52 PM             9,483 53110cba391150bd2b6553079c66cd20.jpg
+08/28/2016  09:52 PM            15,707 5b78337d8a4bcfb9a9259d7c3358b1d6.jpg
+08/28/2016  09:52 PM            12,854 60b50da95ffead8409f546846aef2bb5.jpg
+08/28/2016  09:52 PM            10,776 68cc30c8d5923347200070f57aa2c9b6.jpg
+08/28/2016  09:52 PM             9,891 6a097da8e77f0800a4e45798511b8030.jpg
+08/28/2016  09:52 PM            10,618 6c1c49d1d2decf7b8cdc2c052dbaf5ba.jpg
+08/28/2016  09:52 PM             6,055 7019c67c479a0f1178ec32b0dba60146.jpg
+08/28/2016  09:52 PM            10,326 7164a6a0155a01711181b71e17bf8897.jpg
+08/28/2016  09:52 PM             8,890 734db37e34758789e6af6bf0939546e9.jpg
+08/28/2016  09:52 PM             7,679 7ace2b23f02467509b5ece318ffeca8b.jpg
+08/28/2016  09:52 PM             7,418 7bd8be843327e25b52c3aa2fc06e9ca4.jpg
+08/28/2016  09:52 PM             6,094 7ed7a26edd342483578e44abd3b4aa87.jpg
+08/28/2016  09:52 PM            15,868 804cf6b27e0ef308f68e26af154815dc.jpg
+08/28/2016  09:52 PM             9,379 8ab7b7b635a16ded9fb74abff20abff9.jpg
+08/28/2016  09:52 PM            10,310 bc7a99fb671f7223748c200803446e59.jpg
+08/28/2016  09:52 PM            12,380 bce53a9d15cf1b8d9cb0ec1bd34ee68e.jpg
+08/28/2016  09:52 PM            11,135 bd3f480423d5a89bb930d7adad37dda5.jpg
+08/28/2016  09:52 PM             7,879 d48e43d7f3511d40569bd3f774b43f1c.jpg
+08/28/2016  09:52 PM             6,984 e5d626881cf72e1ceea621a7da7bcbe5.jpg
+08/28/2016  09:52 PM             7,730 ea37a9379ec08c82b4374745af456d33.jpg
+08/28/2016  09:52 PM            11,304 f6f3cf83788047352b488aa66202f893.jpg
+10/13/2016  09:51 PM                 0 files.txt
+10/10/2016  09:56 PM    <DIR>          New folder
+              36 File(s)        349,394 bytes
+               3 Dir(s)  395,799,232,512 bytes free

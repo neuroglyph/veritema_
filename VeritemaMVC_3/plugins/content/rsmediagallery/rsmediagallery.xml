@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5.0" type="plugin" group="content" method="upgrade">
+	<name>Content - RSMediaGallery!</name>
+	<author>RSJoomla!</author>
+	<creationDate>March 2014</creationDate>
+	<copyright>(C) 2014 www.rsjoomla.com</copyright>
+	<license>GNU General Public License</license>
+	<authorEmail>support@rsjoomla.com</authorEmail>
+	<authorUrl>www.rsjoomla.com</authorUrl>
+	<version>1.7.5</version>
+	<description><![CDATA[PLG_CONTENT_RSMEDIAGALLERY_CONTENT_DESC]]></description>
+	<files>
+		<filename plugin="rsmediagallery">rsmediagallery.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_content_rsmediagallery.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_content_rsmediagallery.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_rsmediagallery/fields">
+				<field name="responsive" type="radio" class="btn-group" default="0" label="PLG_CONTENT_RSMEDIAGALLERY_RESPONSIVE_LAYOUT" description="PLG_CONTENT_RSMEDIAGALLERY_RESPONSIVE_LAYOUT_DESC">
+					<option value="1">JON</option>
+					<option value="0">JOFF</option>
+				</field>
+				<field name="itemsrow" type="list" class="input-small" default="3" label="PLG_CONTENT_RSMEDIAGALLERY_RESPONSIVE_ITEMS_ROW" description="PLG_CONTENT_RSMEDIAGALLERY_RESPONSIVE_ITEMS_ROW_DESC">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="6">6</option>
+				</field>
+				<field name="center_list" type="radio" class="btn-group" default="0" label="PLG_CONTENT_RSMEDIAGALLERY_PARAM_CENTER_LIST" description="PLG_CONTENT_RSMEDIAGALLERY_PARAM_CENTER_LIST_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="animation" type="radio" class="btn-group" default="0" label="PLG_CONTENT_RSMEDIAGALLERY_PARAM_FILTERING" description="PLG_CONTENT_RSMEDIAGALLERY_PARAM_FILTERING_DESC">
+					<option value="1">JON</option>
+					<option value="0">JOFF</option>
+				</field>
+				<field name="thumb_resolution" size="5"	type="resolution" class="input-small" default="w,280" label="PLG_CONTENT_RSMEDIAGALLERY_PARAM_THUMB_RESOLUTION" description="PLG_CONTENT_RSMEDIAGALLERY_PARAM_THUMB_RESOLUTION_DESC" />
+				<field name="full_resolution"  size="5" type="resolution" class="input-small" default="w,600" label="PLG_CONTENT_RSMEDIAGALLERY_PARAM_FULL_RESOLUTION"  description="PLG_CONTENT_RSMEDIAGALLERY_PARAM_FULL_RESOLUTION_DESC"  />
+				<field name="use_original" type="radio" class="btn-group" default="0" label="PLG_CONTENT_RSMEDIAGALLERY_PARAM_USE_ORIGINAL" description="PLG_CONTENT_RSMEDIAGALLERY_PARAM_USE_ORIGINAL_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="ordering" type="list" class="input-medium" default="ordering" label="PLG_CONTENT_RSMEDIAGALLERY_PARAM_ORDERING" description="PLG_CONTENT_RSMEDIAGALLERY_PARAM_ORDERING_DESC">
+					<option value="ordering">PLG_CONTENT_RSMEDIAGALLERY_FREE_ORDERING</option>
+					<option value="random">PLG_CONTENT_RSMEDIAGALLERY_RANDOM</option>
+					<option value="title">PLG_CONTENT_RSMEDIAGALLERY_TITLE</option>
+					<option value="description">PLG_CONTENT_RSMEDIAGALLERY_DESC</option>
+					<option value="hits">PLG_CONTENT_RSMEDIAGALLERY_HITS</option>
+					<option value="created">PLG_CONTENT_RSMEDIAGALLERY_CREATED_DATE</option>
+					<option value="modified">PLG_CONTENT_RSMEDIAGALLERY_MODIFIED_DATE</option>
+				</field>
+				<field name="direction" type="list" class="input-small" default="asc" label="PLG_CONTENT_RSMEDIAGALLERY_PARAM_DIRECTION" description="PLG_CONTENT_RSMEDIAGALLERY_PARAM_DIRECTION_DESC">
+					<option value="asc">PLG_CONTENT_RSMEDIAGALLERY_ASCENDING</option>
+					<option value="desc">PLG_CONTENT_RSMEDIAGALLERY_DESCENDING</option>
+				</field>
+				<field name="limit" size="10" type="text" class="input-mini" default="5" label="PLG_CONTENT_RSMEDIAGALLERY_PARAM_LIMIT" description="PLG_CONTENT_RSMEDIAGALLERY_PARAM_LIMIT_DESC" />				
+				<field name="show_title" type="radio" class="btn-group" default="1" label="PLG_CONTENT_RSMEDIAGALLERY_PARAM_SHOW_TITLE" description="PLG_CONTENT_RSMEDIAGALLERY_PARAM_SHOW_TITLE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="show_description" type="radio" class="btn-group" default="1" label="PLG_CONTENT_RSMEDIAGALLERY_PARAM_SHOW_DESCRIPTION" description="PLG_CONTENT_RSMEDIAGALLERY_PARAM_SHOW_DESCRIPTION_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

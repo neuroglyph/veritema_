@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.6.0"
+	client="site"
+	method="upgrade">
+	<name>VS Image Rotator</name>
+	<author>Jesus Vargas</author>
+	<creationDate>Jun 2009</creationDate>
+	<copyright>Copyright (C) 2005 - 2011 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>jesus@vargas.co.cr</authorEmail>
+	<authorUrl>joomla.vargas.co.cr</authorUrl>
+	<version>1.0.1</version>
+	<description>A mootools image fading rotator</description>
+	<files>
+		<filename module="mod_vsir">mod_vsir.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+		<folder>js</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="folder"
+					type="text"
+					default="images"
+					label="Images Folder"
+					description="Path to the images folder relative to the site URL (e.g. images/sampledata/parks/animals)" />
+				<field
+					name="substoo"
+					type="radio"
+					default="0"
+					label="Subfolders"
+					description="Subfolders">
+					<option
+						value="0">Ignore</option>
+					<option
+						value="1">Include</option>
+				</field>
+				<field
+					name="random"
+					type="radio"
+					default="0"
+					label="Randomize Images"
+					description="Randomize Images">
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+				</field>
+				<field
+					name="links"
+					type="textarea"
+					cols="50"
+					rows="4"
+					default=""
+					label="Links"
+					description="By a new line separated URLs to redirect if the corresponding image is clicked upon" />
+				<field
+					name="repeat"
+					type="radio"
+					default="0"
+					label="Repeat Links"
+					description="Repeat Links secuency?">
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+				</field>
+				<field
+					name="alts"
+					type="textarea"
+					cols="50"
+					rows="4"
+					default=""
+					label="Alt"
+					description="By a new line separated alternative text" />
+				<field
+					name="titles"
+					type="textarea"
+					cols="50"
+					rows="4"
+					default=""
+					label="Titles"
+					description="By a new line separated titles" />
+				<field
+					name="target"
+					type="list"
+					default="0"
+					label="Links Target"
+					description="Links Target">
+					<option
+						value="0">Parent Window</option>
+					<option
+						value="1">New Window</option>
+				</field>
+				<field
+					name="width"
+					type="text"
+					default="200"
+					label="Width"
+					description="Images Width (in px)" />
+				<field
+					name="height"
+					type="text"
+					default="144"
+					label="Height"
+					description="Images Height (in px)" />
+				<field
+					name="delay"
+					type="text"
+					default="3000"
+					label="Delay"
+					description="Slide delay in miliseconds" />
+				<field
+					name="trans"
+					type="text"
+					default="2000"
+					label="Transition Delay"
+					description="Transition delay in miliseconds" />
+			</fieldset>
+
+			<fieldset
+				name="advanced">
+
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>

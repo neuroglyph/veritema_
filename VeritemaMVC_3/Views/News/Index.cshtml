@@ -1,0 +1,102 @@
+﻿<div style="margin-left: 30px;" class="panel panel-default col-lg-8 col-md-8">
+
+    <div>
+        <h2>Small Circle Hapkido News</h2>
+    </div>
+    <div>
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h4 class="text-primary">How to adjust and Overcome With Your Kick</h4>
+            </div>
+
+            <div class="panel-body">
+                <img src="/images/site/muay-thai-02.jpg" border="0" alt="no-photo" width="198" height="149" style="border: 1px solid black; float: left; margin-left: 5px; margin-right: 5px;" />
+                <h5 class="text-primary">
+                    <strong>
+
+                    </strong>
+                </h5>
+                <p>
+                    You and your training partners are in a constant struggle to improve and develop that kick, but you catch on to this struggle. You don't want to settle with the idea that you are going to keep building a bridge just to have a truck break it down. You want to get on top of the problem and make a bridge that is unbreakable. You start to think about your kick. You think about your training partners and what they are doing. You figure out the solution. Kick faster, harder and maybe higher. Now you have to re learn your own body. You start training your body to kick faster. You start conditioning your body to kick harder and you start working on the needed stretches to kick higher. This leads to a whole new world of training ideas.
+                </p>
+                <!-- (RG) obviously there are many better ways to do this. Proof of concept, eventually expect these articles to be stored in database-->
+                <a id="btnReadMore_kick" class="btn btn-primary btn-sm" href="#">Read More</a>
+            </div>
+            <div class="panel-body" id="additional_content_kick" style="display:none">
+                How can you learn to kick faster? What body postures and movements will help with this? What techniques and bad habits will slow your kick down? How can you kick harder? Where do you need to train to improve your strength? How can you get stronger and keep your speed and flexibility? How often should you stress your legs to gain flexibility? You start putting more and more time into this kick. Your kick gets better over months. After a few years you are renowned for having awesome kicks.
+
+                You are able to help other students learn to improve their kicking skills. But with this long journey your body has also grown older.Your muscles work differently now. Your new struggle is your own age and conditioning. You have to re learn all over again. How can you train this kick without getting injured? How can you recover from injury when and if it happens? How can you still manage to train and kick while injured? How can you heal yourself and your training partners if injury occurs? You have developed this kick through and through now. All the ins and outs of the kick have been thought through, and re thought through! NOW you have to do it all over again with the 37 OTHER kicks in HAPKIDO, all the punches, the blocks, the wrist locks the throws, the falls, and everything else that comes along with training.
+            </div>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h4 class="text-primary">   Does Martial Arts Make You Smarter</h4>
+            </div>
+            <div class="panel-body">
+                Imagine this, you start to learn simple math. Adding and subtracting. You learn the rules, if you add you just put the two numbers together, if you subtract you take the smaller number out of the larger one. You even catch on to the 'tricks of the trade' if you're adding a number by 9 it's the it's that number's teen minus 1 (IE "9 +5 + 14" ). You have this easy system all understood. It only took you a few days of learning along with a few nights of homework and a test at the end of the class to make sure you got it. Right? Now imagine that the adding and subtracting rules change every so often. What if the numbers have minds of their own and figure out when you catch on and change their ways to keep you on your toes. You'd have to constantly learn and study and always keep an attention for detail right? Now ask yourself, does that make a person smarter? It has to; they are always using their brains and keeping constant to change.    </p>
+                <!-- (RG) obviously there are many better ways to do this. Proof of concept, eventually expect these articles to be stored in database-->
+                <a id="btnReadMore_MartialArtSmarter" class="btn btn-primary btn-sm" href="#">Read More</a>
+            </div>
+            <div class="panel-body" id="additional_content_MartialArtSmarter" style="display:none">
+                In Martial Arts it's the same thing. You spend weeks learning the simple kicks and punches. You learn the mechanics of the kick, how your body moves, how the kick works, how to throw the kick. Then you learn how to throw that kick with your rear leg, then your front leg. Then you learn how to throw that kick as a defensive kick, then an offensive kick. Then you learn how to set up that kick with other attacks first. Then you learn how to use that kick as the result of a follow up combination. Then once you have it all down you start realizing that your training partners have caught on and are now changing their steps to avoid and defend the kick. You have to now learn how to improve and adjust your kick. So when someone asks, 'DO MARTIAL ARTS MAKE YOU SMARTER' you may mention 'MY BRAIN IS ALWAYS IN MOTION'!
+            </div>
+        </div>
+</div>
+</div>
+    <script src="/Scripts/knockout/viewmodels.js" type="text/javascript"></script>
+    <script src="/Scripts/knockout/knockout-2.2.0.js" type="text/javascript"></script>
+
+    <script>
+        function ToggleButtonDiv(button, div)
+        {
+
+                if ($(div).is(':visible')) {
+                    $(button).text('Read More');
+                    $(div).fadeOut();
+                } else {
+                    $('#button').text('Close');
+                    $(div).fadeIn();
+                }
+                return false;
+        }
+
+   
+    </script>
+    <script>
+        $(function () {
+
+        $("#headerBreadCrumbs").text('');
+        $("#headerBreadCrumbs").append("<li><a href='/Home'>Home</a></li>");
+        $("#headerBreadCrumbs").append("<li class='active'>News</li>");
+
+                  ("#additional_content_kick").hide();
+
+            // later on, bind these click events to ToggleButtonDiv
+            $('#btnReadMore_kick').click(function () {
+                if ($('#additional_content_kick').is(':visible')) {
+                    $('#btnReadMore_kick').text('Read More');
+                    $('#additional_content_kick').fadeOut();
+                } else {
+                    $('#btnReadMore_kick').text('Close');
+                    $('#additional_content_kick').fadeIn();
+                }
+                return false;
+            });
+
+            $('#btnReadMore_MartialArtSmarter').click(function () {
+                if ($('#additional_content_MartialArtSmarter').is(':visible')) {
+                    $('#btnReadMore_MartialArtSmarter').text('Read More');
+                    $('#additional_content_MartialArtSmarter').fadeOut();
+                } else {
+                    $('#btnReadMore_MartialArtSmarter').text('Close');
+                    $('#additional_content_MartialArtSmarter').fadeIn();
+                }
+                return false;
+            }); 
+
+     //  var model = new InstructorViewModel();
+     //  ko.applyBindings(model);
+    });
+    </script>
+
+

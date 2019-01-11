@@ -1,0 +1,34 @@
+/* gallery listing */
+ul.rsmg_default_gallery {
+	margin: 0px !important;
+	padding: 0px !important;
+	list-style: none !important;
+}
+
+ul.rsmg_default_gallery li {
+	float: left;
+	margin: 0 15px 20px 0 !important;
+}
+
+ul.rsmg_default_gallery li div.rsmg_default_container {
+	text-align: center;
+	float: left;
+	padding: 10px;	
+	font-size: 11px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+ul.rsmg_default_gallery li div.rsmg_default_container a {
+	display: block;
+	overflow: hidden;
+}
+
+.rsmg_default_clear {
+	display: block;
+	clear: both;
+	height: 1px;
+	font-size: 1px;
+	line-height: 1px;
+}

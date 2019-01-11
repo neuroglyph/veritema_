@@ -1,0 +1,11 @@
+ul.rsmg_system_gallery {
+	margin: 0px;
+	padding: 0px !important;
+	list-style: none !important;
+}
+
+
+ul.rsmg_system_gallery li {
+	float: left;
+	margin: 0 15px 20px 0 !important;
+}

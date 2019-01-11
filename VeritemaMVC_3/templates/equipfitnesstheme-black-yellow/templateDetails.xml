@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<extension version="2.5" type="template">
+
+	<name>EquipFitnessTheme - Black - Yellow</name>
+
+	<creationDate>2012-12-01</creationDate>
+
+	<author>J.Morrison - webunderdog.com</author>
+
+	<authorEmail>jm@webunderdog.com</authorEmail>
+
+	<authorUrl>http://www.webunderdog.com</authorUrl>
+
+	<copyright>J. Morrison - Underdog Web Design</copyright>
+
+	<license>GNU/GPL</license>
+
+	<version>1.0.0</version>
+
+	<description>Black and Yellow - UD-Equip Fitness, Gym, Sports Theme - Template v1.0 by webunderdog - www.webunderdog.com</description>
+
+	<files>
+
+		<folder>snippets</folder>
+
+		<folder>images</folder>
+
+		<folder>css</folder>
+
+		<filename>index.php</filename>
+
+		<filename>templateDetails.xml</filename>
+
+	</files>
+
+	<positions>
+
+		<position>logo</position>
+
+		<position>tagline</position>
+
+		<position>headinfo</position>
+
+		<position>navmenu</position>
+
+		<position>showcase1</position>
+
+		<position>showcase2-1</position>
+
+		<position>showcase2-2</position>
+
+		<position>showcase2-3</position>
+
+		<position>left</position>
+
+		<position>right</position>
+
+		<position>utility1</position>
+
+		<position>utility2</position>
+
+		<position>utility3</position>
+
+		<position>utility4</position>
+
+		<position>utility5</position>
+
+		<position>utility6</position>
+
+		<position>feature1</position>
+
+		<position>feature2</position>
+
+		<position>feature3</position>
+
+		<position>feature4</position>
+
+		<position>feature5</position>
+
+		<position>feature6</position>
+
+		<position>maintop1</position>
+
+		<position>maintop2</position>
+
+		<position>maintop3</position>
+
+		<position>maintop4</position>
+
+		<position>maintop5</position>
+
+		<position>maintop6</position>
+
+		<position>contenttop</position>
+
+		<position>contentbot</position>
+
+		<position>mainbottom1</position>
+
+		<position>mainbottom2</position>
+
+		<position>mainbottom3</position>
+
+		<position>mainbottom4</position>
+
+		<position>mainbottom5</position>
+
+		<position>mainbottom6</position>
+
+		<position>bottom1</position>
+
+		<position>bottom2</position>
+
+		<position>bottom3</position>
+
+		<position>bottom4</position>
+
+		<position>bottom5</position>
+
+		<position>bottom6</position>
+
+		<position>copy1</position>
+
+		<position>copy2</position>
+
+		<position>footer1</position>
+
+		<position>footer2</position>
+
+		<position>footer3</position>
+
+		<position>footer4</position>
+
+		<position>footer5</position>
+
+		<position>footer6</position>
+
+		<position>spotlight1</position>
+
+		<position>spotlight2</position>
+
+		<position>spotlight3</position>
+
+		<position>spotlight4</position>
+
+		<position>spotlight5</position>
+
+		<position>spotlight6</position>
+		
+		<position>topspacer</position>
+		
+		<position>showcasewide</position>
+		
+		<position>intro</position>
+		
+		<position>botspacer</position>
+
+		<position>debug</position>
+
+	</positions>
+
+</extension>

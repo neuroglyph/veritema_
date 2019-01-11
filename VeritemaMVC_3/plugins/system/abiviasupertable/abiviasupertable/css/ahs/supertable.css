@@ -1,0 +1,263 @@
+/**
+ * Abivia Super Table Plugin.
+ *
+ * @package AbiviaSuperTable
+ * @copyright (C) 2011 by Abivia Inc. All rights reserved.
+ * @license GNU/GPL
+ * @link http://www.abivia.net/
+ */
+
+.supertable {
+    color:#333;
+    background:#FAFAFA;
+    border-radius:16px;
+    -moz-border-radius:16px;
+}
+
+.supertable a:link, .supertable a:visited {
+    color: #A13020;
+    font-weight: inherit;
+    -moz-transition: color 0.3s ease-out;
+    -webkit-transition: color 0.4s ease-out;
+}
+
+.supertable a:hover {
+    color: #333;
+    font-weight: inherit;
+}
+
+.supertable .supertable-cell-text {
+    position:relative;
+    margin:0 auto;
+    font-weight:bold;
+}
+
+.supertable-active .supertable-row-head {
+    background: none repeat scroll 0 0 #333333;
+    border-bottom:1px solid #333333;
+    border-left: 1px solid #333333;
+    border-top:1px solid #333333;
+}
+
+.supertable-border {
+    /*border:1px solid #ccc;*/
+    border: 0 solid;
+    margin:-1px;
+    border-radius:8px;
+    -moz-border-radius:8px;
+}
+
+.supertable-cell {
+    border: 1px solid #ccc;
+    padding:10px;
+    text-align:center;
+    text-shadow:1px 1px 1px rgba(255,255,255,0.8);
+}
+
+.supertable-clear {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    clear: both;
+    display: block;
+    float: none;
+    font-size: 0;
+    height: 0;
+    list-style: none outside none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    visibility: hidden;
+    width: 0;
+}
+
+.supertable-col, .supertable-col-rowhead {
+    float:left;
+}
+
+.supertable-col.supertable-active {
+    z-index:2;
+    position:relative;
+    -moz-box-shadow:0 0 10px rgba(0,0,0,0.6);
+    -moz-transition: -moz-box-shadow 0.4s ease-out 0s;
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    -webkit-transition: -webkit-box-shadow 0.4s ease-out;
+}
+
+.supertable-col-even .supertable-row-even {
+    background:#c4c4c4;
+    border-bottom:1px solid #bdbdbd;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #bdbdbd;
+    border-top:1px solid #cccccc;
+}
+
+.supertable-col-even.supertable-active .supertable-row-even {
+    background: #cccccc;
+    border-bottom:1px solid #c4c4c4;
+    border-left: 1px solid #d4d4d4;
+    border-right: 1px solid #c4c4c4;
+    border-top:1px solid #d4d4d4;
+}
+
+.supertable-col-even .supertable-row-odd {
+    background:#dbdbdb;
+    border-bottom:1px solid #d4d4d4;
+    border-left: 1px solid #e3e3e3;
+    border-right: 1px solid #d4d4d4;
+    border-top:1px solid #e3e3e3;
+}
+
+.supertable-col-even.supertable-active .supertable-row-odd {
+    background: #e3e3e3;
+    border-bottom:1px solid #d4d4d4;
+    border-left: 1px solid #dbdbdb;
+    border-right: 1px solid #d4d4d4;
+    border-top:1px solid #dbdbdb;
+}
+
+.supertable-active .supertable-row-even {
+    background: #fafafa;
+}
+
+.supertable-active .supertable-row-odd {
+    background: #fffefe;
+}
+
+.supertable-col-odd .supertable-row-even {
+    background:#dbdbdb;
+    border-bottom:1px solid #d4d4d4;
+    border-left: 1px solid #e3e3e3;
+    border-right: 1px solid #d4d4d4;
+    border-top:1px solid #e3e3e3;
+}
+
+.supertable-col-odd.supertable-active .supertable-row-even {
+    background: #e3e3e3;
+    border-bottom:1px solid #d4d4d4;
+    border-left: 1px solid #dbdbdb;
+    border-right: 1px solid #d4d4d4;
+    border-top:1px solid #dbdbdb;
+}
+
+.supertable-col-odd .supertable-row-odd {
+    background: #ebebeb;
+    border-bottom:1px solid #e3e3e3;
+    border-left: 1px solid #f2f2f2;
+    border-right: 1px solid #e3e3e3;
+    border-top:1px solid #f2f2f2;
+}
+
+.supertable-col-odd.supertable-active .supertable-row-odd {
+    background: #f2f2f2;
+    border-bottom:1px solid #ebebeb;
+    border-left: 1px solid #fafafa;
+    border-right: 1px solid #ebebeb;
+    border-top:1px solid #fafafa;
+}
+
+.supertable-col-first {
+    border-bottom-left-radius: 8px;
+    -moz-border-radius-bottomleft: 8px;
+    border-top-left-radius: 8px;
+    -moz-border-radius-topleft: 8px;
+}
+
+.supertable-col-first .supertable-row-first {
+    border-top-left-radius: 8px;
+    -moz-border-radius-topleft: 8px;
+}
+
+.supertable-col-first .supertable-row-head.supertable-row-first {
+    border-left: 1px solid #999999;
+    border-top: 1px solid #999999;
+}
+
+.supertable-col-first .supertable-row-head {
+    background: none repeat scroll 0 0 #999999;
+}
+
+.supertable-col-first .supertable-row-last {
+    border-bottom-left-radius: 8px;
+    -moz-border-radius-bottomleft: 8px;
+}   
+
+.supertable-row-head {
+    background: none repeat scroll 0 0 #999999;
+    color: #fff;
+    padding:10px;
+    text-align:center;
+    text-shadow:1px 1px 1px rgba(0,0,0,0.5);
+}
+
+.supertable-col .supertable-row-head {
+    border-color: #999999;
+}
+.supertable-active .supertable-row-head {
+    background: none repeat scroll 0 0 #333333;
+    border-bottom:1px solid #333333;
+    border-left: 1px solid #333333;
+    border-top:1px solid #333333;
+}
+
+.supertable-active .supertable-row-head.supertable-row-first {
+    border-left: 1px solid #333333;
+    border-top:1px solid #333333;
+}
+
+.supertable-row-head .supertable-cell-subtext {
+    font-size: 95%;
+    font-weight: normal;
+}
+
+.supertable-row-head .supertable-cell-text {
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.supertable-col-last {
+    border-bottom-right-radius:8px;
+    -moz-border-radius-bottomright:8px;
+    border-top-right-radius:8px;
+    -moz-border-radius-topright:8px;
+}
+
+.supertable-col-last .supertable-col-border {
+    border-bottom-right-radius:8px;
+    -moz-border-radius-bottomright:8px;
+    border-top-right-radius:8px;
+    -moz-border-radius-topright:8px;
+}
+
+.supertable-col-last .supertable-row-first {
+    border-top-right-radius:8px;
+    -moz-border-radius-topright:8px;
+}
+
+.supertable-col-last .supertable-row-last {
+    border-bottom-right-radius: 8px;
+    -moz-border-radius-bottomright: 8px;
+}
+
+.supertable-col-rowhead {
+    background: none repeat scroll 0 0 #916C4F;    
+}
+
+.supertable-col-rowhead .supertable-row-even, .supertable-col-rowhead .supertable-row-odd {
+    color: #ffffff;
+    border-bottom: 1px solid #775941;
+    border-left: 1px solid #A57B5B;
+    border-right: 1px solid #775941;
+    border-top: 1px solid #A57B5B;
+    text-shadow: none;
+}
+
+.supertable-col-rowhead .supertable-row-even {
+    background: #AF8360;
+}
+
+.supertable-row-head {
+    border-top: 1px solid #999999;
+    border-bottom: 1px solid #999999;
+    border-left: 1px solid #999999;
+    border-right: 0;
+}

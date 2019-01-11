@@ -1,0 +1,14 @@
+﻿CREATE TABLE [v].[Event]
+(
+	[Id] BIGINT NOT NULL CONSTRAINT PK_Event PRIMARY KEY IDENTITY(1,1),
+	[Start] DATETIMEOFFSET NOT NULL,
+	[End] DATETIMEOFFSET NOT NULL,
+	[Title] varchar(128) NOT NULL,
+	Details VARCHAR(1024) NOT NULL,
+	[LocationId] INT CONSTRAINT FK_Event_Location REFERENCES [v].[Location](Id),
+	[StyleId] INT CONSTRAINT FK_Event_MartialStyle REFERENCES [v].MartialStyle(Id), 
+    [Confirmed] BIT NOT NULL DEFAULT(1),
+	Updated DATETIMEOFFSET NOT NULL DEFAULT(SYSDATETIMEOFFSET()), 
+    [TypeId] CHAR NOT NULL DEFAULT('C') CONSTRAINT FK_Event_EventType REFERENCES [v].EventType(Id), 
+    [MaxParticipants] INT NULL
+)

@@ -1,0 +1,85 @@
+ul.rsmg_content_gallery li div.rsmg_content_container {
+	border: 1px solid #cccccc;
+	background: white;
+	box-shadow: 5px 5px 0 #dedede;
+}
+
+/* media gallery animated fitlers */
+ul.rsmg_content_gallery_filters li {
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+	background-color: #006dcc;
+	background-image: -moz-linear-gradient(top,#08c,#0044cc);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#08c),to(#0044cc));
+	background-image: -webkit-linear-gradient(top,#08c,#0044cc);
+	background-image: -o-linear-gradient(top,#08c,#0044cc);
+	background-image: linear-gradient(to bottom,#08c,#0044cc);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0043cc', GradientType=0);
+	border-color: #0044cc #0044cc #002a80;
+	border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+	*background-color: #0044cc;
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+
+}
+ul.rsmg_content_gallery_filters li:hover,
+ul.rsmg_content_gallery_filters li:focus {
+	color: #fff;
+	background-color: #0044cc;
+	*background-color: #003bb3;
+	text-decoration: none;
+	background-position: 0 -15px;
+	-webkit-transition: background-position .1s linear;
+	-moz-transition: background-position .1s linear;
+	-o-transition: background-position .1s linear;
+	transition: background-position .1s linear;
+}
+ul.rsmg_content_gallery_filters li:active,
+ul.rsmg_content_gallery_filters li.active,
+ul.rsmg_content_gallery_filters li.disabled,
+ul.rsmg_content_gallery_filters li[disabled] {
+	color: #fff;
+	background-color: #51a351;
+	*background-color: #499249;
+	text-decoration: none;
+	background-position: 0 -40px;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	transition: none;
+}
+/* end filters */
+
+.piro_html_content .h_t_l,
+.piro_html_content .h_t_r,
+.piro_html_content .h_t_c,
+.piro_html_content .h_c_l,
+.piro_html_content .h_c_c,
+.piro_html_content .h_c_r,
+.piro_html_content .h_b_c,
+.piro_html_content .h_b_l,
+.piro_html_content .h_b_r {
+	background:#ffffff;
+}
+
+.piro_html_content .h_c_c .div_reg_content {
+	background:#ffffff;
+}
+
+.piro_loader_content span {
+	background-image: url(../images/lightbox-loader-light.gif);
+}
+
+.piro_overlay_content {
+	background:#000;
+}
+
+.piro_html_content {
+	-moz-box-shadow:    1px 1px 8px 4px #5C5C5C;
+	-webkit-box-shadow: 1px 1px 8px 4px #5C5C5C;
+	box-shadow:         1px 1px 8px 4px #5C5C5C;
+}
+
+.piro_close_content {
+	background:#fff url(../images/close-light.png) center center no-repeat;
+}

@@ -1,0 +1,89 @@
+﻿
+
+
+.header_class
+{
+    height:58px;
+    background-color:rgb(61,61,61);
+    padding:20px 0;
+    font-family:'Helvetica';
+     
+    margin:0;
+    width:100%;
+    display:inline-block;
+}
+.header_class a
+{
+    font-size: 12px;
+    color:rgb(95,163,186);
+    position:absolute;
+    top:75px;
+    left:10px;
+    text-decoration:none;
+}
+.header_class a:visited 
+{
+    color:rgb(95,163,186)
+}
+
+
+.header_class a:hover 
+{
+    color:rgb(105,173,196)
+}
+.sample_title
+{
+    color:rgb(95,163,186);
+    vertical-align:top;
+    display:inline-block;
+    max-width:30%;
+    font-size:18px;
+    *zoom:1;/*inline-block behavior for ie7*/
+    *display:inline;
+}
+.vertical_line
+{
+    background-color:rgb(45,142,182);
+    width:4px;
+    display:inline-block;
+   
+    margin:0 13px;
+    height:100%;
+    font-weight:400;
+    *zoom:1;/*inline-block behavior for ie7*/
+    *display:inline;
+}
+
+.short_description
+{
+    color:#ddd;
+    font-size: 12px;
+    margin: 0 0 15px;
+}
+.long_description
+{
+    color:#aaa;
+    font-size: 11px;
+}
+
+
+.samp_header
+{
+    white-space: nowrap;
+    display:inline-block;
+    *zoom:1;
+    *display:inline; 
+    width:75%;
+    height:100%;
+    margin-left:115px;
+    vertical-align: middle;
+}
+
+.desk_holder
+{
+    display:inherit;
+    *zoom:1;
+    *display:inline;
+    text-align:left;
+    vertical-align: top;
+}

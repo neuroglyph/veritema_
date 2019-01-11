@@ -1,0 +1,25 @@
+ul.rsmg_content_gallery {
+	margin: 0px;
+	padding: 0px !important;
+	list-style: none !important;
+}
+
+
+.rsmg_content_container > a img {
+	width:100%;
+}
+.rsmg_gallery .rsmg_content_gallery li {
+    float: left;
+    margin-bottom: 20px !important;
+}
+.rsmg_gallery .row-fluid .margin_left_none {
+	margin-left:0px !important;
+}
+.rsmg_gallery .row-fluid [class*="span"] {
+	float:left !important;
+}
+
+.rsmg_content_gallery .margin_left_none,
+.rsmg_content_gallery li.margin_left_none {
+	margin-left:0px !important;
+}

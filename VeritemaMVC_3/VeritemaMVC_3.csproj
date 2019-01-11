@@ -1,0 +1,2164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7F88E760-CFA0-4D95-ACD2-3CB76C9E4AE2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VeritemaMVC_3</RootNamespace>
+    <AssemblyName>VeritemaMVC_3</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <ApplicationInsightsResourceId>/subscriptions/5873999d-27ac-4786-92ad-c662605aef87/resourcegroups/veritema.dev/providers/microsoft.insights/components/veritema-dev</ApplicationInsightsResourceId>
+    <Use64BitIISExpress />
+    <TypeScriptToolsVersion>2.3</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AWSSDK.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>..\packages\AWSSDK.Core.3.3.2\lib\net45\AWSSDK.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AWSSDK.S3, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>..\packages\AWSSDK.S3.3.3.1\lib\net45\AWSSDK.S3.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AWSSDK.SimpleNotificationService, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>..\packages\AWSSDK.SimpleNotificationService.3.3.0.1\lib\net45\AWSSDK.SimpleNotificationService.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="LanguageExt.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LanguageExt.Core.1.9.3\lib\net45\LanguageExt.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.1.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.1.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.1.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.1.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.1.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.1.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.KeyVault.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.KeyVault.Core.1.0.0\lib\net40\Microsoft.Azure.KeyVault.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.7.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.7.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Services.Client.5.7.0\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Mvc.4.0.1\lib\net45\Microsoft.Practices.Unity.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.WebApi, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.AspNet.WebApi.4.0.1\lib\net45\Microsoft.Practices.Unity.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Core, Version=3.0.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.Core.3.0.0\lib\net45\System.Reactive.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces, Version=3.0.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.Interfaces.3.0.0\lib\net45\System.Reactive.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Linq, Version=3.0.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.Linq.3.0.0\lib\net45\System.Reactive.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices, Version=3.0.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.PlatformServices.3.0.0\lib\net45\System.Reactive.PlatformServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Spatial, Version=5.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.7.0\lib\net40\System.Spatial.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.1.0.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.2.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\VeritemaAssemblyInfo.cs">
+      <Link>Properties\VeritemaAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="App_Start\DependencyBootstrapper.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\UnityConfig.cs" />
+    <Compile Include="App_Start\UnityMvcActivator.cs" />
+    <Compile Include="App_Start\UnityWebApiActivator.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Context\ApplicationDataContext.cs" />
+    <Compile Include="Controllers\CameraController.cs" />
+    <Compile Include="Controllers\ClassesController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\EventsController.cs" />
+    <Compile Include="Controllers\GalleryController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ImageApiController.cs" />
+    <Compile Include="Controllers\InstructorsController.cs" />
+    <Compile Include="Controllers\LocationApiController.cs" />
+    <Compile Include="Controllers\MembershipsController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Controllers\ScheduleApiController.cs" />
+    <Compile Include="Controllers\ScheduleController.cs" />
+    <Compile Include="Controllers\SpecialtiesController.cs" />
+    <Compile Include="Controllers\SystemsController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Controllers\VideoController.cs" />
+    <Compile Include="Diagnostics\AiExceptionLogger.cs" />
+    <Compile Include="Diagnostics\AiHandleErrorAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ScheduleEvent.cs" />
+    <Compile Include="Models\ScheduleLocation.cs" />
+    <Compile Include="Models\ScheduleLocationCombo.cs" />
+    <Compile Include="Models\ScheduleLocationComboResponse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\ApiKeyAuthenticationAttribute.cs" />
+    <Compile Include="Security\HmacAuthenticationAttribute.cs" />
+    <Compile Include="Security\ResultWithChallenge.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="Streams\ImageStream.cs" />
+    <Compile Include="Streams\Startup.cs" />
+    <Compile Include="Streams\VideoStream.cs" />
+    <Compile Include="ViewModels\AccountViewModels.cs" />
+    <Compile Include="ViewModels\Instructor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\dhtmlxscheduler\dhtmlxscheduler.css" />
+    <Content Include="Content\dhtmlxscheduler\dhtmlxscheduler_classic.css" />
+    <Content Include="Content\dhtmlxscheduler\dhtmlxscheduler_flat.css" />
+    <Content Include="Content\dhtmlxscheduler\dhtmlxscheduler_glossy.css" />
+    <Content Include="Content\dhtmlxscheduler\imgs\buttons.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs\but_repeat.gif" />
+    <Content Include="Content\dhtmlxscheduler\imgs\calendar.gif" />
+    <Content Include="Content\dhtmlxscheduler\imgs\clock_big.gif" />
+    <Content Include="Content\dhtmlxscheduler\imgs\clock_small.gif" />
+    <Content Include="Content\dhtmlxscheduler\imgs\collapse_expand_icon.gif" />
+    <Content Include="Content\dhtmlxscheduler\imgs\controls.gif" />
+    <Content Include="Content\dhtmlxscheduler\imgs\databg.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs\databg_now.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs\export_ical.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs\export_pdf.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs\icon.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs\images.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs\loading.gif" />
+    <Content Include="Content\dhtmlxscheduler\imgs\resize_dots.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_dhx_terrace\arrow_left.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_dhx_terrace\arrow_right.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_dhx_terrace\but_repeat.gif" />
+    <Content Include="Content\dhtmlxscheduler\imgs_dhx_terrace\calendar.gif" />
+    <Content Include="Content\dhtmlxscheduler\imgs_dhx_terrace\clock_big.gif" />
+    <Content Include="Content\dhtmlxscheduler\imgs_dhx_terrace\clock_small.gif" />
+    <Content Include="Content\dhtmlxscheduler\imgs_dhx_terrace\close_icon.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_dhx_terrace\collapse_expand_icon.gif" />
+    <Content Include="Content\dhtmlxscheduler\imgs_dhx_terrace\controls.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_dhx_terrace\databg.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_dhx_terrace\databg_now.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_dhx_terrace\export_ical.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_dhx_terrace\export_pdf.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_dhx_terrace\resize_dots.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_dhx_terrace\resizing.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_flat\agenda_bg.gif" />
+    <Content Include="Content\dhtmlxscheduler\imgs_flat\arrow_left.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_flat\arrow_right.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_flat\but_repeat.gif" />
+    <Content Include="Content\dhtmlxscheduler\imgs_flat\calendar.gif" />
+    <Content Include="Content\dhtmlxscheduler\imgs_flat\clock.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_flat\clock_big.gif" />
+    <Content Include="Content\dhtmlxscheduler\imgs_flat\clock_small.gif" />
+    <Content Include="Content\dhtmlxscheduler\imgs_flat\close_icon.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_flat\collapse_expand_icon.gif" />
+    <Content Include="Content\dhtmlxscheduler\imgs_flat\controls.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_flat\databg.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_flat\databg_now.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_flat\export_ical.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_flat\export_pdf.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_flat\resize_dots.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_flat\resizing.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_glossy\blue_tab.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_glossy\blue_tab_wide.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_glossy\buttons.gif" />
+    <Content Include="Content\dhtmlxscheduler\imgs_glossy\but_repeat.gif" />
+    <Content Include="Content\dhtmlxscheduler\imgs_glossy\calendar.gif" />
+    <Content Include="Content\dhtmlxscheduler\imgs_glossy\clock_big.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_glossy\clock_small.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_glossy\collapse_expand_icon.gif" />
+    <Content Include="Content\dhtmlxscheduler\imgs_glossy\controlls5.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_glossy\databg.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_glossy\databg_now.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_glossy\event-bg.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_glossy\export_ical.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_glossy\export_pdf.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_glossy\icon.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_glossy\left-separator.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_glossy\left-time-bg.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_glossy\lightbox.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_glossy\loading.gif" />
+    <Content Include="Content\dhtmlxscheduler\imgs_glossy\move.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_glossy\multi-days-bg.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_glossy\second-top-days-bg.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_glossy\top-days-bg.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_glossy\top-separator.gif" />
+    <Content Include="Content\dhtmlxscheduler\imgs_glossy\white_tab.png" />
+    <Content Include="Content\dhtmlxscheduler\imgs_glossy\white_tab_wide.png" />
+    <Content Include="Content\dhtmlxscheduler\sources\skins\dhtmlxscheduler.css" />
+    <Content Include="Content\dhtmlxscheduler\sources\skins\dhtmlxscheduler_classic.css" />
+    <Content Include="Content\dhtmlxscheduler\sources\skins\dhtmlxscheduler_flat.css" />
+    <Content Include="Content\dhtmlxscheduler\sources\skins\dhtmlxscheduler_glossy.css" />
+    <Content Include="Content\toastr.css" />
+    <Content Include="Content\toastr.min.css" />
+    <Content Include="css\font-awesome-4.6.3\css\font-awesome.css" />
+    <Content Include="css\font-awesome-4.6.3\css\font-awesome.min.css" />
+    <Content Include="css\font-awesome-4.6.3\fonts\fontawesome-webfont.svg" />
+    <Content Include="css\font-awesome-4.6.3\HELP-US-OUT.txt" />
+    <Content Include="css\jplayer.blue.monday.css" />
+    <Content Include="css\jplayer.pink.flag.css" />
+    <Content Include="css\Reset.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="images\gallery\0f526586519f225d43ca002854105df3.jpg" />
+    <Content Include="images\gallery\215cdd6eaab579d86f2e88df8c1ad2a5.jpg" />
+    <Content Include="images\gallery\27735cd69cff585fe318d602fc66b89b.jpg" />
+    <Content Include="images\gallery\2993f9d9587c89e139ce07b009d28cf2.jpg" />
+    <Content Include="images\gallery\29e2ea24d5cf094be6a6a9c3493af492.jpg" />
+    <Content Include="images\gallery\31ee7b22e888fe5c6a0ef5d15117edeb.jpg" />
+    <Content Include="images\gallery\368506c8c2c855cdd307492dc60b6c20.jpg" />
+    <Content Include="images\gallery\3a513c26c8031e48d6332d31e390f671.jpg" />
+    <Content Include="images\gallery\3daf58ee8d68dc8b61c7bd3a14784a0c.jpg" />
+    <Content Include="images\gallery\476be63d6580028db0fb5acebaf0fc5b.jpg" />
+    <Content Include="images\gallery\493b54706c492f96b105f6068f9aff15.jpg" />
+    <Content Include="images\gallery\5039ff0ded7836b094aaa06125ed503f.jpg" />
+    <Content Include="images\gallery\50ef65a9443d9ba10ade2b6fefde55a3.jpg" />
+    <Content Include="images\gallery\5124d7c9ac6ddca073be6a475cb94566.jpg" />
+    <Content Include="images\gallery\53110cba391150bd2b6553079c66cd20.jpg" />
+    <Content Include="images\gallery\5b78337d8a4bcfb9a9259d7c3358b1d6.jpg" />
+    <Content Include="images\gallery\60b50da95ffead8409f546846aef2bb5.jpg" />
+    <Content Include="images\gallery\68cc30c8d5923347200070f57aa2c9b6.jpg" />
+    <Content Include="images\gallery\6a097da8e77f0800a4e45798511b8030.jpg" />
+    <Content Include="images\gallery\6c1c49d1d2decf7b8cdc2c052dbaf5ba.jpg" />
+    <Content Include="images\gallery\7019c67c479a0f1178ec32b0dba60146.jpg" />
+    <Content Include="images\gallery\7164a6a0155a01711181b71e17bf8897.jpg" />
+    <Content Include="images\gallery\734db37e34758789e6af6bf0939546e9.jpg" />
+    <Content Include="images\gallery\7ace2b23f02467509b5ece318ffeca8b.jpg" />
+    <Content Include="images\gallery\7bd8be843327e25b52c3aa2fc06e9ca4.jpg" />
+    <Content Include="images\gallery\7ed7a26edd342483578e44abd3b4aa87.jpg" />
+    <Content Include="images\gallery\804cf6b27e0ef308f68e26af154815dc.jpg" />
+    <Content Include="images\gallery\8ab7b7b635a16ded9fb74abff20abff9.jpg" />
+    <Content Include="images\gallery\bc7a99fb671f7223748c200803446e59.jpg" />
+    <Content Include="images\gallery\bce53a9d15cf1b8d9cb0ec1bd34ee68e.jpg" />
+    <Content Include="images\gallery\bd3f480423d5a89bb930d7adad37dda5.jpg" />
+    <Content Include="images\gallery\d48e43d7f3511d40569bd3f774b43f1c.jpg" />
+    <Content Include="images\gallery\e5d626881cf72e1ceea621a7da7bcbe5.jpg" />
+    <Content Include="images\gallery\ea37a9379ec08c82b4374745af456d33.jpg" />
+    <Content Include="images\gallery\f6f3cf83788047352b488aa66202f893.jpg" />
+    <Content Include="images\gallery\files.txt" />
+    <Content Include="images\bjj-handshake.jpg" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\mountain_screen.PNG" />
+    <Content Include="images\NEW-HKD-LOGO_2.gif" />
+    <Content Include="images\site\rima_logo.jpg" />
+    <Content Include="images\small_circle_mtn.mp4" />
+    <Content Include="images\social-icons\rima_logo.png" />
+    <Content Include="images\west_seminar_11.11.2017.jpg" />
+    <Content Include="js\bootstrap-collapse.js" />
+    <Content Include="css\bootstrap-responsiveness.css" />
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\carousel.css" />
+    <Content Include="css\modern-business.css" />
+    <Content Include="css\spacelab.css" />
+    <Content Include="css\template.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="images\banners\index.html" />
+    <Content Include="images\banners\osmbanner1.png" />
+    <Content Include="images\banners\osmbanner2.png" />
+    <Content Include="images\banners\shop-ad-books.jpg" />
+    <Content Include="images\banners\shop-ad.jpg" />
+    <Content Include="images\banners\white.png" />
+    <Content Include="images\Ben Tice.JPG" />
+    <Content Include="images\bjj.jpg" />
+    <Content Include="images\chris_tricoli.jpg" />
+    <Content Include="images\classes.jpg" />
+    <Content Include="images\gallerymodule\bjj.jpg" />
+    <Content Include="images\gallerymodule\bjj_front.jpg" />
+    <Content Include="images\gallerymodule\hapkido_classes.jpg" />
+    <Content Include="images\gallerymodule\Judo3.jpg" />
+    <Content Include="images\gallerymodule\Judo_front.jpg" />
+    <Content Include="images\gallerymodule\muay-thai_front.jpg" />
+    <Content Include="images\gallerymodule\pic1.jpg" />
+    <Content Include="images\gallerymodule\pic2.jpg" />
+    <Content Include="images\gallerymodule\pic3.jpg" />
+    <Content Include="images\gallerymodule\pic4.jpg" />
+    <Content Include="images\gallerymodule\pic5.jpg" />
+    <Content Include="images\gallerymodule\pic6.jpg" />
+    <Content Include="images\gallerymodule\thai chi.jpg" />
+    <Content Include="images\gallerymodule\thumbs\bjj.jpg" />
+    <Content Include="images\gallerymodule\thumbs\pic1.jpg" />
+    <Content Include="images\gallerymodule\thumbs\pic2.jpg" />
+    <Content Include="images\gallerymodule\thumbs\pic3.jpg" />
+    <Content Include="images\gallerymodule\thumbs\pic4.jpg" />
+    <Content Include="images\gallerymodule\thumbs\pic5.jpg" />
+    <Content Include="images\gallerymodule\thumbs\pic6.jpg" />
+    <Content Include="images\hapkido_classes1.jpg" />
+    <Content Include="images\index.html" />
+    <Content Include="images\John Taube.JPG" />
+    <Content Include="images\joomla_black.gif" />
+    <Content Include="images\joomla_green.gif" />
+    <Content Include="images\joomla_logo_black.jpg" />
+    <Content Include="images\muay-thai-03.jpg" />
+    <Content Include="images\partners\activeden.jpg" />
+    <Content Include="images\partners\audiojungle.jpg" />
+    <Content Include="images\partners\codecanyon.jpg" />
+    <Content Include="images\partners\photodune.jpg" />
+    <Content Include="images\partners\themeforest.jpg" />
+    <Content Include="images\partners\videohive.jpg" />
+    <Content Include="images\powered_by.png" />
+    <Content Include="images\sampledata\fruitshop\apple.jpg" />
+    <Content Include="images\sampledata\fruitshop\bananas_2.jpg" />
+    <Content Include="images\sampledata\fruitshop\fruits.gif" />
+    <Content Include="images\sampledata\fruitshop\index.html" />
+    <Content Include="images\sampledata\fruitshop\tamarind.jpg" />
+    <Content Include="images\sampledata\index.html" />
+    <Content Include="images\sampledata\parks\animals\180px_koala_ag1.jpg" />
+    <Content Include="images\sampledata\parks\animals\180px_wobbegong.jpg" />
+    <Content Include="images\sampledata\parks\animals\200px_phyllopteryx_taeniolatus1.jpg" />
+    <Content Include="images\sampledata\parks\animals\220px_spottedquoll_2005_seanmcclean.jpg" />
+    <Content Include="images\sampledata\parks\animals\789px_spottedquoll_2005_seanmcclean.jpg" />
+    <Content Include="images\sampledata\parks\animals\800px_koala_ag1.jpg" />
+    <Content Include="images\sampledata\parks\animals\800px_phyllopteryx_taeniolatus1.jpg" />
+    <Content Include="images\sampledata\parks\animals\800px_wobbegong.jpg" />
+    <Content Include="images\sampledata\parks\animals\index.html" />
+    <Content Include="images\sampledata\parks\banner_cradle.jpg" />
+    <Content Include="images\sampledata\parks\index.html" />
+    <Content Include="images\sampledata\parks\landscape\120px_pinnacles_western_australia.jpg" />
+    <Content Include="images\sampledata\parks\landscape\120px_rainforest_bluemountainsnsw.jpg" />
+    <Content Include="images\sampledata\parks\landscape\180px_ormiston_pound.jpg" />
+    <Content Include="images\sampledata\parks\landscape\250px_cradle_mountain_seen_from_barn_bluff.jpg" />
+    <Content Include="images\sampledata\parks\landscape\727px_rainforest_bluemountainsnsw.jpg" />
+    <Content Include="images\sampledata\parks\landscape\800px_cradle_mountain_seen_from_barn_bluff.jpg" />
+    <Content Include="images\sampledata\parks\landscape\800px_ormiston_pound.jpg" />
+    <Content Include="images\sampledata\parks\landscape\800px_pinnacles_western_australia.jpg" />
+    <Content Include="images\sampledata\parks\landscape\index.html" />
+    <Content Include="images\sampledata\parks\parks.gif" />
+    <Content Include="images\site\activeden.png" />
+    <Content Include="images\site\addthis-share.png" />
+    <Content Include="images\site\atom-icon.png" />
+    <Content Include="images\site\audiojungle.png" />
+    <Content Include="images\site\Ben Tice.JPG" />
+    <Content Include="images\site\bjj.jpg" />
+    <Content Include="images\site\calendar-icon.png" />
+    <Content Include="images\site\class-banner.jpg" />
+    <Content Include="images\site\class-test.jpg" />
+    <Content Include="images\site\clock-icon.png" />
+    <Content Include="images\site\codecanyon.png" />
+    <Content Include="images\site\envato-logo.png" />
+    <Content Include="images\site\equip-joomla-fitness-theme-logo.png" />
+    <Content Include="images\site\facebook-footer.png" />
+    <Content Include="images\site\facebook-icon-over.png" />
+    <Content Include="images\site\facebook-icon.png" />
+    <Content Include="images\site\flickr-footer.png" />
+    <Content Include="images\site\flickr-icon-over.png" />
+    <Content Include="images\site\flickr-icon.png" />
+    <Content Include="images\site\google-plus-footer.png" />
+    <Content Include="images\site\google-plus-icon-over.png" />
+    <Content Include="images\site\google-plus-icon.png" />
+    <Content Include="images\site\graph-icon.png" />
+    <Content Include="images\site\img-hapkido.jpg" />
+    <Content Include="images\site\img-law.jpg" />
+    <Content Include="images\site\img-protection.jpg" />
+    <Content Include="images\site\img-semiinars.jpg" />
+    <Content Include="images\site\img-training.jpg" />
+    <Content Include="images\site\img-weapons.jpg" />
+    <Content Include="images\site\img1.jpg" />
+    <Content Include="images\site\img2.jpg" />
+    <Content Include="images\site\img3.jpg" />
+    <Content Include="images\site\instagram-footer-icon.png" />
+    <Content Include="images\site\instagram-icon-over.png" />
+    <Content Include="images\site\instagram-icon.png" />
+    <Content Include="images\site\instructor-test.jpg" />
+    <Content Include="images\site\John Taube.JPG" />
+    <Content Include="images\site\joomla-logo-mod.png" />
+    <Content Include="images\site\Judo.jpg" />
+    <Content Include="images\site\mainbottom-test.jpg" />
+    <Content Include="images\site\module-positions.jpg" />
+    <Content Include="images\site\money-icon.png" />
+    <Content Include="images\site\muay-thai-02.jpg" />
+    <Content Include="images\site\no-photo.jpg" />
+    <Content Include="images\site\photodune.png" />
+    <Content Include="images\site\rima logo.JPG" />
+    <Content Include="images\site\showcase-wide-test.jpg" />
+    <Content Include="images\site\test-icon.png" />
+    <Content Include="images\site\themeforest-logo.png" />
+    <Content Include="images\site\tools-icon.png" />
+    <Content Include="images\site\twitter-footer.png" />
+    <Content Include="images\site\twitter-icon-over.png" />
+    <Content Include="images\site\twitter-icon.png" />
+    <Content Include="images\site\videohive.png" />
+    <Content Include="images\sliderwide\image1.jpg" />
+    <Content Include="images\sliderwide\image2.jpg" />
+    <Content Include="images\sliderwide\image3.jpg" />
+    <Content Include="images\slider\image1.jpg" />
+    <Content Include="images\slider\image2.jpg" />
+    <Content Include="images\slider\image3.jpg" />
+    <Content Include="images\slider\images3.png" />
+    <Content Include="images\slider\RIMA.JPG" />
+    <Content Include="images\social-icons\facebook-icon-over.png" />
+    <Content Include="images\social-icons\facebook-icon.png" />
+    <Content Include="images\social-icons\facebook2.png" />
+    <Content Include="images\social-icons\flickr-icon-over.png" />
+    <Content Include="images\social-icons\flickr-icon.png" />
+    <Content Include="images\social-icons\flickr2.png" />
+    <Content Include="images\social-icons\google-plus-icon-over.png" />
+    <Content Include="images\social-icons\google-plus-icon.png" />
+    <Content Include="images\social-icons\googleplus2.png" />
+    <Content Include="images\social-icons\instagram-icon-over.png" />
+    <Content Include="images\social-icons\instagram-icon.png" />
+    <Content Include="images\social-icons\instagram2.png" />
+    <Content Include="images\social-icons\linkedin-icon-over.png" />
+    <Content Include="images\social-icons\linkedin-icon.png" />
+    <Content Include="images\social-icons\linkedin2.png" />
+    <Content Include="images\social-icons\pinterest-icon-over.png" />
+    <Content Include="images\social-icons\pinterest-icon.png" />
+    <Content Include="images\social-icons\pinterest2.png" />
+    <Content Include="images\social-icons\tumblr-icon-over.png" />
+    <Content Include="images\social-icons\tumblr-icon.png" />
+    <Content Include="images\social-icons\tumblr2.png" />
+    <Content Include="images\social-icons\twitter-icon-over.png" />
+    <Content Include="images\social-icons\twitter-icon.png" />
+    <Content Include="images\social-icons\twitter2.png" />
+    <Content Include="images\social-icons\vimeo-icon-over.png" />
+    <Content Include="images\social-icons\vimeo-icon.png" />
+    <Content Include="images\social-icons\vimeo2.png" />
+    <Content Include="images\social-icons\youtube-icon-over.png" />
+    <Content Include="images\social-icons\youtube-icon.png" />
+    <Content Include="images\social-icons\youtube2.png" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="js\jquery.jplayer.min.js" />
+    <Content Include="js\jquery.jplayer.swf" />
+    <Content Include="js\photo-gallery.js" />
+    <Content Include="js\polyfills.base64.js" />
+    <Content Include="js\polyfills.intersection-observer.js" />
+    <Content Include="js\polyfills.promise.js" />
+    <Content Include="js\polyfills.vttrenderer.js" />
+    <Content Include="js\popper-utils.js" />
+    <Content Include="js\popper-utils.min.js" />
+    <Content Include="js\popper.js" />
+    <Content Include="js\popper.min.js" />
+    <Content Include="js\skins\beelden.css" />
+    <Content Include="js\skins\bekle.css" />
+    <Content Include="js\skins\five.css" />
+    <Content Include="js\skins\glow.css" />
+    <Content Include="js\skins\roundster.css" />
+    <Content Include="js\skins\seven.css" />
+    <Content Include="js\skins\six.css" />
+    <Content Include="js\skins\stormtrooper.css" />
+    <Content Include="js\skins\vapor.css" />
+    <Content Include="js\toastr.js" />
+    <Content Include="js\toastr.min.js" />
+    <Content Include="media\small_circle_mtn.mp4" />
+    <Content Include="Scripts\ai.0.22.19-build00125.js" />
+    <Content Include="Scripts\ai.0.22.19-build00125.min.js" />
+    <Content Include="Scripts\dhtmlxscheduler\dhtmlxscheduler.css" />
+    <Content Include="Scripts\dhtmlxscheduler\dhtmlxscheduler.js" />
+    <Content Include="Scripts\dhtmlxscheduler\dhtmlxscheduler_classic.css" />
+    <Content Include="Scripts\dhtmlxscheduler\dhtmlxscheduler_contrast_black.css" />
+    <Content Include="Scripts\dhtmlxscheduler\dhtmlxscheduler_contrast_white.css" />
+    <Content Include="Scripts\dhtmlxscheduler\dhtmlxscheduler_custom_lightbox.js" />
+    <Content Include="Scripts\dhtmlxscheduler\dhtmlxscheduler_flat.css" />
+    <Content Include="Scripts\dhtmlxscheduler\dhtmlxscheduler_glossy.css" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_active_links.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_agenda_view.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_all_timed.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_collision.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_container_autoresize.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_cookie.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_csp.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_daytimeline.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_drag_between.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_editors.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_expand.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_grid_view.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_html_templates.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_key_nav.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_layer.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_limit.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_live_updates.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_map_view.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_minical.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_monthheight.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_multisection.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_multiselect.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_multisource.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_mvc.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_offline.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_outerdrag.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_pdf.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_quick_info.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_readonly.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_recurring.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_serialize.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_timeline.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_tooltip.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_treetimeline.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_units.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_url.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_week_agenda.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_wp.js" />
+    <Content Include="Scripts\dhtmlxscheduler\ext\dhtmlxscheduler_year_view.js" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs\buttons.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs\but_repeat.gif" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs\calendar.gif" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs\clock_big.gif" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs\clock_small.gif" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs\collapse_expand_icon.gif" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs\controls.gif" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs\databg.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs\databg_now.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs\export_ical.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs\export_pdf.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs\icon.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs\images.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs\loading.gif" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs\resize_dots.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_contrast_black\arrow_left.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_contrast_black\arrow_right.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_contrast_black\but_repeat.gif" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_contrast_black\calendar.gif" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_contrast_black\clock_big.gif" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_contrast_black\clock_small.gif" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_contrast_black\close_icon.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_contrast_black\collapse_expand_icon.gif" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_contrast_black\controls.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_contrast_black\databg.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_contrast_black\export_ical.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_contrast_black\export_pdf.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_contrast_black\resize_dots.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_contrast_black\resizing.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_contrast_white\arrow_left.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_contrast_white\arrow_right.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_contrast_white\but_repeat.gif" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_contrast_white\calendar.gif" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_contrast_white\clock_big.gif" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_contrast_white\clock_small.gif" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_contrast_white\close_icon.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_contrast_white\collapse_expand_icon.gif" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_contrast_white\controls.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_contrast_white\databg.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_contrast_white\export_ical.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_contrast_white\export_pdf.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_contrast_white\quick_info_edit.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_contrast_white\resize_dots.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_contrast_white\resizing.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_dhx_terrace\arrow_left.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_dhx_terrace\arrow_right.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_dhx_terrace\but_repeat.gif" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_dhx_terrace\calendar.gif" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_dhx_terrace\clock_big.gif" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_dhx_terrace\clock_small.gif" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_dhx_terrace\close_icon.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_dhx_terrace\collapse_expand_icon.gif" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_dhx_terrace\controls.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_dhx_terrace\databg.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_dhx_terrace\databg_now.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_dhx_terrace\export_ical.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_dhx_terrace\export_pdf.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_dhx_terrace\resize_dots.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_dhx_terrace\resizing.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_flat\agenda_bg.gif" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_flat\arrow_left.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_flat\arrow_right.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_flat\but_repeat.gif" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_flat\calendar.gif" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_flat\clock.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_flat\clock_big.gif" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_flat\clock_small.gif" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_flat\close_icon.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_flat\collapse_expand_icon.gif" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_flat\controls.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_flat\databg.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_flat\databg_now.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_flat\export_ical.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_flat\export_pdf.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_flat\resize_dots.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_flat\resizing.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_glossy\blue_tab.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_glossy\blue_tab_wide.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_glossy\buttons.gif" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_glossy\but_repeat.gif" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_glossy\calendar.gif" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_glossy\clock_big.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_glossy\clock_small.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_glossy\collapse_expand_icon.gif" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_glossy\controlls5.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_glossy\databg.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_glossy\databg_now.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_glossy\event-bg.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_glossy\export_ical.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_glossy\export_pdf.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_glossy\icon.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_glossy\left-separator.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_glossy\left-time-bg.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_glossy\lightbox.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_glossy\loading.gif" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_glossy\move.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_glossy\multi-days-bg.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_glossy\second-top-days-bg.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_glossy\top-days-bg.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_glossy\top-separator.gif" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_glossy\white_tab.png" />
+    <Content Include="Scripts\dhtmlxscheduler\imgs_glossy\white_tab_wide.png" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\locale_ar.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\locale_be.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\locale_ca.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\locale_cn.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\locale_cs.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\locale_da.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\locale_de.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\locale_el.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\locale_en.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\locale_es.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\locale_fi.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\locale_fr.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\locale_he.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\locale_hu.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\locale_id.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\locale_it.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\locale_jp.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\locale_nb.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\locale_nl.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\locale_no.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\locale_pl.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\locale_pt.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\locale_ro.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\locale_ru.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\locale_si.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\locale_sk.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\locale_sv.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\locale_tr.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\locale_ua.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\recurring\locale_recurring_be.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\recurring\locale_recurring_cn.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\recurring\locale_recurring_cs.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\recurring\locale_recurring_da.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\recurring\locale_recurring_de.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\recurring\locale_recurring_el.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\recurring\locale_recurring_en.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\recurring\locale_recurring_es.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\recurring\locale_recurring_fi.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\recurring\locale_recurring_fr.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\recurring\locale_recurring_it.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\recurring\locale_recurring_nb.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\recurring\locale_recurring_nl.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\recurring\locale_recurring_pl.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\recurring\locale_recurring_pt.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\recurring\locale_recurring_ro.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\recurring\locale_recurring_ru.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\recurring\locale_recurring_sk.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\recurring\locale_recurring_sv.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\recurring\locale_recurring_ua.js" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\recurring\repeat_template_be.html" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\recurring\repeat_template_cn.html" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\recurring\repeat_template_de.html" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\recurring\repeat_template_el.html" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\recurring\repeat_template_en.html" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\recurring\repeat_template_es.html" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\recurring\repeat_template_fr.html" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\recurring\repeat_template_it.html" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\recurring\repeat_template_nl.html" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\recurring\repeat_template_ro.html" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\recurring\repeat_template_ru.html" />
+    <Content Include="Scripts\dhtmlxscheduler\locale\recurring\repeat_template_sk.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\.gitignore" />
+    <Content Include="Scripts\jPlayer-2.9.2\.jamignore" />
+    <Content Include="Scripts\jPlayer-2.9.2\artwork\jplayer.blue.monday.psd" />
+    <Content Include="Scripts\jPlayer-2.9.2\artwork\jplayer.blue.monday.spirites.psd" />
+    <Content Include="Scripts\jPlayer-2.9.2\artwork\jplayer.circle.player.psd" />
+    <Content Include="Scripts\jPlayer-2.9.2\artwork\jplayer.pink.flag.psd" />
+    <Content Include="Scripts\jPlayer-2.9.2\artwork\jplayer.pink.flag.sprites.psd" />
+    <Content Include="Scripts\jPlayer-2.9.2\bower.json" />
+    <Content Include="Scripts\jPlayer-2.9.2\CHANGELOG.md" />
+    <Content Include="Scripts\jPlayer-2.9.2\CLA.md" />
+    <Content Include="Scripts\jPlayer-2.9.2\composer.json" />
+    <Content Include="Scripts\jPlayer-2.9.2\CONTRIBUTING.md" />
+    <Content Include="Scripts\jPlayer-2.9.2\dist\add-on\jplayer.playlist.js" />
+    <Content Include="Scripts\jPlayer-2.9.2\dist\add-on\jplayer.playlist.min.js" />
+    <Content Include="Scripts\jPlayer-2.9.2\dist\add-on\jquery.jplayer.inspector.js" />
+    <Content Include="Scripts\jPlayer-2.9.2\dist\add-on\jquery.jplayer.inspector.min.js" />
+    <Content Include="Scripts\jPlayer-2.9.2\dist\jplayer\jquery.jplayer.js" />
+    <Content Include="Scripts\jPlayer-2.9.2\dist\jplayer\jquery.jplayer.min.js" />
+    <Content Include="Scripts\jPlayer-2.9.2\dist\jplayer\jquery.jplayer.swf" />
+    <Content Include="Scripts\jPlayer-2.9.2\dist\popcorn\popcorn.jplayer.js" />
+    <Content Include="Scripts\jPlayer-2.9.2\dist\popcorn\popcorn.jplayer.min.js" />
+    <Content Include="Scripts\jPlayer-2.9.2\dist\skin\blue.monday\css\jplayer.blue.monday.css" />
+    <Content Include="Scripts\jPlayer-2.9.2\dist\skin\blue.monday\css\jplayer.blue.monday.min.css" />
+    <Content Include="Scripts\jPlayer-2.9.2\dist\skin\blue.monday\image\jplayer.blue.monday.jpg" />
+    <Content Include="Scripts\jPlayer-2.9.2\dist\skin\blue.monday\image\jplayer.blue.monday.seeking.gif" />
+    <Content Include="Scripts\jPlayer-2.9.2\dist\skin\blue.monday\image\jplayer.blue.monday.video.play.png" />
+    <Content Include="Scripts\jPlayer-2.9.2\dist\skin\blue.monday\mustache\jplayer.blue.monday.audio.playlist.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\dist\skin\blue.monday\mustache\jplayer.blue.monday.audio.single.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\dist\skin\blue.monday\mustache\jplayer.blue.monday.audio.stream.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\dist\skin\blue.monday\mustache\jplayer.blue.monday.video.playlist.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\dist\skin\blue.monday\mustache\jplayer.blue.monday.video.single.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\dist\skin\pink.flag\css\jplayer.pink.flag.css" />
+    <Content Include="Scripts\jPlayer-2.9.2\dist\skin\pink.flag\css\jplayer.pink.flag.min.css" />
+    <Content Include="Scripts\jPlayer-2.9.2\dist\skin\pink.flag\image\jplayer.pink.flag.jpg" />
+    <Content Include="Scripts\jPlayer-2.9.2\dist\skin\pink.flag\image\jplayer.pink.flag.seeking.gif" />
+    <Content Include="Scripts\jPlayer-2.9.2\dist\skin\pink.flag\image\jplayer.pink.flag.video.play.png" />
+    <Content Include="Scripts\jPlayer-2.9.2\dist\skin\pink.flag\mustache\jplayer.pink.flag.audio.playlist.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\dist\skin\pink.flag\mustache\jplayer.pink.flag.audio.single.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\dist\skin\pink.flag\mustache\jplayer.pink.flag.audio.stream.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\dist\skin\pink.flag\mustache\jplayer.pink.flag.video.playlist.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\dist\skin\pink.flag\mustache\jplayer.pink.flag.video.single.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\blue.monday\demo-01-android.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\blue.monday\demo-01-solution-flash-html.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\blue.monday\demo-01-supplied-mp3.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\blue.monday\demo-01-video-solution-flash-html.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\blue.monday\demo-01-video-supplied-m4v.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\blue.monday\demo-01-video-supplied-rtmpv.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\blue.monday\demo-01-video.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\blue.monday\demo-01.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\blue.monday\demo-02-jPlayerPlaylist.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\blue.monday\demo-02-media-solution-flash-html.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\blue.monday\demo-02-media.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\blue.monday\demo-02-multi.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\blue.monday\demo-02-video.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\blue.monday\demo-02.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\blue.monday\demo-03-together.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\blue.monday\demo-03-video.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\blue.monday\demo-03.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\blue.monday\demo-08.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\blue.monday\demo-09-popcorn-video-solution-flash-html.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\blue.monday\demo-09-popcorn-video.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\blue.monday\jPlayer-tester.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\other\demo-04.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\other\demo-05.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\other\demo-07.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\pink.flag\demo-01-android.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\pink.flag\demo-01-solution-flash-html.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\pink.flag\demo-01-supplied-mp3.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\pink.flag\demo-01-video-solution-flash-html.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\pink.flag\demo-01-video-supplied-m4v.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\pink.flag\demo-01-video-supplied-rtmpv.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\pink.flag\demo-01-video.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\pink.flag\demo-01.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\pink.flag\demo-02-jPlayerPlaylist.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\pink.flag\demo-02-media-solution-flash-html.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\pink.flag\demo-02-media.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\pink.flag\demo-02-multi.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\pink.flag\demo-02-video.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\pink.flag\demo-02.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\pink.flag\demo-03-together.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\pink.flag\demo-03-video.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\pink.flag\demo-03.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\pink.flag\demo-08.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\pink.flag\demo-09-popcorn-video-solution-flash-html.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\pink.flag\demo-09-popcorn-video.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\examples\pink.flag\jPlayer-tester.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\Gruntfile.js" />
+    <Content Include="Scripts\jPlayer-2.9.2\lib\aurora\aac.js" />
+    <Content Include="Scripts\jPlayer-2.9.2\lib\aurora\aurora.js" />
+    <Content Include="Scripts\jPlayer-2.9.2\lib\aurora\flac.js" />
+    <Content Include="Scripts\jPlayer-2.9.2\lib\aurora\mp3.js" />
+    <Content Include="Scripts\jPlayer-2.9.2\lib\aurora\ogg.js" />
+    <Content Include="Scripts\jPlayer-2.9.2\lib\aurora\opus.js" />
+    <Content Include="Scripts\jPlayer-2.9.2\lib\aurora\vorbis.js" />
+    <Content Include="Scripts\jPlayer-2.9.2\lib\circle-player\js\circle.player.js" />
+    <Content Include="Scripts\jPlayer-2.9.2\lib\circle-player\js\jquery.grab.js" />
+    <Content Include="Scripts\jPlayer-2.9.2\lib\circle-player\js\jquery.transform2d.js" />
+    <Content Include="Scripts\jPlayer-2.9.2\lib\circle-player\js\mod.csstransforms.min.js" />
+    <Content Include="Scripts\jPlayer-2.9.2\lib\circle-player\skin\bgr.jpg" />
+    <Content Include="Scripts\jPlayer-2.9.2\lib\circle-player\skin\buffer.png" />
+    <Content Include="Scripts\jPlayer-2.9.2\lib\circle-player\skin\circle.player.css" />
+    <Content Include="Scripts\jPlayer-2.9.2\lib\circle-player\skin\controls.jpg" />
+    <Content Include="Scripts\jPlayer-2.9.2\lib\circle-player\skin\progress.png" />
+    <Content Include="Scripts\jPlayer-2.9.2\lib\circle-player\skin\progress_sprite.jpg" />
+    <Content Include="Scripts\jPlayer-2.9.2\lib\jquery.min.js" />
+    <Content Include="Scripts\jPlayer-2.9.2\lib\popcorn.ie8.js" />
+    <Content Include="Scripts\jPlayer-2.9.2\lib\popcorn.js" />
+    <Content Include="Scripts\jPlayer-2.9.2\lib\popcorn.player.js" />
+    <Content Include="Scripts\jPlayer-2.9.2\lib\popcorn.subtitle.js" />
+    <Content Include="Scripts\jPlayer-2.9.2\lib\README.md" />
+    <Content Include="Scripts\jPlayer-2.9.2\MIGRATION.md" />
+    <Content Include="Scripts\jPlayer-2.9.2\MIT-LICENSE.txt" />
+    <Content Include="Scripts\jPlayer-2.9.2\package.json" />
+    <Content Include="Scripts\jPlayer-2.9.2\README.md" />
+    <Content Include="Scripts\jPlayer-2.9.2\src\actionscript\happyworm\jPlayer\ConnectManager.as" />
+    <Content Include="Scripts\jPlayer-2.9.2\src\actionscript\happyworm\jPlayer\JplayerEvent.as" />
+    <Content Include="Scripts\jPlayer-2.9.2\src\actionscript\happyworm\jPlayer\JplayerMp3.as" />
+    <Content Include="Scripts\jPlayer-2.9.2\src\actionscript\happyworm\jPlayer\JplayerMp4.as" />
+    <Content Include="Scripts\jPlayer-2.9.2\src\actionscript\happyworm\jPlayer\JplayerRtmp.as" />
+    <Content Include="Scripts\jPlayer-2.9.2\src\actionscript\happyworm\jPlayer\JplayerStatus.as" />
+    <Content Include="Scripts\jPlayer-2.9.2\src\actionscript\Jplayer.as" />
+    <Content Include="Scripts\jPlayer-2.9.2\src\javascript\add-on\.jshintrc" />
+    <Content Include="Scripts\jPlayer-2.9.2\src\javascript\add-on\jplayer.playlist.js" />
+    <Content Include="Scripts\jPlayer-2.9.2\src\javascript\add-on\jquery.jplayer.inspector.js" />
+    <Content Include="Scripts\jPlayer-2.9.2\src\javascript\jplayer\.jshintrc" />
+    <Content Include="Scripts\jPlayer-2.9.2\src\javascript\jplayer\jquery.jplayer.js" />
+    <Content Include="Scripts\jPlayer-2.9.2\src\javascript\popcorn\.jshintrc" />
+    <Content Include="Scripts\jPlayer-2.9.2\src\javascript\popcorn\popcorn.jplayer.js" />
+    <Content Include="Scripts\jPlayer-2.9.2\src\skin\blue.monday\image\jplayer.blue.monday.jpg" />
+    <Content Include="Scripts\jPlayer-2.9.2\src\skin\blue.monday\image\jplayer.blue.monday.seeking.gif" />
+    <Content Include="Scripts\jPlayer-2.9.2\src\skin\blue.monday\image\jplayer.blue.monday.video.play.png" />
+    <Content Include="Scripts\jPlayer-2.9.2\src\skin\blue.monday\mustache\jplayer.blue.monday.audio.playlist.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\src\skin\blue.monday\mustache\jplayer.blue.monday.audio.single.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\src\skin\blue.monday\mustache\jplayer.blue.monday.audio.stream.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\src\skin\blue.monday\mustache\jplayer.blue.monday.video.playlist.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\src\skin\blue.monday\mustache\jplayer.blue.monday.video.single.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\src\skin\blue.monday\scss\jplayer.blue.monday.scss" />
+    <Content Include="Scripts\jPlayer-2.9.2\src\skin\pink.flag\image\jplayer.pink.flag.jpg" />
+    <Content Include="Scripts\jPlayer-2.9.2\src\skin\pink.flag\image\jplayer.pink.flag.seeking.gif" />
+    <Content Include="Scripts\jPlayer-2.9.2\src\skin\pink.flag\image\jplayer.pink.flag.video.play.png" />
+    <Content Include="Scripts\jPlayer-2.9.2\src\skin\pink.flag\mustache\jplayer.pink.flag.audio.playlist.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\src\skin\pink.flag\mustache\jplayer.pink.flag.audio.single.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\src\skin\pink.flag\mustache\jplayer.pink.flag.audio.stream.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\src\skin\pink.flag\mustache\jplayer.pink.flag.video.playlist.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\src\skin\pink.flag\mustache\jplayer.pink.flag.video.single.html" />
+    <Content Include="Scripts\jPlayer-2.9.2\src\skin\pink.flag\scss\jplayer.pink.flag.scss" />
+    <Content Include="Scripts\jquery.jplayer.min.js" />
+    <Content Include="Scripts\knockout\knockout-2.2.0.debug.js" />
+    <Content Include="Scripts\knockout\knockout-2.2.0.js" />
+    <Content Include="Scripts\knockout\modernizr-2.6.2.js" />
+    <Content Include="Scripts\knockout\viewmodels.js" />
+    <Content Include="Content\toastr.scss" />
+    <Content Include="Content\toastr.less" />
+    <Content Include="js\popper-utils.js.map" />
+    <Content Include="js\popper-utils.min.js.map" />
+    <Content Include="js\popper.js.map" />
+    <Content Include="js\popper.min.js.map" />
+    <None Include="Properties\PublishProfiles\veritema.dev.pubxml" />
+    <None Include="Scripts\jquery-1.6.3-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.6.3.js" />
+    <Content Include="Scripts\jquery-1.6.3.min.js" />
+    <Content Include="Scripts\toastr.js" />
+    <Content Include="Scripts\toastr.min.js" />
+    <Content Include="templates\atomic\css\blueprint\ie.css" />
+    <Content Include="templates\atomic\css\blueprint\index.html" />
+    <Content Include="templates\atomic\css\blueprint\plugins\buttons\icons\cross.png" />
+    <Content Include="templates\atomic\css\blueprint\plugins\buttons\icons\index.html" />
+    <Content Include="templates\atomic\css\blueprint\plugins\buttons\icons\key.png" />
+    <Content Include="templates\atomic\css\blueprint\plugins\buttons\icons\tick.png" />
+    <Content Include="templates\atomic\css\blueprint\plugins\buttons\index.html" />
+    <Content Include="templates\atomic\css\blueprint\plugins\buttons\readme.txt" />
+    <Content Include="templates\atomic\css\blueprint\plugins\buttons\screen.css" />
+    <Content Include="templates\atomic\css\blueprint\plugins\fancy-type\index.html" />
+    <Content Include="templates\atomic\css\blueprint\plugins\fancy-type\readme.txt" />
+    <Content Include="templates\atomic\css\blueprint\plugins\fancy-type\screen.css" />
+    <Content Include="templates\atomic\css\blueprint\plugins\index.html" />
+    <Content Include="templates\atomic\css\blueprint\plugins\joomla-nav\AUTHORS.txt" />
+    <Content Include="templates\atomic\css\blueprint\plugins\joomla-nav\index.html" />
+    <Content Include="templates\atomic\css\blueprint\plugins\joomla-nav\README.txt" />
+    <Content Include="templates\atomic\css\blueprint\plugins\joomla-nav\screen.css" />
+    <Content Include="templates\atomic\css\blueprint\plugins\link-icons\icons\doc.png" />
+    <Content Include="templates\atomic\css\blueprint\plugins\link-icons\icons\email.png" />
+    <Content Include="templates\atomic\css\blueprint\plugins\link-icons\icons\external.png" />
+    <Content Include="templates\atomic\css\blueprint\plugins\link-icons\icons\feed.png" />
+    <Content Include="templates\atomic\css\blueprint\plugins\link-icons\icons\im.png" />
+    <Content Include="templates\atomic\css\blueprint\plugins\link-icons\icons\index.html" />
+    <Content Include="templates\atomic\css\blueprint\plugins\link-icons\icons\pdf.png" />
+    <Content Include="templates\atomic\css\blueprint\plugins\link-icons\icons\visited.png" />
+    <Content Include="templates\atomic\css\blueprint\plugins\link-icons\icons\xls.png" />
+    <Content Include="templates\atomic\css\blueprint\plugins\link-icons\index.html" />
+    <Content Include="templates\atomic\css\blueprint\plugins\link-icons\readme.txt" />
+    <Content Include="templates\atomic\css\blueprint\plugins\link-icons\screen.css" />
+    <Content Include="templates\atomic\css\blueprint\plugins\liquidgrid\index.html" />
+    <Content Include="templates\atomic\css\blueprint\plugins\liquidgrid\liquid.css" />
+    <Content Include="templates\atomic\css\blueprint\plugins\rtl\index.html" />
+    <Content Include="templates\atomic\css\blueprint\plugins\rtl\readme.txt" />
+    <Content Include="templates\atomic\css\blueprint\plugins\rtl\screen.css" />
+    <Content Include="templates\atomic\css\blueprint\plugins\silksprite\index.html" />
+    <Content Include="templates\atomic\css\blueprint\plugins\silksprite\README.txt" />
+    <Content Include="templates\atomic\css\blueprint\plugins\silksprite\sprite.css" />
+    <Content Include="templates\atomic\css\blueprint\plugins\silksprite\sprites.png" />
+    <Content Include="templates\atomic\css\blueprint\plugins\silksprite\test.htm" />
+    <Content Include="templates\atomic\css\blueprint\plugins\tabs\AUTHORS.txt" />
+    <Content Include="templates\atomic\css\blueprint\plugins\tabs\index.html" />
+    <Content Include="templates\atomic\css\blueprint\plugins\tabs\README.txt" />
+    <Content Include="templates\atomic\css\blueprint\plugins\tabs\screen.css" />
+    <Content Include="templates\atomic\css\blueprint\print.css" />
+    <Content Include="templates\atomic\css\blueprint\screen.css" />
+    <Content Include="templates\atomic\css\blueprint\src\AUTHORS.txt" />
+    <Content Include="templates\atomic\css\blueprint\src\CHANGELOG.txt" />
+    <Content Include="templates\atomic\css\blueprint\src\forms.css" />
+    <Content Include="templates\atomic\css\blueprint\src\grid.css" />
+    <Content Include="templates\atomic\css\blueprint\src\grid.png" />
+    <Content Include="templates\atomic\css\blueprint\src\ie.css" />
+    <Content Include="templates\atomic\css\blueprint\src\index.html" />
+    <Content Include="templates\atomic\css\blueprint\src\LICENSE.txt" />
+    <Content Include="templates\atomic\css\blueprint\src\print.css" />
+    <Content Include="templates\atomic\css\blueprint\src\README.txt" />
+    <Content Include="templates\atomic\css\blueprint\src\reset.css" />
+    <Content Include="templates\atomic\css\blueprint\src\RESOURCES.txt" />
+    <Content Include="templates\atomic\css\blueprint\src\TUTORIAL.txt" />
+    <Content Include="templates\atomic\css\blueprint\src\typography.css" />
+    <Content Include="templates\atomic\css\index.html" />
+    <Content Include="templates\atomic\css\template.css" />
+    <Content Include="templates\atomic\css\template_ie.css" />
+    <Content Include="templates\atomic\css\template_rtl.css" />
+    <Content Include="templates\atomic\favicon.ico" />
+    <Content Include="templates\atomic\html\index.html" />
+    <Content Include="templates\atomic\html\mod_custom\index.html" />
+    <Content Include="templates\atomic\html\mod_login\index.html" />
+    <Content Include="templates\atomic\html\mod_menu\index.html" />
+    <Content Include="templates\atomic\html\mod_search\index.html" />
+    <Content Include="templates\atomic\images\index.html" />
+    <Content Include="templates\atomic\index.html" />
+    <Content Include="templates\atomic\js\index.html" />
+    <Content Include="templates\atomic\js\template.js" />
+    <Content Include="templates\atomic\language\en-GB\index.html" />
+    <Content Include="templates\atomic\language\index.html" />
+    <Content Include="templates\atomic\templateDetails.xml" />
+    <Content Include="templates\atomic\template_preview.png" />
+    <Content Include="templates\atomic\template_thumbnail.png" />
+    <Content Include="templates\beez5\css\beez5.css" />
+    <Content Include="templates\beez5\css\beez5_konqueror.css" />
+    <Content Include="templates\beez5\css\beez5_mozilla.css" />
+    <Content Include="templates\beez5\css\beez5_opera.css" />
+    <Content Include="templates\beez5\css\general.css" />
+    <Content Include="templates\beez5\css\general_konqueror.css" />
+    <Content Include="templates\beez5\css\general_mozilla.css" />
+    <Content Include="templates\beez5\css\general_opera.css" />
+    <Content Include="templates\beez5\css\ie7only.css" />
+    <Content Include="templates\beez5\css\ieonly.css" />
+    <Content Include="templates\beez5\css\index.html" />
+    <Content Include="templates\beez5\css\layout.css" />
+    <Content Include="templates\beez5\css\position.css" />
+    <Content Include="templates\beez5\css\print.css" />
+    <Content Include="templates\beez5\css\template.css" />
+    <Content Include="templates\beez5\css\template_rtl.css" />
+    <Content Include="templates\beez5\favicon.ico" />
+    <Content Include="templates\beez5\fonts\index.html" />
+    <Content Include="templates\beez5\html\com_contact\contact\index.html" />
+    <Content Include="templates\beez5\html\com_contact\index.html" />
+    <Content Include="templates\beez5\html\com_content\archive\index.html" />
+    <Content Include="templates\beez5\html\com_content\article\index.html" />
+    <Content Include="templates\beez5\html\com_content\categories\index.html" />
+    <Content Include="templates\beez5\html\com_content\category\index.html" />
+    <Content Include="templates\beez5\html\com_content\featured\index.html" />
+    <Content Include="templates\beez5\html\com_content\index.html" />
+    <Content Include="templates\beez5\html\index.html" />
+    <Content Include="templates\beez5\images\arrow.png" />
+    <Content Include="templates\beez5\images\arrow1.gif" />
+    <Content Include="templates\beez5\images\arrow1_rtl.gif" />
+    <Content Include="templates\beez5\images\arrow2.gif" />
+    <Content Include="templates\beez5\images\arrow2_grey.png" />
+    <Content Include="templates\beez5\images\arrow_nav.gif" />
+    <Content Include="templates\beez5\images\arrow_small.png" />
+    <Content Include="templates\beez5\images\arrow_small_rtl.png" />
+    <Content Include="templates\beez5\images\arrow_white_grey.png" />
+    <Content Include="templates\beez5\images\blog_more.gif" />
+    <Content Include="templates\beez5\images\box.png" />
+    <Content Include="templates\beez5\images\box1.png" />
+    <Content Include="templates\beez5\images\close.png" />
+    <Content Include="templates\beez5\images\content_bg.gif" />
+    <Content Include="templates\beez5\images\footer.jpg" />
+    <Content Include="templates\beez5\images\fruits.jpg" />
+    <Content Include="templates\beez5\images\header_outer.jpg" />
+    <Content Include="templates\beez5\images\index.html" />
+    <Content Include="templates\beez5\images\karo.gif" />
+    <Content Include="templates\beez5\images\level4.png" />
+    <Content Include="templates\beez5\images\minus.png" />
+    <Content Include="templates\beez5\images\nav_level1_a.gif" />
+    <Content Include="templates\beez5\images\nav_level_1.gif" />
+    <Content Include="templates\beez5\images\news.gif" />
+    <Content Include="templates\beez5\images\plus.png" />
+    <Content Include="templates\beez5\images\req.png" />
+    <Content Include="templates\beez5\images\searchbutton.png" />
+    <Content Include="templates\beez5\images\slider_minus.png" />
+    <Content Include="templates\beez5\images\slider_minus_rtl.png" />
+    <Content Include="templates\beez5\images\slider_plus.png" />
+    <Content Include="templates\beez5\images\slider_plus_rtl.png" />
+    <Content Include="templates\beez5\images\system\arrow.png" />
+    <Content Include="templates\beez5\images\system\arrow_rtl.png" />
+    <Content Include="templates\beez5\images\system\index.html" />
+    <Content Include="templates\beez5\images\system\notice-alert.png" />
+    <Content Include="templates\beez5\images\system\notice-alert_rtl.png" />
+    <Content Include="templates\beez5\images\system\notice-info.png" />
+    <Content Include="templates\beez5\images\system\notice-info_rtl.png" />
+    <Content Include="templates\beez5\images\system\notice-note.png" />
+    <Content Include="templates\beez5\images\system\notice-note_rtl.png" />
+    <Content Include="templates\beez5\images\table_footer.gif" />
+    <Content Include="templates\beez5\images\tabs_back.png" />
+    <Content Include="templates\beez5\index.html" />
+    <Content Include="templates\beez5\javascript\hide.js" />
+    <Content Include="templates\beez5\javascript\html5.js" />
+    <Content Include="templates\beez5\javascript\index.html" />
+    <Content Include="templates\beez5\javascript\md_stylechanger.js" />
+    <Content Include="templates\beez5\language\en-GB\index.html" />
+    <Content Include="templates\beez5\language\index.html" />
+    <Content Include="templates\beez5\templateDetails.xml" />
+    <Content Include="templates\beez5\template_preview.png" />
+    <Content Include="templates\beez5\template_thumbnail.png" />
+    <Content Include="templates\beez_20\css\black.css" />
+    <Content Include="templates\beez_20\css\general.css" />
+    <Content Include="templates\beez_20\css\general_konqueror.css" />
+    <Content Include="templates\beez_20\css\general_mozilla.css" />
+    <Content Include="templates\beez_20\css\general_opera.css" />
+    <Content Include="templates\beez_20\css\ie7only.css" />
+    <Content Include="templates\beez_20\css\ieonly.css" />
+    <Content Include="templates\beez_20\css\index.html" />
+    <Content Include="templates\beez_20\css\layout.css" />
+    <Content Include="templates\beez_20\css\nature.css" />
+    <Content Include="templates\beez_20\css\nature_rtl.css" />
+    <Content Include="templates\beez_20\css\personal.css" />
+    <Content Include="templates\beez_20\css\personal_rtl.css" />
+    <Content Include="templates\beez_20\css\position.css" />
+    <Content Include="templates\beez_20\css\print.css" />
+    <Content Include="templates\beez_20\css\template.css" />
+    <Content Include="templates\beez_20\css\template_rtl.css" />
+    <Content Include="templates\beez_20\favicon.ico" />
+    <Content Include="templates\beez_20\fonts\index.html" />
+    <Content Include="templates\beez_20\html\index.html" />
+    <Content Include="templates\beez_20\images\all_bg.gif" />
+    <Content Include="templates\beez_20\images\arrow.png" />
+    <Content Include="templates\beez_20\images\arrow2_grey.png" />
+    <Content Include="templates\beez_20\images\arrow_white_grey.png" />
+    <Content Include="templates\beez_20\images\blog_more.gif" />
+    <Content Include="templates\beez_20\images\blog_more_hover.gif" />
+    <Content Include="templates\beez_20\images\close.png" />
+    <Content Include="templates\beez_20\images\content_bg.gif" />
+    <Content Include="templates\beez_20\images\footer_bg.gif" />
+    <Content Include="templates\beez_20\images\footer_bg.png" />
+    <Content Include="templates\beez_20\images\header-bg.gif" />
+    <Content Include="templates\beez_20\images\index.html" />
+    <Content Include="templates\beez_20\images\minus.png" />
+    <Content Include="templates\beez_20\images\nature\arrow1.gif" />
+    <Content Include="templates\beez_20\images\nature\arrow1_rtl.gif" />
+    <Content Include="templates\beez_20\images\nature\arrow2.gif" />
+    <Content Include="templates\beez_20\images\nature\arrow2_grey.png" />
+    <Content Include="templates\beez_20\images\nature\arrow2_rtl.gif" />
+    <Content Include="templates\beez_20\images\nature\arrow_nav.gif" />
+    <Content Include="templates\beez_20\images\nature\arrow_small.png" />
+    <Content Include="templates\beez_20\images\nature\arrow_small_rtl.png" />
+    <Content Include="templates\beez_20\images\nature\bar.jpg" />
+    <Content Include="templates\beez_20\images\nature\blog_more.gif" />
+    <Content Include="templates\beez_20\images\nature\box.png" />
+    <Content Include="templates\beez_20\images\nature\box1.png" />
+    <Content Include="templates\beez_20\images\nature\grey_bg.png" />
+    <Content Include="templates\beez_20\images\nature\h3_js_bg.gif" />
+    <Content Include="templates\beez_20\images\nature\header.jpg" />
+    <Content Include="templates\beez_20\images\nature\header.png" />
+    <Content Include="templates\beez_20\images\nature\header_outer.gif" />
+    <Content Include="templates\beez_20\images\nature\headingback.png" />
+    <Content Include="templates\beez_20\images\nature\index.html" />
+    <Content Include="templates\beez_20\images\nature\karo.gif" />
+    <Content Include="templates\beez_20\images\nature\koala.png" />
+    <Content Include="templates\beez_20\images\nature\level4.png" />
+    <Content Include="templates\beez_20\images\nature\navhoriz.png" />
+    <Content Include="templates\beez_20\images\nature\nav_level1_a.gif" />
+    <Content Include="templates\beez_20\images\nature\nav_level_1.gif" />
+    <Content Include="templates\beez_20\images\nature\pfeil.gif" />
+    <Content Include="templates\beez_20\images\nature\readmore_arrow.png" />
+    <Content Include="templates\beez_20\images\nature\searchbutton.png" />
+    <Content Include="templates\beez_20\images\nature\tabs.gif" />
+    <Content Include="templates\beez_20\images\nav_level_1.gif" />
+    <Content Include="templates\beez_20\images\news.gif" />
+    <Content Include="templates\beez_20\images\personal\arrow2_grey.jpg" />
+    <Content Include="templates\beez_20\images\personal\arrow2_grey.png" />
+    <Content Include="templates\beez_20\images\personal\bg2.png" />
+    <Content Include="templates\beez_20\images\personal\button.png" />
+    <Content Include="templates\beez_20\images\personal\dot.png" />
+    <Content Include="templates\beez_20\images\personal\ecke.gif" />
+    <Content Include="templates\beez_20\images\personal\footer.jpg" />
+    <Content Include="templates\beez_20\images\personal\grey_bg.png" />
+    <Content Include="templates\beez_20\images\personal\index.html" />
+    <Content Include="templates\beez_20\images\personal\navi_active.png" />
+    <Content Include="templates\beez_20\images\personal\personal2.png" />
+    <Content Include="templates\beez_20\images\personal\readmore_arrow.png" />
+    <Content Include="templates\beez_20\images\personal\readmore_arrow_hover.png" />
+    <Content Include="templates\beez_20\images\personal\tabs_back.png" />
+    <Content Include="templates\beez_20\images\plus.png" />
+    <Content Include="templates\beez_20\images\req.png" />
+    <Content Include="templates\beez_20\images\slider_minus.png" />
+    <Content Include="templates\beez_20\images\slider_minus_rtl.png" />
+    <Content Include="templates\beez_20\images\slider_plus.png" />
+    <Content Include="templates\beez_20\images\slider_plus_rtl.png" />
+    <Content Include="templates\beez_20\images\system\arrow.png" />
+    <Content Include="templates\beez_20\images\system\arrow_rtl.png" />
+    <Content Include="templates\beez_20\images\system\calendar.png" />
+    <Content Include="templates\beez_20\images\system\index.html" />
+    <Content Include="templates\beez_20\images\system\j_button2_blank.png" />
+    <Content Include="templates\beez_20\images\system\j_button2_image.png" />
+    <Content Include="templates\beez_20\images\system\j_button2_left.png" />
+    <Content Include="templates\beez_20\images\system\j_button2_pagebreak.png" />
+    <Content Include="templates\beez_20\images\system\j_button2_readmore.png" />
+    <Content Include="templates\beez_20\images\system\notice-alert.png" />
+    <Content Include="templates\beez_20\images\system\notice-alert_rtl.png" />
+    <Content Include="templates\beez_20\images\system\notice-info.png" />
+    <Content Include="templates\beez_20\images\system\notice-info_rtl.png" />
+    <Content Include="templates\beez_20\images\system\notice-note.png" />
+    <Content Include="templates\beez_20\images\system\notice-note_rtl.png" />
+    <Content Include="templates\beez_20\images\system\selector-arrow.png" />
+    <Content Include="templates\beez_20\images\table_footer.gif" />
+    <Content Include="templates\beez_20\images\trans.gif" />
+    <Content Include="templates\beez_20\index.html" />
+    <Content Include="templates\beez_20\javascript\hide.js" />
+    <Content Include="templates\beez_20\javascript\index.html" />
+    <Content Include="templates\beez_20\javascript\md_stylechanger.js" />
+    <Content Include="templates\beez_20\language\en-GB\index.html" />
+    <Content Include="templates\beez_20\language\index.html" />
+    <Content Include="templates\beez_20\templateDetails.xml" />
+    <Content Include="templates\beez_20\template_preview.png" />
+    <Content Include="templates\beez_20\template_thumbnail.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\css\editor.css" />
+    <Content Include="templates\equipfitnesstheme-black-blue\css\template.css" />
+    <Content Include="templates\equipfitnesstheme-black-blue\favicon.ico" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\arrow-list.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\arrow.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\block-close.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\block-open.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\blog-calendar.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\calendar.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\camera.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\chart.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\check-ul.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\check.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\clip.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\clipboard.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\clock-ul.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\clock.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\container-bg.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\cross.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\dark-steel.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\date-ul.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\davidstar.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\diamond.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\document.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\error.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\events-clock.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\exclamation-red.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\female.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\heart.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\index_01.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\index_02.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\index_03.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\index_04.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\index_05.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\index_06.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\index_07.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\index_08.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\index_09.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\index_10.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\index_11.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\info1.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\info2.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\intro-bg.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\key.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\mail.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\maindiv-bg.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\male.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\menu-hover.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\message.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\minus.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\moonstar.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\note.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\notebooks.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\phone.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\photo.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\pin.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\plus.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\pushpin.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\ribbon.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\showcase2-1-bg.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\showcase2-2-bg.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\showcase2-3-bg.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\speech.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\star-ul.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\star.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\stopwatch.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\tag-label-black.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\tag.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\tip.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\tool.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\images\white_carbon.png" />
+    <Content Include="templates\equipfitnesstheme-black-blue\templateDetails.xml" />
+    <Content Include="templates\equipfitnesstheme-black-green\css\editor.css" />
+    <Content Include="templates\equipfitnesstheme-black-green\css\template.css" />
+    <Content Include="templates\equipfitnesstheme-black-green\favicon.ico" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\arrow-list.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\arrow.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\block-close.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\block-open.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\blog-calendar.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\calendar.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\camera.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\chart.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\check-ul.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\check.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\clip.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\clipboard.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\clock-ul.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\clock.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\container-bg.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\cross.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\date-ul.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\davidstar.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\diamond.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\document.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\error.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\events-clock.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\exclamation-red.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\female.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\heart.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\index_01.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\index_02.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\index_03.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\index_04.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\index_05.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\index_06.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\index_07.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\index_08.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\index_09.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\index_10.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\index_11.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\info1.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\info2.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\intro-bg.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\key.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\mail.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\maindiv-bg.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\male.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\menu-hover.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\message.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\minus.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\moonstar.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\note.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\notebooks.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\phone.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\photo.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\pin.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\plus.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\pushpin.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\ribbon.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\showcase2-1-bg.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\showcase2-2-bg.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\showcase2-3-bg.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\speech.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\star-ul.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\star.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\stopwatch.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\tag-label-black.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\tag.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\tip.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\tool.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\images\white_carbon.png" />
+    <Content Include="templates\equipfitnesstheme-black-green\templateDetails.xml" />
+    <Content Include="templates\equipfitnesstheme-black-orange\css\editor.css" />
+    <Content Include="templates\equipfitnesstheme-black-orange\css\template.css" />
+    <Content Include="templates\equipfitnesstheme-black-orange\favicon.ico" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\arrow-list.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\arrow.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\block-close.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\block-open.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\blog-calendar.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\calendar.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\camera.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\chart.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\check-ul.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\check.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\clip.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\clipboard.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\clock-ul.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\clock.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\container-bg.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\cross.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\date-ul.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\davidstar.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\diamond.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\document.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\error.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\events-clock.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\exclamation-red.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\female.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\heart.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\index_01.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\index_02.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\index_03.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\index_04.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\index_05.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\index_06.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\index_07.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\index_08.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\index_09.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\index_10.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\index_11.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\info1.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\info2.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\intro-bg.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\key.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\mail.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\maindiv-bg.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\male.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\menu-hover.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\message.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\minus.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\moonstar.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\note.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\notebooks.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\phone.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\photo.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\pin.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\plus.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\pushpin.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\ribbon.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\showcase2-1-bg.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\showcase2-2-bg.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\showcase2-3-bg.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\speech.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\star-ul.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\star.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\stopwatch.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\tag-label-black.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\tag.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\tip.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\tool.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\images\white_carbon.png" />
+    <Content Include="templates\equipfitnesstheme-black-orange\templateDetails.xml" />
+    <Content Include="templates\equipfitnesstheme-black-pink\css\editor.css" />
+    <Content Include="templates\equipfitnesstheme-black-pink\css\template.css" />
+    <Content Include="templates\equipfitnesstheme-black-pink\favicon.ico" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\arrow-list.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\arrow.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\block-close.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\block-open.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\blog-calendar.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\calendar.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\camera.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\chart.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\check-ul.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\check.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\clip.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\clipboard.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\clock-ul.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\clock.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\container-bg.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\cross.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\dark-steel.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\date-ul.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\davidstar.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\diamond.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\document.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\error.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\events-clock.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\exclamation-red.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\female.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\heart.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\index_01.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\index_02.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\index_03.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\index_04.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\index_05.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\index_06.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\index_07.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\index_08.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\index_09.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\index_10.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\index_11.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\info1.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\info2.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\intro-bg.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\key.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\mail.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\maindiv-bg.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\male.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\menu-hover.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\message.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\minus.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\moonstar.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\note.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\notebooks.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\phone.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\photo.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\pin.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\plus.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\pushpin.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\ribbon.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\showcase2-1-bg.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\showcase2-2-bg.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\showcase2-3-bg.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\speech.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\star-ul.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\star.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\stopwatch.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\tag-label-black.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\tag.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\tip.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\tool.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\images\white_carbon.png" />
+    <Content Include="templates\equipfitnesstheme-black-pink\templateDetails.xml" />
+    <Content Include="templates\equipfitnesstheme-black-purple\css\editor.css" />
+    <Content Include="templates\equipfitnesstheme-black-purple\css\template.css" />
+    <Content Include="templates\equipfitnesstheme-black-purple\favicon.ico" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\arrow-list.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\arrow.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\block-close.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\block-open.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\blog-calendar.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\calendar.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\camera.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\chart.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\check-ul.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\check.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\clip.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\clipboard.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\clock-ul.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\clock.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\container-bg.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\cross.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\date-ul.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\davidstar.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\diamond.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\document.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\error.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\events-clock.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\exclamation-red.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\female.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\heart.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\index_01.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\index_02.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\index_03.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\index_04.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\index_05.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\index_06.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\index_07.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\index_08.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\index_09.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\index_10.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\index_11.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\info1.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\info2.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\intro-bg.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\key.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\mail.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\maindiv-bg.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\male.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\menu-hover.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\message.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\minus.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\moonstar.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\note.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\notebooks.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\phone.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\photo.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\pin.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\plus.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\pushpin.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\ribbon.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\showcase2-1-bg.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\showcase2-2-bg.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\showcase2-3-bg.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\speech.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\star-ul.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\star.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\stopwatch.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\tag-label-black.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\tag.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\tip.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\tool.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\images\white_carbon.png" />
+    <Content Include="templates\equipfitnesstheme-black-purple\templateDetails.xml" />
+    <Content Include="templates\equipfitnesstheme-black-red\css\editor.css" />
+    <Content Include="templates\equipfitnesstheme-black-red\css\template.css" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\arrow-list.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\arrow.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\block-close.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\block-open.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\blog-calendar.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\calendar.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\camera.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\chart.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\check-ul.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\check.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\clip.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\clipboard.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\clock-ul.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\clock.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\container-bg.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\cross.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\date-ul.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\davidstar.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\diamond.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\document.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\error.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\events-clock.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\exclamation-red.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\female.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\heart.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\index_01.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\index_02.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\index_03.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\index_04.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\index_05.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\index_06.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\index_07.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\index_08.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\index_09.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\index_10.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\index_11.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\info1.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\info2.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\intro-bg.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\key.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\mail.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\maindiv-bg.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\male.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\menu-hover.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\message.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\minus.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\moonstar.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\note.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\notebooks.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\phone.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\photo.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\pin.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\plus.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\pushpin.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\ribbon.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\speech.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\star-ul.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\star.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\stopwatch.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\tag-label-black.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\tag.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\tip.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\tool.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\images\white_carbon.png" />
+    <Content Include="templates\equipfitnesstheme-black-red\templateDetails.xml" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\css\editor.css" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\css\template.css" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\favicon.ico" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\arrow-list.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\arrow.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\block-close.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\block-open.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\blog-calendar.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\calendar.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\camera.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\chart.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\check-ul.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\check.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\clip.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\clipboard.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\clock-ul.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\clock.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\container-bg.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\cross.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\date-ul.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\davidstar.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\diamond.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\document.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\error.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\events-clock.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\exclamation-red.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\female.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\heart.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\index_01.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\index_02.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\index_03.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\index_04.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\index_05.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\index_06.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\index_07.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\index_08.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\index_09.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\index_10.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\index_11.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\info1.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\info2.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\intro-bg.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\key.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\mail.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\maindiv-bg.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\male.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\menu-hover.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\message.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\minus.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\moonstar.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\note.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\notebooks.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\phone.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\photo.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\pin.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\plus.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\pushpin.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\ribbon.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\showcase2-1-bg.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\showcase2-2-bg.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\showcase2-3-bg.jpg" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\speech.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\star-ul.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\star.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\stopwatch.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\tag-label-black.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\tag.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\tip.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\tool.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\images\white_carbon.png" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\templateDetails.xml" />
+    <Content Include="templates\index.html" />
+    <Content Include="templates\system\css\editor.css" />
+    <Content Include="templates\system\css\error.css" />
+    <Content Include="templates\system\css\error_rtl.css" />
+    <Content Include="templates\system\css\general.css" />
+    <Content Include="templates\system\css\index.html" />
+    <Content Include="templates\system\css\offline.css" />
+    <Content Include="templates\system\css\offline_rtl.css" />
+    <Content Include="templates\system\css\system.css" />
+    <Content Include="templates\system\css\toolbar.css" />
+    <Content Include="templates\system\html\index.html" />
+    <Content Include="templates\system\images\calendar.png" />
+    <Content Include="templates\system\images\index.html" />
+    <Content Include="templates\system\images\j_button2_blank.png" />
+    <Content Include="templates\system\images\j_button2_image.png" />
+    <Content Include="templates\system\images\j_button2_left.png" />
+    <Content Include="templates\system\images\j_button2_pagebreak.png" />
+    <Content Include="templates\system\images\j_button2_readmore.png" />
+    <Content Include="templates\system\images\j_button2_right.png" />
+    <Content Include="templates\system\images\selector-arrow.png" />
+    <Content Include="templates\system\index.html" />
+    <Content Include="templates\_system\css\general.css" />
+    <Content Include="templates\_system\images\calendar.png" />
+    <Content Include="templates\_system\images\j_button2_blank.png" />
+    <Content Include="templates\_system\images\j_button2_image.png" />
+    <Content Include="templates\_system\images\j_button2_left.png" />
+    <Content Include="templates\_system\images\j_button2_pagebreak.png" />
+    <Content Include="templates\_system\images\j_button2_readmore.png" />
+    <Content Include="templates\_system\images\j_button2_right.png" />
+    <Content Include="templates\_system\images\selector-arrow.png" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Schedule\AddEvent.cshtml" />
+    <Content Include="Views\Schedule\Details.cshtml" />
+    <Content Include="Views\Contact\Directions.cshtml" />
+    <Content Include="Views\Specialties\PrivateLessons.cshtml" />
+    <Content Include="Service References\Application Insights\ConnectedService.json" />
+    <Content Include="Views\Home\Video.cshtml" />
+    <Content Include="Views\Events\Index.cshtml" />
+    <Content Include="Views\Schedule\Calendar.cshtml" />
+    <Content Include="Views\Schedule\Index_Original.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\gallery\New folder\" />
+    <Folder Include="Views\Systems\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\About\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Services\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Contact\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Portfolio\OneColumn.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Portfolio\TwoColumn.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Portfolio\ThreeColumn.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Portfolio\FourColumn.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Blog\Home1.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Blog\Post.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Other\FullWidth.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Other\SideBar.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\FourColumn1.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="templates\atomic\component.php" />
+    <Content Include="templates\atomic\error.php" />
+    <Content Include="templates\atomic\html\modules.php" />
+    <Content Include="templates\atomic\html\mod_custom\default.php" />
+    <Content Include="templates\atomic\html\mod_login\default.php" />
+    <Content Include="templates\atomic\html\mod_menu\default.php" />
+    <Content Include="templates\atomic\html\mod_search\default.php" />
+    <Content Include="templates\atomic\index.php" />
+    <Content Include="templates\atomic\language\en-GB\en-GB.tpl_atomic.ini" />
+    <Content Include="templates\atomic\language\en-GB\en-GB.tpl_atomic.sys.ini" />
+    <Content Include="templates\beez5\component.php" />
+    <Content Include="templates\beez5\error.php" />
+    <Content Include="templates\beez5\fonts\TitilliumMaps29L002.eot" />
+    <Content Include="templates\beez5\fonts\TitilliumMaps29L002.otf" />
+    <Content Include="templates\beez5\fonts\TitilliumMaps29L002.woff" />
+    <Content Include="templates\beez5\html\com_contact\contact\encyclopedia.php" />
+    <Content Include="templates\beez5\html\com_content\archive\default.php" />
+    <Content Include="templates\beez5\html\com_content\archive\default_items.php" />
+    <Content Include="templates\beez5\html\com_content\article\default.php" />
+    <Content Include="templates\beez5\html\com_content\categories\default.php" />
+    <Content Include="templates\beez5\html\com_content\category\blog.php" />
+    <Content Include="templates\beez5\html\com_content\category\blog_children.php" />
+    <Content Include="templates\beez5\html\com_content\category\blog_item.php" />
+    <Content Include="templates\beez5\html\com_content\category\blog_links.php" />
+    <Content Include="templates\beez5\html\com_content\category\default.php" />
+    <Content Include="templates\beez5\html\com_content\category\default_articles.php" />
+    <Content Include="templates\beez5\html\com_content\category\default_children.php" />
+    <Content Include="templates\beez5\html\com_content\featured\default.php" />
+    <Content Include="templates\beez5\html\com_content\featured\default_item.php" />
+    <Content Include="templates\beez5\html\com_content\featured\default_links.php" />
+    <Content Include="templates\beez5\html\modules.php" />
+    <Content Include="templates\beez5\index.php" />
+    <Content Include="templates\beez5\language\en-GB\en-GB.tpl_beez5.ini" />
+    <Content Include="templates\beez5\language\en-GB\en-GB.tpl_beez5.sys.ini" />
+    <Content Include="templates\beez_20\component.php" />
+    <Content Include="templates\beez_20\error.php" />
+    <Content Include="templates\beez_20\fonts\TitilliumMaps29L002.eot" />
+    <Content Include="templates\beez_20\fonts\TitilliumMaps29L002.otf" />
+    <Content Include="templates\beez_20\fonts\TitilliumMaps29L002.woff" />
+    <Content Include="templates\beez_20\html\modules.php" />
+    <Content Include="templates\beez_20\index.php" />
+    <Content Include="templates\beez_20\language\en-GB\en-GB.tpl_beez_20.ini" />
+    <Content Include="templates\beez_20\language\en-GB\en-GB.tpl_beez_20.sys.ini" />
+    <Content Include="templates\equipfitnesstheme-black-blue\index.php" />
+    <Content Include="templates\equipfitnesstheme-black-blue\snippets\bottom.php" />
+    <Content Include="templates\equipfitnesstheme-black-blue\snippets\feature.php" />
+    <Content Include="templates\equipfitnesstheme-black-blue\snippets\footer.php" />
+    <Content Include="templates\equipfitnesstheme-black-blue\snippets\mainbottom.php" />
+    <Content Include="templates\equipfitnesstheme-black-blue\snippets\maintop.php" />
+    <Content Include="templates\equipfitnesstheme-black-blue\snippets\spotlight.php" />
+    <Content Include="templates\equipfitnesstheme-black-blue\snippets\utility.php" />
+    <Content Include="templates\equipfitnesstheme-black-green\index.php" />
+    <Content Include="templates\equipfitnesstheme-black-green\snippets\bottom.php" />
+    <Content Include="templates\equipfitnesstheme-black-green\snippets\feature.php" />
+    <Content Include="templates\equipfitnesstheme-black-green\snippets\footer.php" />
+    <Content Include="templates\equipfitnesstheme-black-green\snippets\mainbottom.php" />
+    <Content Include="templates\equipfitnesstheme-black-green\snippets\maintop.php" />
+    <Content Include="templates\equipfitnesstheme-black-green\snippets\spotlight.php" />
+    <Content Include="templates\equipfitnesstheme-black-green\snippets\utility.php" />
+    <Content Include="templates\equipfitnesstheme-black-orange\index.php" />
+    <Content Include="templates\equipfitnesstheme-black-orange\snippets\bottom.php" />
+    <Content Include="templates\equipfitnesstheme-black-orange\snippets\feature.php" />
+    <Content Include="templates\equipfitnesstheme-black-orange\snippets\footer.php" />
+    <Content Include="templates\equipfitnesstheme-black-orange\snippets\mainbottom.php" />
+    <Content Include="templates\equipfitnesstheme-black-orange\snippets\maintop.php" />
+    <Content Include="templates\equipfitnesstheme-black-orange\snippets\spotlight.php" />
+    <Content Include="templates\equipfitnesstheme-black-orange\snippets\utility.php" />
+    <Content Include="templates\equipfitnesstheme-black-pink\index.php" />
+    <Content Include="templates\equipfitnesstheme-black-pink\snippets\bottom.php" />
+    <Content Include="templates\equipfitnesstheme-black-pink\snippets\feature.php" />
+    <Content Include="templates\equipfitnesstheme-black-pink\snippets\footer.php" />
+    <Content Include="templates\equipfitnesstheme-black-pink\snippets\mainbottom.php" />
+    <Content Include="templates\equipfitnesstheme-black-pink\snippets\maintop.php" />
+    <Content Include="templates\equipfitnesstheme-black-pink\snippets\spotlight.php" />
+    <Content Include="templates\equipfitnesstheme-black-pink\snippets\utility.php" />
+    <Content Include="templates\equipfitnesstheme-black-purple\index.php" />
+    <Content Include="templates\equipfitnesstheme-black-purple\snippets\bottom.php" />
+    <Content Include="templates\equipfitnesstheme-black-purple\snippets\feature.php" />
+    <Content Include="templates\equipfitnesstheme-black-purple\snippets\footer.php" />
+    <Content Include="templates\equipfitnesstheme-black-purple\snippets\mainbottom.php" />
+    <Content Include="templates\equipfitnesstheme-black-purple\snippets\maintop.php" />
+    <Content Include="templates\equipfitnesstheme-black-purple\snippets\spotlight.php" />
+    <Content Include="templates\equipfitnesstheme-black-purple\snippets\utility.php" />
+    <Content Include="templates\equipfitnesstheme-black-red\index.php" />
+    <Content Include="templates\equipfitnesstheme-black-red\snippets\bottom.php" />
+    <Content Include="templates\equipfitnesstheme-black-red\snippets\feature.php" />
+    <Content Include="templates\equipfitnesstheme-black-red\snippets\footer.php" />
+    <Content Include="templates\equipfitnesstheme-black-red\snippets\mainbottom.php" />
+    <Content Include="templates\equipfitnesstheme-black-red\snippets\maintop.php" />
+    <Content Include="templates\equipfitnesstheme-black-red\snippets\spotlight.php" />
+    <Content Include="templates\equipfitnesstheme-black-red\snippets\utility.php" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\index.php" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\snippets\bottom.php" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\snippets\feature.php" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\snippets\footer.php" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\snippets\mainbottom.php" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\snippets\maintop.php" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\snippets\spotlight.php" />
+    <Content Include="templates\equipfitnesstheme-black-yellow\snippets\utility.php" />
+    <Content Include="templates\system\component.php" />
+    <Content Include="templates\system\error.php" />
+    <Content Include="templates\system\html\modules.php" />
+    <Content Include="templates\system\index.php" />
+    <Content Include="templates\system\offline.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Classes\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Classes\Hapkido.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Classes\BJJ.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Classes\Kickboxing.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Classes\Judo.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Classes\MuayThai.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Classes\TaiChi.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index2.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\font-awesome-4.6.3\fonts\fontawesome-webfont.eot" />
+    <Content Include="css\font-awesome-4.6.3\fonts\fontawesome-webfont.ttf" />
+    <Content Include="css\font-awesome-4.6.3\fonts\fontawesome-webfont.woff" />
+    <Content Include="css\font-awesome-4.6.3\fonts\fontawesome-webfont.woff2" />
+    <Content Include="css\font-awesome-4.6.3\fonts\FontAwesome.otf" />
+    <Content Include="css\font-awesome-4.6.3\less\animated.less" />
+    <Content Include="css\font-awesome-4.6.3\less\bordered-pulled.less" />
+    <Content Include="css\font-awesome-4.6.3\less\core.less" />
+    <Content Include="css\font-awesome-4.6.3\less\fixed-width.less" />
+    <Content Include="css\font-awesome-4.6.3\less\font-awesome.less" />
+    <Content Include="css\font-awesome-4.6.3\less\icons.less" />
+    <Content Include="css\font-awesome-4.6.3\less\larger.less" />
+    <Content Include="css\font-awesome-4.6.3\less\list.less" />
+    <Content Include="css\font-awesome-4.6.3\less\mixins.less" />
+    <Content Include="css\font-awesome-4.6.3\less\path.less" />
+    <Content Include="css\font-awesome-4.6.3\less\rotated-flipped.less" />
+    <Content Include="css\font-awesome-4.6.3\less\screen-reader.less" />
+    <Content Include="css\font-awesome-4.6.3\less\stacked.less" />
+    <Content Include="css\font-awesome-4.6.3\less\variables.less" />
+    <Content Include="css\font-awesome-4.6.3\scss\font-awesome.scss" />
+    <Content Include="css\font-awesome-4.6.3\scss\_animated.scss" />
+    <Content Include="css\font-awesome-4.6.3\scss\_bordered-pulled.scss" />
+    <Content Include="css\font-awesome-4.6.3\scss\_core.scss" />
+    <Content Include="css\font-awesome-4.6.3\scss\_fixed-width.scss" />
+    <Content Include="css\font-awesome-4.6.3\scss\_icons.scss" />
+    <Content Include="css\font-awesome-4.6.3\scss\_larger.scss" />
+    <Content Include="css\font-awesome-4.6.3\scss\_list.scss" />
+    <Content Include="css\font-awesome-4.6.3\scss\_mixins.scss" />
+    <Content Include="css\font-awesome-4.6.3\scss\_path.scss" />
+    <Content Include="css\font-awesome-4.6.3\scss\_rotated-flipped.scss" />
+    <Content Include="css\font-awesome-4.6.3\scss\_screen-reader.scss" />
+    <Content Include="css\font-awesome-4.6.3\scss\_stacked.scss" />
+    <Content Include="css\font-awesome-4.6.3\scss\_variables.scss" />
+    <None Include="Properties\PublishProfiles\veritema %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\veritema.pubxml" />
+    <Content Include="Views\Schedule\Index.cshtml" />
+    <Content Include="Views\Gallery\Index.cshtml" />
+    <Content Include="Views\Memberships\Index.cshtml" />
+    <Content Include="Views\News\Index.cshtml" />
+    <Content Include="Views\Specialties\Index.cshtml" />
+    <Content Include="Views\Test\Index.cshtml" />
+    <Content Include="unity.config" />
+    <Content Include="Scripts\knockout\knockout-2.2.0.zip" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lib\Veritema.Data.Dapper\Veritema.Data.Dapper.csproj">
+      <Project>{6c584ea4-8c8f-45ae-bb13-0fac80ffb2a2}</Project>
+      <Name>Veritema.Data.Dapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lib\Veritema.Data\Veritema.Data.csproj">
+      <Project>{128AE44A-0ED7-4A21-B92E-2462CA8E9104}</Project>
+      <Name>Veritema.Data</Name>
+    </ProjectReference>
+    <Content Include="Views\Specialties\Seminars.cshtml" />
+    <Content Include="Views\Specialties\ProtectionTraining.cshtml" />
+    <Content Include="Views\Specialties\WeaponsTraining.cshtml" />
+    <Content Include="Views\Specialties\LawEnforcement.cshtml" />
+    <ProjectReference Include="..\Lib\Veritema.Eventing\Veritema.Eventing.csproj">
+      <Project>{8A8F7754-747E-4AC8-8FC0-99C97D81FC4E}</Project>
+      <Name>Veritema.Eventing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lib\Veritema.Notification\Veritema.Notification.csproj">
+      <Project>{CF8A5017-6EF5-41B8-8BA5-958CC14795DF}</Project>
+      <Name>Veritema.Notification</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\AWSSDK.S3.3.3.1\analyzers\dotnet\cs\AWSSDK.S3.CodeAnalysis.dll" />
+    <Analyzer Include="..\packages\AWSSDK.SimpleNotificationService.3.3.0.1\analyzers\dotnet\cs\AWSSDK.SimpleNotificationService.CodeAnalysis.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:58908/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.3" client="site" method="upgrade">
+	<name>Vinaora Slick Slideshow</name>
+	<author>VINAORA</author>
+	<creationDate>March 2012</creationDate>
+	<copyright>Copyright (C) 2010-2012 VINAORA. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>info@vinaora.com</authorEmail>
+	<authorUrl>http://vinaora.com</authorUrl>
+	<version>2.5.3</version>
+	<description>MOD_VINAORA_SLICKSHOW_DESC</description>
+	<files>
+		<filename module="mod_vinaora_slickshow">mod_vinaora_slickshow.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>fields</folder>
+		<folder>helper</folder>
+		<folder>tmpl</folder>
+	</files>
+
+	<media folder="media" destination="mod_vinaora_slickshow">
+		<filename>index.html</filename>
+		<folder>config</folder>
+		<folder>flash</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+	</media>
+
+	<languages>
+		<language tag="en-GB">language/en-GB.mod_vinaora_slickshow.ini</language>
+		<language tag="en-GB">language/en-GB.mod_vinaora_slickshow.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_vinaora_slickshow/fields" >
+			<fieldset name="basic">
+				<field name="config_code" type="lastedit" label="MOD_VINAORA_SLICKSHOW_FIELD_CONFIG_CODE" description="MOD_VINAORA_SLICKSHOW_FIELD_CONFIG_CODE_DESC" default="" size="50" />
+				<field name="config_custom" type="filelist" default="-1" label="MOD_VINAORA_SLICKSHOW_FIELD_CONFIG_CUSTOM" description="MOD_VINAORA_SLICKSHOW_FIELD_CONFIG_CUSTOM_DESC" directory="media/mod_vinaora_slickshow/config/custom" filter="[^\s]+(?i)(\.xml(\.php)?)$" exclude="" stripext="" hide_none="0" hide_default="1" />
+
+				<field type="spacer" label="" description="" hr="true" />
+				<field name="width" type="text" size="50" default="300" label="MOD_VINAORA_SLICKSHOW_FIELD_STAGE_WIDTH" description="MOD_VINAORA_SLICKSHOW_FIELD_STAGE_WIDTH_DESC" />
+				<field name="height" type="text" size="50" default="300" label="MOD_VINAORA_SLICKSHOW_FIELD_STAGE_HEIGHT" description="MOD_VINAORA_SLICKSHOW_FIELD_STAGE_HEIGHT_DESC" />
+				<field name="backgroundColor" type="colorpicker" default="#ffffff" cellwidth="7" cellheight="10" top="20" left="-30" label="MOD_VINAORA_SLICKSHOW_FIELD_BACKGROUND_COLOR" description="MOD_VINAORA_SLICKSHOW_FIELD_BACKGROUND_COLOR_DESC" />
+				<field name="backgroundTransparency" type="integer" first="0" last="100" step="5" default="0" label="MOD_VINAORA_SLICKSHOW_FIELD_BACKGROUND_TRANSPARENCY" description="MOD_VINAORA_SLICKSHOW_FIELD_BACKGROUND_TRANSPARENCY_DESC" />
+
+				<field type="spacer" name="spacer11" class="text" hr="true"/>
+				<field name="border_width" type="text" default="0" label="MOD_VINAORA_SLICKSHOW_FIELD_BORDER_WIDTH" description="MOD_VINAORA_SLICKSHOW_FIELD_BORDER_WIDTH_DESC" />
+				<field name="border_color" type="colorpicker" default="#000000" label="MOD_VINAORA_SLICKSHOW_FIELD_BORDER_COLOR" description="MOD_VINAORA_SLICKSHOW_FIELD_BORDER_COLOR_DESC" />
+				<field name="border_style" type="list" default="solid" label="MOD_VINAORA_SLICKSHOW_FIELD_BORDER_STYLE" description="MOD_VINAORA_SLICKSHOW_FIELD_BORDER_STYLE_DESC">
+					<option value="none">JNONE</option>
+					<option value="dotted">MOD_VINAORA_SLICKSHOW_OPTION_BORDER_STYLE_DOTTED</option>
+					<option value="dashed">MOD_VINAORA_SLICKSHOW_OPTION_BORDER_STYLE_DASHED</option>
+					<option value="solid">MOD_VINAORA_SLICKSHOW_OPTION_BORDER_STYLE_SOLID</option>
+					<option value="double">MOD_VINAORA_SLICKSHOW_OPTION_BORDER_STYLE_DOUBLE</option>
+				</field>
+				<field name="border_rounded" type="radio" default="1" label="MOD_VINAORA_SLICKSHOW_FIELD_BORDER_ROUNDED" description="MOD_VINAORA_SLICKSHOW_FIELD_BORDER_ROUNDED_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="border_shadow" type="radio" default="1" label="MOD_VINAORA_SLICKSHOW_FIELD_BORDER_SHADOW" description="MOD_VINAORA_SLICKSHOW_FIELD_BORDER_SHADOW_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field type="spacer" label="" description="" hr="true" />
+				<field name="barHeight" type="text" size="5" default="35" label="MOD_VINAORA_SLICKSHOW_FIELD_BAR_HEIGHT" description="MOD_VINAORA_SLICKSHOW_FIELD_BAR_HEIGHT_DESC" />
+				<field name="barColor" type="colorpicker" default="#ffffff" cellwidth="7" cellheight="10" top="20" left="-30" label="MOD_VINAORA_SLICKSHOW_FIELD_BAR_COLOR" description="MOD_VINAORA_SLICKSHOW_FIELD_BAR_COLOR_DESC" />
+				<field name="barTransparency" type="integer" first="0" last="100" step="5" default="5" label="MOD_VINAORA_SLICKSHOW_FIELD_BAR_TRANSPARENCY" description="MOD_VINAORA_SLICKSHOW_FIELD_BAR_TRANSPARENCY_DESC" />
+				<field name="controllerTop" type="radio" default="0" label="MOD_VINAORA_SLICKSHOW_FIELD_CONTROLLER_TOP" description="MOD_VINAORA_SLICKSHOW_FIELD_CONTROLLER_TOP_DESC" >
+					<option value="1">MOD_VINAORA_SLICKSHOW_OPTION_TOP</option>
+					<option value="0">MOD_VINAORA_SLICKSHOW_OPTION_BOTTOM</option>
+				</field>
+
+				<field type="spacer" label="" description="" hr="true" />
+				<field name="fadeTransition" type="radio" default="0" label="MOD_VINAORA_SLICKSHOW_FIELD_FADE_TRANSITION" description="MOD_VINAORA_SLICKSHOW_FIELD_FADE_TRANSITION_DESC" >
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="verticalTransition" type="radio" default="1" label="MOD_VINAORA_SLICKSHOW_FIELD_VERTICAL_TRANSITION" description="MOD_VINAORA_SLICKSHOW_FIELD_VERTICAL_TRANSITION_DESC" >
+					<option value="1">MOD_VINAORA_SLICKSHOW_OPTION_HORIZONTAL</option>
+					<option value="0">MOD_VINAORA_SLICKSHOW_OPTION_VERTICAL</option>
+				</field>
+				<field name="transitionSpeed" type="integer" first="0" last="10" step="1" default="1" label="MOD_VINAORA_SLICKSHOW_FIELD_TRANSITION_SPEED" description="MOD_VINAORA_SLICKSHOW_FIELD_TRANSITION_SPEED_DESC" />
+				<field name="slideShowTime" type="integer" first="0" last="20" step="1" default="3" label="MOD_VINAORA_SLICKSHOW_FIELD_SLIDESHOW_TIME" description="MOD_VINAORA_SLICKSHOW_FIELD_SLIDESHOW_TIME_DESC" />
+				<field name="startWith" type="integer" first="1" last="20" step="1" default="1" label="MOD_VINAORA_SLICKSHOW_FIELD_START_WITH" description="MOD_VINAORA_SLICKSHOW_FIELD_START_WITH_DESC" />
+
+				<field type="spacer" label="" description="" hr="true" />
+				<field name="titleX" type="text" size="5" default="0" label="MOD_VINAORA_SLICKSHOW_FIELD_TITLE_X" description="MOD_VINAORA_SLICKSHOW_FIELD_TITLE_X_DESC" />
+				<field name="titleY" type="text" size="5" default="0" label="MOD_VINAORA_SLICKSHOW_FIELD_TITLE_Y" description="MOD_VINAORA_SLICKSHOW_FIELD_TITLE_Y_DESC" />
+
+				<field type="spacer" label="" description="" hr="true" />
+				<field name="item_dir" type="folderlist" default="" label="MOD_VINAORA_SLICKSHOW_FIELD_ITEM_DIR" description="MOD_VINAORA_SLICKSHOW_FIELD_ITEM_DIR_DESC" directory="images/" filter="" exclude="" hide_none="0" hide_default="1" />
+				<field name="item_path" type="textarea" rows="5" cols="30" default="" label="MOD_VINAORA_SLICKSHOW_FIELD_ITEM_PATH" description="MOD_VINAORA_SLICKSHOW_FIELD_ITEM_PATH_DESC" />
+				<field name="item_title" type="textarea" rows="5" cols="30" default="" label="MOD_VINAORA_SLICKSHOW_FIELD_ITEM_TITLE" description="MOD_VINAORA_SLICKSHOW_FIELD_ITEM_TITLE_DESC" />
+				<field name="item_url" type="textarea" rows="5" cols="30" default="" label="MOD_VINAORA_SLICKSHOW_FIELD_ITEM_URL" description="MOD_VINAORA_SLICKSHOW_FIELD_ITEM_URL_DESC" />
+				<field name="item_target" type="textarea" rows="5" cols="30" default="" label="MOD_VINAORA_SLICKSHOW_FIELD_ITEM_TARGET" description="MOD_VINAORA_SLICKSHOW_FIELD_ITEM_TARGET_DESC" />
+				<field name="item_bar_color" type="textarea" rows="5" cols="30" default="" label="MOD_VINAORA_SLICKSHOW_FIELD_ITEM_BAR_COLOR" description="MOD_VINAORA_SLICKSHOW_FIELD_ITEM_BAR_COLOR_DESC" />
+				<field name="item_bar_transparency" type="textarea" cols="30" rows="5" default="" label="MOD_VINAORA_SLICKSHOW_FIELD_ITEM_BAR_TRANSPARENCY" description="MOD_VINAORA_SLICKSHOW_FIELD_ITEM_BAR_TRANSPARENCY_DESC" />
+				<field name="item_slideShowTime" type="textarea" cols="30" rows="5" default="" label="MOD_VINAORA_SLICKSHOW_FIELD_ITEM_SLIDESHOWTIME" description="MOD_VINAORA_SLICKSHOW_FIELD_ITEM_SLIDESHOWTIME_DESC" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field name="moduleclass_sfx" type="text" size="20" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field name="cachemode" type="hidden" default="static">
+					<option value="static"></option>
+				</field>
+
+				<field type="spacer" label="" description="" hr="true" />
+				<field name="swfobject_source" type="list" default="local" label="MOD_VINAORA_SLICKSHOW_FIELD_SWFOBJECT_SOURCE" description="MOD_VINAORA_SLICKSHOW_FIELD_SWFOBJECT_SOURCE_DESC">
+					<option value="local">MOD_VINAORA_SLICKSHOW_OPTION_SWFOBJECT_SOURCE_LOCAL</option>
+					<option value="google">MOD_VINAORA_SLICKSHOW_OPTION_SWFOBJECT_SOURCE_GOOGLE</option>
+					<option value="none">JNONE</option>
+				</field>
+				<field name="swfobject_version" type="folderlist" default="2.2" directory="media/mod_vinaora_slickshow/js/swfobject/" filter="" exclude="" stripext="" hide_none="1" hide_default="1" label="MOD_VINAORA_SLICKSHOW_FIELD_SWFOBJECT_VERSION" description="MOD_VINAORA_SLICKSHOW_FIELD_SWFOBJECT_VERSION_DESC" />
+
+				<field name="flash_wmode" type="list" default="transparent" label="MOD_VINAORA_SLICKSHOW_FIELD_FLASH_WMODE" description="MOD_VINAORA_SLICKSHOW_FIELD_FLASH_WMODE_DESC" >
+					<option value="window">MOD_VINAORA_SLICKSHOW_OPTION_WINDOW</option>
+					<option value="opaque">MOD_VINAORA_SLICKSHOW_OPTION_OPAQUE</option>
+					<option value="transparent">MOD_VINAORA_SLICKSHOW_OPTION_TRANSPARENT</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

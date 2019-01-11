@@ -1,0 +1,34 @@
+﻿<style>
+        .navbar-brand-small {
+            margin-top: -25px;
+            margin-left: 5px;
+            position: absolute;
+            z-index: 100;
+            width: 300px;
+        }
+</style>
+<nav class="navbar  navbar-inverse">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header" style="height: 10px">
+            <a class="navbar-brand-small" href="#">
+                <img alt="Brand" src="~/images/site/equip-joomla-fitness-theme-logo.png"  width="100" height="100"/>
+            </a>
+       </div>
+        <span class="navbar-header-custom" style="margin-left:130px" id="lightBoxTitle"></span>
+          
+    </div><!-- /.container-fluid -->
+</nav>
+ <div id="my_form">
+    <label style="width:100px" for="description">Event Text </label><input type="text" name="eventText" value="" id="eventText"><br>
+   <!-- <label style="width:100px" for="custom1">Event Title </label><input type="text" name="eventTitle" value="" id="eventTitle"><br> -->
+    <label style="width:100px" for="custom2">Start</label><input type="text" name="startTime" value="" id="startTime"><br><br>
+    <label style="width:100px" for="custom2">End</label><input type="text" name="endTime" value="" id="endTime"><br><br>
+    <label style="width:100px" for="custom2">Location</label><input type="text" name="location" value="" id="location"><br><br>
+     <span id="editButtons">
+         <a class="btn btn-success" href="#" onclick="save_form()"><i class="fa fa-floppy-o fa-lg"></i> Save</a>
+         <a class="btn btn-danger" href="#" onclick="delete_event()"><i class="fa fa-trash-o fa-lg"></i> Delete</a>
+     </span>
+    <span class="pull-right"> <a class="btn btn-default" href="#"  onclick="close_form()"><i class="fa fa-trash-o fa-lg"></i> Close</a></span>
+    
+</div>

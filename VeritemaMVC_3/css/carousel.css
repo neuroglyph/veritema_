@@ -1,0 +1,398 @@
+﻿/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-bottom: 40px;
+  color: #5a5a5a;
+}
+
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: auto;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 500px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: auto;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}
+
+/* from template.css*/
+/*MODULE STYLES*/
+#maindivwrap {
+    background-image: url(../images/white_carbon.png);
+    background-repeat: repeat;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+}
+
+.moduletable_logo {margin-top:5px;}
+.moduletable_tagline {font-size:14px; color:#999; margin-top:20px;}
+.moduletable_headinfo {margin-top:18px;}
+.moduletable_headinfo img {margin-left:4px;}
+
+/*QUOTE BOX MODULE STYLING _quotebox*/
+.moduletable_quotebox {background-color:#e7e7e7; border:1px dotted #c2c2c2; padding:0px 20px 0px 20px; text-align:center; font-size:12px; font-style:italic; color:#777777; margin-top:5px;}
+
+/*TOPSPACER MODULE STYLING _topspacer*/
+.moduletable_topspacer {float:right; text-align:right; margin-top:4px; color:#666;}
+.moduletable_topspacer a {color:#333; text-decoration:none;}
+.moduletable_topspacer a:visited {color:#333; text-decoration:none;}
+.moduletable_topspacer a:hover {color:#000; text-decoration:none;}
+
+/*BOTSPACER MODULE STYLING _botspacer*/
+.moduletable_botspacer {float: none; text-align:center; margin-top:30px; color:#666;}
+.moduletable_botspacer a {color:#333; text-decoration:none;}
+.moduletable_botspacer a:visited {color:#333; text-decoration:none;}
+.moduletable_botspacer a:hover {color:#000; text-decoration:none;}
+
+/*BREADCRUMB MODULE STYLING _bread*/
+.moduletable_bread {padding:15px 0px 12px 0px; color:#999; font-size:12px;}
+.moduletable_bread a {color:#777777; text-decoration:none;}
+.moduletable_bread a:visited {color:#777777; text-decoration:none;}
+.moduletable_bread a:hover {color:#555555; text-decoration:none;}
+
+/*SEARCH MODULE POSITIONING _search*/
+.moduletable_search {padding:14px 20px 10px 10px; color:#999; font-size:12px; overflow:hidden; width:180px;}
+.moduletable_search a {color:#777777; text-decoration:none;}
+.moduletable_search a:visited {color:#777777; text-decoration:none;}
+.moduletable_search a:hover {color:#555555; text-decoration:none;}
+
+/*ADDTHIS EXTENSION - UTILITY 2 - MODULE POSITIONING _addthis*/
+.moduletable_addthis {padding:15px 20px 12px 20px; color:#999; font-size:12px; overflow:hidden; float:right; text-align:right;}
+.moduletable_addthis a {color:#777777; text-decoration:none;}
+.moduletable_addthis a:visited {color:#777777; text-decoration:none;}
+.moduletable_addthis a:hover {color:#555555; text-decoration:none;}
+
+/*SPOTLIGHT MODULE STYLING _spotlight*/
+.moduletable_spotlight {padding:15px 20px 15px 20px;}
+.moduletable_spotlight a {color:#5e5e5e; text-decoration:none;}
+.moduletable_spotlight a:visited {color:#5e5e5e; text-decoration:none;}
+.moduletable_spotlight a:hover {color:#212121; text-decoration:none;}
+
+/*BOTTOM MODULE STYLING _bottom*/
+.moduletable_bottom {margin-top:20px; margin-bottom:20px; color:#212121;}
+.moduletable_bottom {color:#343434;}
+.moduletable_bottom a {color:#212121; text-decoration:none;}
+.moduletable_bottom a:visited {color:#212121; text-decoration:none;}
+.moduletable_bottom a:hover {color:#fff; text-decoration:none;}
+
+/*CONTENTTOP MODULE STYLING _contenttop*/
+.moduletable_contenttop h3 {color:#333; margin-top:0px;margin-bottom:15px;}
+.moduletable_contenttop {margin-top:20px; margin-bottom:0px;}
+.moduletable_contenttop a {color:#247daa; text-decoration:none;}
+.moduletable_contenttop a:visited {color:#247daa; text-decoration:none;}
+.moduletable_contenttop a:hover {color:#003366; text-decoration:none;}
+
+/*COPY MODULE STYLING - _copy*/
+.moduletable_copy {color:#666; font-size:11px; padding:17px 20px 13px 20px;}
+.moduletable_copy a {color:#666; text-decoration:none;}
+.moduletable_copy a:visited {color:#999; text-decoration:none;}
+.moduletable_copy a:hover {color:#ccc; text-decoration:none;}
+
+/*INTRO DIV MODULE STYLING _intro*/
+.moduletable_intro h3 {color:#999;}
+.moduletable_intro {color:#ccc; padding:20px;}
+.moduletable_intro a {color:#e7e7e7; text-decoration:none;}
+.moduletable_intro a:visited {color:#e7e7e7; text-decoration:none;}
+.moduletable_intro a:hover {color:#fff; text-decoration:none;}
+
+/*FOOTER DIV MODULE STYLING _footer*/
+.moduletable_footer h3 {margin-top:5px; margin-bottom:18px; color:#ccc; border-left:4px solid #666; padding-left:7px;}
+.moduletable_footer {padding:0px 20px 0px 20px; color:#777777;}
+.moduletable_footer a {color:#999; text-decoration:none;}
+.moduletable_footer a:visited {color:#999; text-decoration:none;}
+.moduletable_footer a:hover {color:#ccc; text-decoration:none;}
+.moduletable_footer img {margin:5px 4px 5px 4px;}
+
+/*FEATURE DIV MODULE STYLING _feature*/
+.moduletable_feature h3 {margin-top:5px; margin-bottom:12px; color:#333;}
+.moduletable_feature {padding:0px 20px 0px 20px; overflow:hidden;}
+.moduletable_feature a {color:#247daa; text-decoration:none;}
+.moduletable_feature a:visited {color:#247daa; text-decoration:none;}
+.moduletable_feature a:hover {color:#003366; text-decoration:none;}
+
+/*MAINTOP DIV MODULE STYLING _maintop*/
+.moduletable_maintop h3 {margin-top:5px; margin-bottom:12px; color:#333;}
+.moduletable_maintop {padding:0px 20px 0px 20px; overflow:hidden;}
+.moduletable_maintop a {color:#247daa; text-decoration:none;}
+.moduletable_maintop a:visited {color:#247daa; text-decoration:none;}
+.moduletable_maintop a:hover {color:#003366; text-decoration:none;}
+
+/*CONTENTBOT DIV MODULE STYLING _contentbot*/
+.moduletable_contentbot h3 {color:#666; margin-top:0px; margin-bottom:15px;}
+.moduletable_contentbot {background-color:#fff; border:1px solid #ccc; padding:20px; color:#666; margin-bottom:20px;}
+.moduletable_contentbot a {color:#247daa; text-decoration:none;}
+.moduletable_contentbot a:visited {color:#247daa; text-decoration:none;}
+.moduletable_contentbot a:hover {color:#003366; text-decoration:none;}
+
+/*SHOWCASE2 DIVS & MODULE STYLING*/
+.moduletable_showcase2 {padding:20px; text-align:right; color:#ccc; font-size:14px;}
+.moduletable_showcase2 a {color:#e7e7e7; text-decoration:none;}
+.moduletable_showcase2 a:visited {color:#e7e7e7; text-decoration:none;}
+.moduletable_showcase2 a:hover {color:#fff; text-decoration:none;}
+
+/*RIGHT MODULE STYLING - REGULAR MODULE _right*/
+.moduletable_right h3 {margin-top:0px; margin-bottom:20px; color:#666; border-left:4px solid #999; padding-left:7px;}
+.moduletable_right {margin-bottom:40px; overflow:hidden;}
+.moduletable_right a {color:#247daa; text-decoration:none;}
+.moduletable_right a:visited {color:#247daa; text-decoration:none;}
+.moduletable_right a:hover {color:#003366; text-decoration:none;}
+
+/*RIGHTEVENTS MODULE STYLING - JEVENTS MODULE _rightevents*/
+.moduletable_rightevents h3 {margin-top:0px; margin-bottom:14px; color:#666; border-left:4px solid #999; padding-left:7px;}
+.moduletable_rightevents {margin-bottom:34px; overflow:hidden;}
+.moduletable_rightevents a {color:#247daa; text-decoration:none;}
+.moduletable_rightevents a:visited {color:#247daa; text-decoration:none;}
+.moduletable_rightevents a:hover {color:#003366; text-decoration:none;}
+
+/*RIGHTLIST UNORDERED LIST MODULE STYLING _rightlist*/
+.moduletable_rightlist h3 {margin-top:0px; margin-bottom:14px; color:#666; border-left:4px solid #999; padding-left:7px;}
+.moduletable_rightlist {margin-bottom:34px; overflow:hidden;}
+.moduletable_rightlist ul li {margin-left:-40px; border-bottom:1px dotted #ccc; padding:6px 0px 6px 12px; list-style:none; background-image:url(../images/arrow-list.png); background-repeat:no-repeat; background-position:center left;}
+.moduletable_rightlist a {color:#888888; text-decoration:none;}
+.moduletable_rightlist a:visited {color:#888888; text-decoration:none;}
+.moduletable_rightlist a:hover {color:#003366; text-decoration:none;}
+
+/*RIGHTROTATE EXTENSION _rightrotate*/
+.moduletable_rightrotate h3 {margin-top:0px; margin-bottom:20px; color:#666; border-left:4px solid #999; padding-left:7px;}
+.moduletable_rightrotate {margin-bottom:40px;}
+.moduletable_rightrotate a {color:#247daa; text-decoration:none;}
+.moduletable_rightrotate a:visited {color:#247daa; text-decoration:none;}
+.moduletable_rightrotate a:hover {color:#003366; text-decoration:none;}
+.moduletable_rightrotate img {border:1px dotted #ccc;}
+
+/*LEFT COLUMN MODULE STYLING - REGULAR - _left*/
+.moduletable_left h3 {margin-top:0px; margin-bottom:20px; color:#666; border-left:4px solid #999; padding-left:7px;}
+.moduletable_left {margin-bottom:40px; overflow:hidden;}
+.moduletable_left a {color:#247daa; text-decoration:none;}
+.moduletable_left a:visited {color:#247daa; text-decoration:none;}
+.moduletable_left a:hover {color:#003366; text-decoration:none;}
+
+/*LEFT UNORDERED LIST MODULE STYLING - _leftlist*/
+.moduletable_leftlist h3 {margin-top:0px; margin-bottom:14px; color:#666; border-left:4px solid #999; padding-left:7px;}
+.moduletable_leftlist {margin-bottom:34px; overflow:hidden;}
+.moduletable_leftlist ul li {margin-left:-40px; border-bottom:1px dotted #ccc; padding:6px 0px 6px 12px; list-style:none; background-image:url(../images/arrow-list.png); background-repeat:no-repeat; background-position:center left;}
+.moduletable_leftlist a {color:#888888; text-decoration:none;}
+.moduletable_leftlist a:visited {color:#888888; text-decoration:none;}
+.moduletable_leftlist a:hover {color:#003366; text-decoration:none;}
+
+/*LEFTEVENTS - JEVENTS MODULE EXTENSION - MODULE STYLING _leftevents*/
+.moduletable_leftevents h3 {margin-top:0px; margin-bottom:14px; color:#666; border-left:4px solid #999; padding-left:7px;}
+.moduletable_leftevents {margin-bottom:34px; overflow:hidden;}
+.moduletable_leftevents a {color:#247daa; text-decoration:none;}
+.moduletable_leftevents a:visited {color:#247daa; text-decoration:none;}
+.moduletable_leftevents a:hover {color:#003366; text-decoration:none;}
+
+/*LEFTROTATE - ROTATING IMAGE EXTENSIONS - _leftrotate*/
+.moduletable_leftrotate h3 {margin-top:0px; margin-bottom:20px; color:#666; border-left:4px solid #999; padding-left:7px;}
+.moduletable_leftrotate {margin-bottom:40px;}
+.moduletable_leftrotate a {color:#660000; text-decoration:none;}
+.moduletable_leftrotate a:visited {color:#660000; text-decoration:none;}
+.moduletable_leftrotate a:hover {color:#990000; text-decoration:none;}
+.moduletable_leftrotate img {border:1px dotted #ccc;}
+
+/*MAINBOTTOM DIVS MODULE STYLING _mainbottom*/
+.moduletable_mainbottom h3 {margin-top:0px; margin-bottom:15px; color:#333;}
+.moduletable_mainbottom {padding:0px 20px 0px 20px;}
+.moduletable_mainbottom a {color:#247daa; text-decoration:none;}
+.moduletable_mainbottom a:visited {color:#247daa; text-decoration:none;}
+.moduletable_mainbottom a:hover {color:#003366; text-decoration:none;}
+.moduletable_mainbottom img {background-color:#fff; padding:5px; border:1px dotted #ccc;}
+
+/*TWEET DISPLAY BACK MODULE*/
+.moduletable_righttweet h3 {margin-top:0px; margin-bottom:12px;}
+.moduletable_righttweet {margin-bottom:20px;}
+.moduletable_righttweet a {color:#247daa; text-decoration:none;}
+.moduletable_righttweet a:visited {color:#247daa; text-decoration:none;}
+.moduletable_righttweet a:hover {color:#003366; text-decoration:none;}
+.TDB-tweet-text {padding-bottom:10px; border-bottom:1px dashed #666; margin-bottom:10px;} 
+
+#showcase {
+    width: 100%;
+	height:390px;
+	text-align:left;
+	background-color:#f7f7f7;
+	background-repeat: no-repeat;
+	background-position:top center;
+}
+
+.showcase2 {font-size:24px; color:#e7e7e7;}
+
+
+#showcase1 {width:75%; float:left; overflow:auto;}
+#showcase2 {width:25%; float:left; overflow:auto;}
+#showcase2-1 {width:100%; height:167px; float:left; background-color:#404040; border-left:2px solid #121212;}
+#showcase2-2 {width:100%; height:166px; float:left; background-color:#303030; border-top:2px solid #121212; border-bottom:2px solid #121212; border-left:2px solid #121212; background-position:top left; background-repeat:no-repeat;}
+#showcase2-3 {width:100%; height:167px; float:left; background-color:#202020; border-left:2px solid #121212; }
+/*TYPOGRAPHY*/
+/*TITLES*/
+.tagline {font-size:24px; color:#999;}
+.title1 {font-size:24px; color:#333; display:inline-block; margin-top:2px;}
+
+.intro {font-size:20px; color:#e7e7e7; margin-bottom:12px; display:inline-block;}  
+.subtitle {font-size:14px; color:#333; font-style:italic; display:inline-block; margin-top:5px; margin-bottom:10px;}
+
+#bottom {
+	height:auto;
+	overflow:hidden;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:left;
+	padding:0px 0px 0px 0px;
+}
+
+#footer {
+	height:auto;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:left;
+	overflow:hidden;
+	padding:25px 20px 25px 20px;
+}
+
+#boxcontent {background-color:#fff; width:960px; margin-left:20px; overflow:hidden; border:1px solid #dedede;
+-moz-box-shadow: 0 0 2px 3px #dbdada;
+-webkit-box-shadow: 0 0 2px 3px #dbdada;
+box-shadow: 0 0 2px 3px #dbdada;}
+
+/*MAIN WRAPS - OUTER DIVS - 100% WIDTH DIVS*/
+#headerwrap {
+background-image: url(../images/index_01.jpg);background-repeat: repeat;overflow:hidden;margin-left:auto;margin-right:auto;height:60px; overflow:visible; z-index:12000; position:relative;}
+#navdivwrap {
+background-image: url(../images/index_02.jpg);background-repeat: repeat-x;overflow:hidden;margin-left:auto;margin-right:auto;height:40px;
+-moz-box-shadow: 0 3px 5px #999;-webkit-box-shadow: 0 3px 5px #999;box-shadow: 0 3px 5px #999; overflow: visible; position:relative; z-index: 1000;}
+#maindivwrap {
+background-image: url(../images/white_carbon.png);background-repeat: repeat;overflow:hidden;margin-left:auto;margin-right:auto;height:auto;}
+#bottomwrap {
+background-color:#999999; background-image:url(../images/dark-steel.jpg);background-repeat: repeat;overflow:hidden;margin-left:auto;margin-right:auto;height:auto;
+-moz-box-shadow: 0 -3px 5px #cecdcd;-webkit-box-shadow: 0 -3px 5px #cecdcd;box-shadow: 0 -3px 5px #cecdcd; overflow: visible; position:relative; z-index: 1000;}
+#footerwrap {
+background-color:#1a1a1a;background-repeat: repeat-x;overflow:hidden;margin-left:auto;margin-right:auto;height:auto;}
+#copydivwrap {
+background-color:#101010;background-repeat: repeat;overflow:hidden;margin-left:auto;margin-right:auto;height:auto;}
+
+/*BOTTOM MODULE STYLING _bottom*/
+.moduletable_bottom {margin-top:20px; margin-bottom:20px; color:#212121;}
+.moduletable_bottom {color:#343434;}
+.moduletable_bottom a {color:#212121; text-decoration:none;}
+.moduletable_bottom a:visited {color:#212121; text-decoration:none;}
+.moduletable_bottom a:hover {color:#fff; text-decoration:none;}
+

@@ -1,0 +1,195 @@
+/* lightbox popup */
+.piro_html_default {
+	position:absolute;
+	top:0;
+	left:0;
+	padding:0;
+	width:500px;
+	height:500px;
+	margin:0;
+	display:block;
+	padding:0;
+	z-index:150001;
+	padding:0;
+}
+.piro_html_default table,.piro_html_default tbody,.piro_html_default tr,.piro_html_default th,.piro_html_default td {
+	margin:0;
+	padding:0;
+	border:none;
+}
+.piro_html_default img {
+	margin:0;
+	padding:0;
+	border:none;
+}
+.piro_html_default .h_t_l {
+	width:10px;
+	height:10px;
+}
+.piro_html_default .h_t_r {
+	width:10px;
+	height:10px;
+}
+.piro_html_default .h_t_c {
+	height:10px;
+}
+.piro_html_default .h_c_l {
+	width:10px;
+}
+.piro_html_default .h_c_c {
+	margin:0;
+	padding:0;
+}
+.piro_html_default .h_c_c .div_reg_default {
+	width:480px;
+	overflow:hidden;
+	height:480px;
+	margin:0;
+	padding:0;
+}
+.piro_html_default .h_c_r {
+	width:10px;
+}
+.piro_html_default .h_b_c {
+	height:10px;
+}
+.piro_html_default .h_b_l {
+	width:10px;
+	height:10px;
+}
+.piro_html_default .h_b_r {
+	width:10px;
+	height:10px;
+}
+.piro_overlay_default {
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index:150000;
+	display:none;
+	cursor:pointer;
+}
+.piro_loader_default {
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:-59px 0 0 -59px;
+	width:118px;
+	height:118px;
+	display:block;
+	z-index:150005;
+	cursor:pointer;
+}
+.piro_loader_default span {
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-36px;
+	margin-left:-36px;
+	width:72px;
+	height:72px;
+	display:block;
+	z-index:150009;
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.resize_default {
+	position: relative;
+}
+.piro_caption_default {
+	position:absolute;
+	bottom:0;
+	left:0;
+	margin:0;
+	display:block;
+	padding:0px;
+	color:black;
+	cursor:text;
+	background:url(../images/caption.png);
+	z-index:150025
+}
+.piro_caption_default p {
+	display:block;
+	margin:0;
+	padding:7px 20px 7px 5px;
+	text-align:left;
+	font-weight:normal;
+	font-size:14px;
+	color:white;
+	z-index:150025;
+	color:white;
+}
+.piro_nav_container_default {
+	position:absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background: url(../images/blank.gif);
+}
+.piro_close_default {
+	position:absolute;
+	width:14px !important;
+	right:0;
+	height:13px !important;
+	text-indent:-999em;
+	outline:none;
+	display:block;	
+	cursor:pointer;
+	z-index:150024;
+	padding:3px;
+	top: 0;
+}
+a.piro_next_default {
+	position:absolute;
+	width: 50% !important;
+	right: 0;
+	top: 0;
+	height: 100% !important;
+	text-indent:-999em;
+	outline:none;
+	display:block;	
+	background: none !important;
+	text-decoration: none !important;
+	cursor:pointer;
+	z-index:150024;
+}
+a:hover.piro_next_default,
+a:active.piro_next_default,
+a:focus.piro_next_default {
+	background: url(../images/right.png) no-repeat 90% 50% !important;
+	text-decoration: none !important;
+}
+a.piro_prev_default {
+	position:absolute;
+	width: 50% !important;
+	left: 0;
+	top: 0;
+	height: 100% !important;
+	text-indent:-999em;
+	outline:none;
+	display:block;	
+	background: none !important;
+	text-decoration: none !important;
+	cursor:pointer;
+	z-index:150024;
+}
+a:hover.piro_prev_default,
+a:active.piro_prev_default,
+a:focus.piro_prev_default {
+	background: url(../images/left.png) no-repeat 10% 50% !important;
+	text-decoration: none !important;
+}
+
+#piro_close_desc {
+	color: white;
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 5px;
+	cursor: pointer;
+}

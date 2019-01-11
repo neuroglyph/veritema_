@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="system" version="1.6.0" method="upgrade">
+    <name>Abivia.net SuperTable Plugin</name>
+    <author>Abivia Inc.</author>
+    <creationDate>20120131</creationDate>
+    <copyright>(C) 2012. Abivia Inc. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authorUrl>http://www.abivia.net</authorUrl>
+    <version>1.0.1</version>
+    <description><![CDATA[
+    <p>Abivia SuperTable Plugin version 1.0.1.<br />
+    From <a href="http://www.abivia.net">Abivia</a>.<br /></p>
+    <p>SuperTable gives you powerful control over the display of tabular data.
+    If you need a database-driven table check out SuperTable Pro!</p>
+    <p>Visit our web site for complete documentation.</p>
+    ]]></description>
+    <files>
+        <filename plugin="abiviasupertable">abiviasupertable.php</filename>
+        <folder>abiviasupertable</folder>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="triggerWord" type="text" size="50" default="supertable"
+                    label="Trigger Word"
+                    description="The word the plugin uses to identify itself (default 'supertable')."
+                />
+                <field
+                    name="cssMode" type="list" default="preset"
+                    label="CSS Mode"
+                    description="Defines how additional CSS is included."
+                >
+                    <option value="none">No additional CSS</option>
+                    <option value="preset">SuperTable Preset</option>
+                    <option value="custom">Custom CSS File</option>
+                </field>
+                <field
+                    name="presetFile" type="folderlist" size="1" default="ahs" 
+                    directory="/plugins/system/abiviasupertable/abiviasupertable/css"
+                    label="CSS Template"
+                    description="Preset CSS template. Used when CSS mode is SuperTable preset."
+                />
+                <field
+                    name="customFile" type="text" size="50" default="" 
+                    directory="/"
+                    label="Custom CSS File"
+                    description="Used when CSS mode is Custom CSS."
+                />
+                <field name="debug" type="list" default="0" label="Debugging">
+                    <option value="0">Off</option>
+                    <option value="1">Basic</option>
+                    <option value="2">Verbose</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

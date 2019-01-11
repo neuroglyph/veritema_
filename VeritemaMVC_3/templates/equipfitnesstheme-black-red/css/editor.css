@@ -1,0 +1,1317 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+
+
+/*UD-EQUIP JOOMLA FITNESS THEME - EDITOR CSS*/
+
+/*DESIGN BY WEBUNDERDOG - WWW.WEBUNDERDOG.COM*/
+
+/*COPYRIGHT 2012 - ALL RIGHTS RESERVED*/
+
+
+
+/*TYPOGRAPHY*/
+
+.tagline {font-size:24px; color:#666666;}
+
+.showcase2 {font-size:24px; color:#ccc;}
+
+.title1 {font-size:24px; color:#fff;}
+
+.intro {font-size:24px; color:#666;}
+
+.subtitle {font-size:14px; color:#333; font-style:italic;}
+
+
+
+pre {
+
+background-color: #ececec;
+
+border-left:5px solid #ccc;
+
+width:100%;
+
+background-image: none;
+
+background-repeat: repeat;
+
+background-attachment: scroll;
+
+background-position: 0% 0%;
+
+background-clip: border-box;
+
+background-origin: padding-box;
+
+background-size: auto auto;
+
+font-family: Monaco,Consolas,"Courier News",monospace;
+
+font-style: normal;
+
+font-variant: normal;
+
+font-weight: normal;
+
+font-size: 1em;
+
+line-height: 1.5;
+
+font-size-adjust: none;
+
+font-stretch: normal;
+
+-x-system-font: none;
+
+margin-top: 15px;
+
+margin-right: 0pt;
+
+margin-bottom: 15px;
+
+margin-left: 0pt;
+
+padding-top: 10px;
+
+padding-right: 15px;
+
+padding-bottom: 10px;
+
+padding-left: 15px;
+
+}
+
+
+
+.dropcap {
+
+display: block;
+
+float: left;
+
+font-family: Georgia,Times,serif;
+
+font-style: normal;
+
+font-variant: normal;
+
+font-weight: normal;
+
+font-size: 60px;
+
+line-height: 40px;
+
+font-size-adjust: none;
+
+font-stretch: normal;
+
+-x-system-font: none;
+
+padding-top: 7px;
+
+padding-right: 8px;
+
+padding-bottom: 0pt;
+
+padding-left: 0pt;
+
+}
+
+
+
+blockquote {
+
+font-family: Georgia,Times,serif;
+
+font-size: 115%;
+
+}
+
+
+
+blockquote span.open {
+
+background-color: transparent;
+
+background-image: url("../images/block-open.png");
+
+background-repeat: no-repeat;
+
+background-attachment: scroll;
+
+background-position: left top;
+
+background-clip: border-box;
+
+background-origin: padding-box;
+
+background-size: auto auto;
+
+padding-top: 0pt;
+
+padding-right: 0pt;
+
+padding-bottom: 0pt;
+
+padding-left: 20px;
+
+}
+
+
+
+blockquote span.close {
+
+background-color: transparent;
+
+background-image: url("../images/block-close.png");
+
+background-repeat: no-repeat;
+
+background-attachment: scroll;
+
+background-position: right;
+
+background-clip: border-box;
+
+background-origin: padding-box;
+
+background-size: auto auto;
+
+padding-top: 0pt;
+
+padding-right: 20px;
+
+padding-bottom: 0pt;
+
+padding-left: 0pt;
+
+}
+
+
+
+/*INLINE HIGHLIGHT STYLES*/
+
+.highlight-black {
+
+background-color: #292929;color:#fff;background-image: none;background-repeat: repeat;background-attachment: scroll;background-position: 0% 0%;background-clip: border-box;background-origin: padding-box;background-size: auto auto;font-weight: bold;padding-top: 1px;padding-right: 5px;padding-bottom: 1px;padding-left: 5px;}
+
+
+
+.highlight-grey {
+
+background-color: #666;color:#fff;background-image: none;background-repeat: repeat;background-attachment: scroll;background-position: 0% 0%;background-clip: border-box;background-origin: padding-box;background-size: auto auto;font-weight: bold;padding-top: 1px;padding-right: 5px;padding-bottom: 1px;padding-left: 5px;}
+
+
+
+.highlight-silver {
+
+background-color: #ccc;color:#333;background-image: none;background-repeat: repeat;background-attachment: scroll;background-position: 0% 0%;background-clip: border-box;background-origin: padding-box;background-size: auto auto;font-weight: bold;padding-top: 1px;padding-right: 5px;padding-bottom: 1px;padding-left: 5px;}
+
+
+
+.highlight-yellow {
+
+background-color: #f7c015;color:#fff;background-image: none;background-repeat: repeat;background-attachment: scroll;background-position: 0% 0%;background-clip: border-box;background-origin: padding-box;background-size: auto auto;font-weight: bold;padding-top: 1px;padding-right: 5px;padding-bottom: 1px;padding-left: 5px;}
+
+
+
+.highlight-pink {
+
+background-color: #cc3366;color:#fff;background-image: none;background-repeat: repeat;background-attachment: scroll;background-position: 0% 0%;background-clip: border-box;background-origin: padding-box;background-size: auto auto;font-weight: bold;padding-top: 1px;padding-right: 5px;padding-bottom: 1px;padding-left: 5px;}
+
+
+
+.highlight-blue {
+
+background-color: #3399cc;color:#fff;background-image: none;background-repeat: repeat;background-attachment: scroll;background-position: 0% 0%;background-clip: border-box;background-origin: padding-box;background-size: auto auto;font-weight: bold;padding-top: 1px;padding-right: 5px;padding-bottom: 1px;padding-left: 5px;}
+
+
+
+.highlight-green {
+
+background-color: #59b42d;color:#fff;background-image: none;background-repeat: repeat;background-attachment: scroll;background-position: 0% 0%;background-clip: border-box;background-origin: padding-box;background-size: auto auto;font-weight: bold;padding-top: 1px;padding-right: 5px;padding-bottom: 1px;padding-left: 5px;}
+
+
+
+.highlight-orange {
+
+background-color: #ff6633;color:#fff;background-image: none;background-repeat: repeat;background-attachment: scroll;background-position: 0% 0%;background-clip: border-box;background-origin: padding-box;background-size: auto auto;font-weight: bold;padding-top: 1px;padding-right: 5px;padding-bottom: 1px;padding-left: 5px;}
+
+
+
+.highlight-purple {
+
+background-color: #a03391;color:#fff;background-image: none;background-repeat: repeat;background-attachment: scroll;background-position: 0% 0%;background-clip: border-box;background-origin: padding-box;background-size: auto auto;font-weight: bold;padding-top: 1px;padding-right: 5px;padding-bottom: 1px;padding-left: 5px;}
+
+
+
+.highlight-red {
+
+background-color: #990000;color:#fff;background-image: none;background-repeat: repeat;background-attachment: scroll;background-position: 0% 0%;background-clip: border-box;background-origin: padding-box;background-size: auto auto;font-weight: bold;padding-top: 1px;padding-right: 5px;padding-bottom: 1px;padding-left: 5px;}
+
+
+
+p.error, p.message, p.tips, p.tag, p.note, p.photo, p.doc, p.phone, p.calendar, p.clock, p.camera, p.check, p.plus, p.minus, p.diamond, p.tool, p.female, p.male, p.ribbon, p.heart, p.davidstar, p.moonstar, p.cross, p.star, p.stopwatch, p.pin, p.chart, p.key, p.speech, p.pushpin, p.mail, p.info1, p.info2, p.clipboard  {
+
+padding-left: 25px;
+
+position: relative;}
+
+
+
+p.error {color: #cc0000; background-position:top left; background-image:url(../images/error.png); background-repeat:no-repeat;}
+
+p.message {color: #666; background-position:top left; background-image: url(../images/message.png); background-repeat:no-repeat;}
+
+p.tips {color: #666; background-position:top left; background-image: url(../images/tip.png); background-repeat:no-repeat;}
+
+p.tag {color: #666; background-position:top left; background-image: url(../images/tag.png); background-repeat:no-repeat;}
+
+p.note {color: #666; background-position:top left; background-image: url(../images/note.png); background-repeat:no-repeat;}
+
+p.photo {color: #666; background-position:top left; background-image: url(../images/photo.png); background-repeat:no-repeat;}
+
+p.doc {color: #666; background-position:top left; background-image: url(../images/document.png); background-repeat:no-repeat;}
+
+p.phone {color: #666; background-position:top left; background-image: url(../images/phone.png); background-repeat:no-repeat;}
+
+p.calendar {color: #666; background-position:top left; background-image: url(../images/calendar.png); background-repeat:no-repeat;}
+
+p.clock {color: #666; background-position:top left; background-image: url(../images/clock.png); background-repeat:no-repeat;}
+
+p.camera {color: #666; background-position:top left; background-image: url(../images/camera.png); background-repeat:no-repeat;}
+
+p.check {color: #666; background-position:top left; background-image: url(../images/check.png); background-repeat:no-repeat;}
+
+p.plus {color: #666; background-position:top left; background-image: url(../images/plus.png); background-repeat:no-repeat;}
+
+p.minus {color: #666; background-position:top left; background-image: url(../images/minus.png); background-repeat:no-repeat;}
+
+p.diamond {color: #666; background-position:top left; background-image: url(../images/diamond.png); background-repeat:no-repeat;}
+
+p.tool {color: #666; background-position:top left; background-image: url(../images/tool.png); background-repeat:no-repeat;}
+
+p.female {color: #666; background-position:top left; background-image: url(../images/female.png); background-repeat:no-repeat;}
+
+p.male {color: #666; background-position:top left; background-image: url(../images/male.png); background-repeat:no-repeat;}
+
+p.ribbon {color: #666; background-position:top left; background-image: url(../images/ribbon.png); background-repeat:no-repeat;}
+
+p.heart {color: #666; background-position:top left; background-image: url(../images/heart.png); background-repeat:no-repeat;}
+
+p.star {color: #666; background-position:top left; background-image: url(../images/star.png); background-repeat:no-repeat;}
+
+p.stopwatch {color: #666; background-position:top left; background-image: url(../images/stopwatch.png); background-repeat:no-repeat;}
+
+p.pin {color: #666; background-position:top left; background-image: url(../images/pin.png); background-repeat:no-repeat;}
+
+p.chart {color: #666; background-position:top left; background-image: url(../images/chart.png); background-repeat:no-repeat;}
+
+p.key {color: #666; background-position:top left; background-image: url(../images/key.png); background-repeat:no-repeat;}
+
+p.speech {color: #666; background-position:top left; background-image: url(../images/speech.png); background-repeat:no-repeat;}
+
+p.pushpin {color: #666; background-position:top left; background-image: url(../images/pushpin.png); background-repeat:no-repeat;}
+
+p.mail {color: #666; background-position:top left; background-image: url(../images/mail.png); background-repeat:no-repeat;}
+
+p.info1 {color: #666; background-position:top left; background-image: url(../images/info1.png); background-repeat:no-repeat;}
+
+p.info2 {color: #666; background-position:top left; background-image: url(../images/info2.png); background-repeat:no-repeat;}
+
+p.clipboard {color: #666; background-position:top left; background-image: url(../images/clipboard.png); background-repeat:no-repeat;}
+
+
+
+/*LIST STYLES*/
+
+ul.starlist {
+
+  background-color: transparent;
+
+  background-repeat: no-repeat;
+
+  background-attachment: scroll;
+
+  background-position: left top;
+
+  background-clip: border-box;
+
+  background-origin: padding-box;
+
+  background-size: auto auto;
+
+  line-height: 20px;
+
+  list-style-type: url("../images/star-ul.png");
+
+  list-style-image: url("../images/star-ul.png");
+
+  list-style-position: outside;
+
+  margin-top: 10px;
+
+  padding-top: 0px;
+
+  padding-right: 0px;
+
+  padding-bottom: 0px;
+
+  padding-left: 24px;
+
+  margin-left:20px;
+
+}
+
+
+
+ul.checklist {
+
+  background-color: transparent;
+
+  background-repeat: no-repeat;
+
+  background-attachment: scroll;
+
+  background-position: left top;
+
+  background-clip: border-box;
+
+  background-origin: padding-box;
+
+  background-size: auto auto;
+
+  line-height: 20px;
+
+  list-style-type: url("../images/check-ul.png");
+
+  list-style-image: url("../images/check-ul.png");
+
+  list-style-position: outside;
+
+  margin-top: 10px;
+
+  padding-top: 0px;
+
+  padding-right: 0px;
+
+  padding-bottom: 0px;
+
+  padding-left: 24px;
+
+  margin-left:20px;
+
+}
+
+
+
+ul.clocklist {
+
+  background-color: transparent;
+
+  background-repeat: no-repeat;
+
+  background-attachment: scroll;
+
+  background-position: left top;
+
+  background-clip: border-box;
+
+  background-origin: padding-box;
+
+  background-size: auto auto;
+
+  line-height: 20px;
+
+  list-style-type: url("../images/clock-ul.png");
+
+  list-style-image: url("../images/clock-ul.png");
+
+  list-style-position: outside;
+
+  margin-top: 10px;
+
+  padding-top: 0px;
+
+  padding-right: 0px;
+
+  padding-bottom: 0px;
+
+  padding-left: 24px;
+
+  margin-left:20px;
+
+}
+
+
+
+ul.datelist {
+
+  background-color: transparent;
+
+  background-repeat: no-repeat;
+
+  background-attachment: scroll;
+
+  background-position: left top;
+
+  background-clip: border-box;
+
+  background-origin: padding-box;
+
+  background-size: auto auto;
+
+  line-height: 20px;
+
+  list-style-type: url("../images/date-ul.png");
+
+  list-style-image: url("../images/date-ul.png");
+
+  list-style-position: outside;
+
+  margin-top: 10px;
+
+  padding-top: 0px;
+
+  padding-right: 0px;
+
+  padding-bottom: 0px;
+
+  padding-left: 24px;
+
+  margin-left:20px;
+
+}
+
+
+
+/*BLOCK NUMBER STYLES*/
+
+.footer-blocknumber {background-color:#333;background-repeat: no-repeat;position:top left;float:left;margin-right:10px;margin-top:5px;color: #999;display: block;width: 32px;height: 32px;line-height: 32px;top: 10px;left: 0px;font-family: Arial,sans-serif;font-style: normal;font-variant: normal;font-weight: bold;font-size: 20px;font-size-adjust: none;font-stretch: normal;text-align: center;text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);/*radius*/-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px; /* future proofing */}
+
+
+
+.grey-blocknumber {background-color:#333;background-repeat: no-repeat;position:top left;float:left;margin-right:10px;margin-top:5px;color: #ffffff;display: block;width: 44px;height: 44px;line-height: 44px;top: 10px;left: 0px;font-family: Arial,sans-serif;font-style: normal;font-variant: normal;font-weight: bold;font-size: 20px;font-size-adjust: none;font-stretch: normal;text-align: center;text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);/*radius*/-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px; /* future proofing */}
+
+
+
+.silver-blocknumber {background-color:#666;background-repeat: no-repeat;position:top left;float:left;margin-right:10px;margin-top:5px;color: #ffffff;display: block;width: 44px;height: 44px;line-height: 44px;top: 10px;left: 0px;font-family: Arial,sans-serif;font-style: normal;font-variant: normal;font-weight: bold;font-size: 20px;font-size-adjust: none;font-stretch: normal;text-align: center;text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);/*radius*/-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px; /* future proofing */}
+
+
+
+.yellow-blocknumber {background-color:#f7c015;background-repeat: no-repeat;position:top left;float:left;margin-right:10px;margin-top:5px;color: #ffffff;display: block;width: 44px;height: 44px;line-height: 44px;top: 10px;left: 0px;font-family: Arial,sans-serif;font-style: normal;font-variant: normal;font-weight: bold;font-size: 20px;font-size-adjust: none;font-stretch: normal;text-align: center;text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);/*radius*/-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px; /* future proofing */}
+
+
+
+.pink-blocknumber {background-color:#cc3366;background-repeat: no-repeat;position:top left;float:left;margin-right:10px;margin-top:5px;color: #ffffff;display: block;width: 44px;height: 44px;line-height: 44px;top: 10px;left: 0px;font-family: Arial,sans-serif;font-style: normal;font-variant: normal;font-weight: bold;font-size: 20px;font-size-adjust: none;font-stretch: normal;text-align: center;text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);/*radius*/-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px; /* future proofing */}
+
+
+
+.blue-blocknumber {background-color:#3399cc;background-repeat: no-repeat;position:top left;float:left;margin-right:10px;margin-top:5px;color: #ffffff;display: block;width: 44px;height: 44px;line-height: 44px;top: 10px;left: 0px;font-family: Arial,sans-serif;font-style: normal;font-variant: normal;font-weight: bold;font-size: 20px;font-size-adjust: none;font-stretch: normal;text-align: center;text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);/*radius*/-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px; /* future proofing */}
+
+
+
+.green-blocknumber {background-color:#59b42d;background-repeat: no-repeat;position:top left;float:left;margin-right:10px;margin-top:5px;color: #ffffff;display: block;width: 44px;height: 44px;line-height: 44px;top: 10px;left: 0px;font-family: Arial,sans-serif;font-style: normal;font-variant: normal;font-weight: bold;font-size: 20px;font-size-adjust: none;font-stretch: normal;text-align: center;text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);/*radius*/-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px; /* future proofing */}
+
+
+
+.orange-blocknumber {background-color:#ff6633;background-repeat: no-repeat;position:top left;float:left;margin-right:10px;margin-top:5px;color: #ffffff;display: block;width: 44px;height: 44px;line-height: 44px;top: 10px;left: 0px;font-family: Arial,sans-serif;font-style: normal;font-variant: normal;font-weight: bold;font-size: 20px;font-size-adjust: none;font-stretch: normal;text-align: center;text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);/*radius*/-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px; /* future proofing */}
+
+
+
+.purple-blocknumber {background-color:#a03391;background-repeat: no-repeat;position:top left;float:left;margin-right:10px;margin-top:5px;color: #ffffff;display: block;width: 44px;height: 44px;line-height: 44px;top: 10px;left: 0px;font-family: Arial,sans-serif;font-style: normal;font-variant: normal;font-weight: bold;font-size: 20px;font-size-adjust: none;font-stretch: normal;text-align: center;text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);/*radius*/-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px; /* future proofing */}
+
+
+
+.red-blocknumber {background-color:#990000;background-repeat: no-repeat;position:top left;float:left;margin-right:10px;margin-top:5px;color: #ffffff;display: block;width: 44px;height: 44px;line-height: 44px;top: 10px;left: 0px;font-family: Arial,sans-serif;font-style: normal;font-variant: normal;font-weight: bold;font-size: 20px;font-size-adjust: none;font-stretch: normal;text-align: center;text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);/*radius*/-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px; /* future proofing */}
+
+
+
+/*VITA BOOK GUEST BOOK MODULE STYLING*/
+
+div.vb_lm_name /*TEMPLATE*/
+
+{
+
+  width: 100%;
+
+  font-weight: bold;
+
+  color: #b58402;
+
+  margin-bottom:-10px;
+
+}
+
+
+
+/*READ MORE BUTTON*/
+
+/*TEMPLATE*/
+
+a.readmore {
+
+	background-color:#990000 ;color:#ffffff;padding-top:6px;padding-bottom:6px;padding-left:12px;padding-right:12px;font-weight:normal;			font-size:12px;text-decoration:none;border:0px solid #ccc;text-decoration:none;margin-top:8px;margin-bottom:10px;
+
+
+
+/*radius*/-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px; /* future proofing */
+
+	/*gradient*/
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#990000 ', endColorstr='#830101'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#990000 ), to(#830101)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #990000 ,  #830101); /* for firefox 3.6+ */ 
+
+}
+
+
+
+/*TEMPLATE*/
+
+a.readmore:hover {
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#830101', endColorstr='#990000 '); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#830101), to(#990000 )); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #830101,  #990000 ); /* for firefox 3.6+ */ 
+
+	color:#fff; 
+
+}
+
+
+
+/*BUTTON STYLES*/
+
+#component a.blackbutton, #component a.blackbutton:hover {color:#fff;}
+
+#component a.greybutton, #component a.greybutton:hover {color:#fff;}
+
+#component a.silverbutton, #component a.silverbutton:hover {color:#fff;}
+
+#component a.yellowbutton, #component a.yellowbutton:hover {color:#fff;}
+
+#component a.pinkbutton, #component a.pinkbutton:hover {color:#fff;}
+
+#component a.bluebutton, #component a.bluebutton:hover {color:#fff;}
+
+#component a.greenbutton, #component a.greenbutton:hover {color:#fff;}
+
+#component a.orangebutton, #component a.orangebutton:hover {color:#fff;}
+
+#component a.purplebutton, #component a.purplebutton:hover {color:#fff;}
+
+#component a.redbutton, #component a.redbutton:hover {color:#fff;}
+
+
+
+a.blackbutton {
+
+	background-color:#000000;color:#ffffff;padding-top:6px;padding-bottom:6px;padding-left:12px;padding-right:12px;font-weight:normal;			font-size:12px;text-decoration:none;border:1px solid #ccc;text-decoration:none;margin-top:8px;margin-bottom:10px;
+
+	/*radius*/
+
+	-moz-border-radius: 5px;
+
+	-webkit-border-radius: 5px;
+
+	border-radius: 5px; /* future proofing */
+
+	/*gradient*/
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#000000'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#333333), to(#000000)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #333333,  #000000); /* for firefox 3.6+ */ 
+
+}
+
+
+
+a.blackbutton:hover {
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#333333'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#333333)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #000000,  #333333); /* for firefox 3.6+ */ 
+
+	color:#fff; 
+
+}
+
+
+
+/*GREY BUTTON*/
+
+a.greybutton {
+
+	background-color:#333333;color:#ffffff;padding-top:6px;padding-bottom:6px;padding-left:12px;padding-right:12px;font-weight:normal;			font-size:12px;text-decoration:none;border:1px solid #ccc;text-decoration:none;margin-top:8px;margin-bottom:10px;
+
+/*radius*/-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px; /* future proofing */
+
+	/*gradient*/
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#666666', endColorstr='#333333'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#666666), to(#333333)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #666666,  #333333); /* for firefox 3.6+ */ 
+
+}
+
+
+
+a.greybutton:hover {
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#666666'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#333333), to(#666666)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #333333,  #666666); /* for firefox 3.6+ */ 
+
+	color:#fff; 
+
+}
+
+
+
+/*SILVER BUTTON*/
+
+a.silverbutton {
+
+	background-color:#666666;color:#ffffff;padding-top:6px;padding-bottom:6px;padding-left:12px;padding-right:12px;font-weight:normal;			font-size:12px;text-decoration:none;border:1px solid #ccc;text-decoration:none;margin-top:8px;margin-bottom:10px;
+
+/*radius*/-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px; /* future proofing */
+
+	/*gradient*/
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8e8e8e', endColorstr='#666666'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#8e8e8e), to(#666666)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #8e8e8e,  #666666); /* for firefox 3.6+ */ 
+
+}
+
+
+
+a.silverbutton:hover {
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#666666', endColorstr='#8e8e8e'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#666666), to(#8e8e8e)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #666666,  #8e8e8e); /* for firefox 3.6+ */ 
+
+	color:#fff; 
+
+}
+
+
+
+/*YELLOW BUTTON*/
+
+a.yellowbutton {
+
+	background-color:#f7c015;color:#ffffff;padding-top:6px;padding-bottom:6px;padding-left:12px;padding-right:12px;font-weight:normal;			font-size:12px;text-decoration:none;border:1px solid #ccc;text-decoration:none;margin-top:8px;margin-bottom:10px;
+
+/*radius*/-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px; /* future proofing */
+
+	/*gradient*/
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7c015', endColorstr='#ecb712'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#f7c015), to(#ecb712)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #f7c015,  #ecb712); /* for firefox 3.6+ */ 
+
+}
+
+
+
+a.yellowbutton:hover {
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ecb712', endColorstr='#f7c015'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#ecb712), to(#f7c015)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #ecb712,  #f7c015); /* for firefox 3.6+ */ 
+
+	color:#fff; 
+
+}
+
+
+
+/*pink BUTTON*/
+
+a.pinkbutton {
+
+	background-color:#ff6699;color:#ffffff;padding-top:6px;padding-bottom:6px;padding-left:12px;padding-right:12px;font-weight:normal;			font-size:12px;text-decoration:none;border:1px solid #ccc;text-decoration:none;margin-top:8px;margin-bottom:10px;
+
+/*radius*/-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px; /* future proofing */
+
+	/*gradient*/
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff6699', endColorstr='#cc3366'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#ff6699), to(#cc3366)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #ff6699,  #cc3366); /* for firefox 3.6+ */ 
+
+}
+
+
+
+a.pinkbutton:hover {
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc3366', endColorstr='#ff6699'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#cc3366), to(#ff6699)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #cc3366,  #ff6699); /* for firefox 3.6+ */ 
+
+	color:#fff; 
+
+}
+
+
+
+/*BLUE BUTTON*/
+
+a.bluebutton {
+
+	background-color:#3399cc;color:#ffffff;padding-top:6px;padding-bottom:6px;padding-left:12px;padding-right:12px;font-weight:normal;			font-size:12px;text-decoration:none;border:1px solid #ccc;text-decoration:none;margin-top:8px;margin-bottom:10px;
+
+/*radius*/-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px; /* future proofing */
+
+	/*gradient*/
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3399cc', endColorstr='#247daa'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#3399cc), to(#247daa)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #3399cc,  #247daa); /* for firefox 3.6+ */ 
+
+}
+
+
+
+a.bluebutton:hover {
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#247daa', endColorstr='#3399cc'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#247daa), to(#3399cc)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #247daa,  #3399cc); /* for firefox 3.6+ */ 
+
+	color:#fff; 
+
+}
+
+/*GREEN BUTTON*/
+
+a.greenbutton {
+
+	background-color:#59b42d ;color:#ffffff;padding-top:6px;padding-bottom:6px;padding-left:12px;padding-right:12px;font-weight:normal;			font-size:12px;text-decoration:none;border:1px solid #ccc;text-decoration:none;margin-top:8px;margin-bottom:10px;
+
+/*radius*/-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px; /* future proofing */
+
+	/*gradient*/
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#59b42d ', endColorstr='#4ea125'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#59b42d ), to(#4ea125)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #59b42d ,  #4ea125); /* for firefox 3.6+ */ 
+
+}
+
+
+
+a.greenbutton:hover {
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4ea125', endColorstr='#59b42d '); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#4ea125), to(#59b42d )); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #4ea125,  #59b42d ); /* for firefox 3.6+ */ 
+
+	color:#fff; 
+
+}
+
+
+
+/*ORANGE BUTTON*/
+
+a.orangebutton {
+
+	background-color:#ff6633 ;color:#ffffff;padding-top:6px;padding-bottom:6px;padding-left:12px;padding-right:12px;font-weight:normal;			font-size:12px;text-decoration:none;border:1px solid #ccc;text-decoration:none;margin-top:8px;margin-bottom:10px;
+
+/*radius*/-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px; /* future proofing */
+
+	/*gradient*/
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff6633 ', endColorstr='#e1582a'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#ff6633 ), to(#e1582a)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #ff6633 ,  #e1582a); /* for firefox 3.6+ */ 
+
+}
+
+
+
+a.orangebutton:hover {
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e1582a', endColorstr='#ff6633 '); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#e1582a), to(#ff6633 )); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #e1582a,  #ff6633 ); /* for firefox 3.6+ */ 
+
+	color:#fff; 
+
+}
+
+
+
+/*PURPLE BUTTON*/
+
+a.purplebutton {
+
+	background-color:#a03391 ;color:#ffffff;padding-top:6px;padding-bottom:6px;padding-left:12px;padding-right:12px;font-weight:normal;			font-size:12px;text-decoration:none;border:1px solid #ccc;text-decoration:none;margin-top:8px;margin-bottom:10px;
+
+/*radius*/-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px; /* future proofing */
+
+	/*gradient*/
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a03391 ', endColorstr='#88297b'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#a03391 ), to(#88297b)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #a03391 ,  #88297b); /* for firefox 3.6+ */ 
+
+}
+
+
+
+a.purplebutton:hover {
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#88297b', endColorstr='#a03391 '); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#88297b), to(#a03391 )); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #88297b,  #a03391 ); /* for firefox 3.6+ */ 
+
+	color:#fff; 
+
+}
+
+
+
+/*RED BUTTON*/
+
+a.redbutton {
+
+	background-color:#990000 ;color:#ffffff;padding-top:6px;padding-bottom:6px;padding-left:12px;padding-right:12px;font-weight:normal;			font-size:12px;text-decoration:none;border:1px solid #ccc;text-decoration:none;margin-top:8px;margin-bottom:10px;
+
+
+
+/*radius*/-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px; /* future proofing */
+
+	/*gradient*/
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#990000 ', endColorstr='#830101'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#990000 ), to(#830101)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #990000 ,  #830101); /* for firefox 3.6+ */ 
+
+}
+
+
+
+a.redbutton:hover {
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#830101', endColorstr='#990000 '); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#830101), to(#990000 )); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #830101,  #990000 ); /* for firefox 3.6+ */ 
+
+	color:#fff; 
+
+}
+
+
+
+/*BIG BUTTON STYLES*/
+
+#component a.blackbutton-big, #component a.blackbutton-big:hover {color:#fff;}
+
+#component a.greybutton-big, #component a.greybutton-big:hover {color:#fff;}
+
+#component a.silverbutton-big, #component a.silverbutton-big:hover {color:#fff;}
+
+#component a.yellowbutton-big, #component a.yellowbutton-big:hover {color:#fff;}
+
+#component a.pinkbutton-big, #component a.pinkbutton-big:hover {color:#fff;}
+
+#component a.bluebutton-big, #component a.bluebutton-big:hover {color:#fff;}
+
+#component a.greenbutton-big, #component a.greenbutton-big:hover {color:#fff;}
+
+#component a.orangebutton-big, #component a.orangebutton-big:hover {color:#fff;}
+
+#component a.purplebutton-big, #component a.purplebutton-big:hover {color:#fff;}
+
+#component a.redbutton-big, #component a.redbutton-big:hover {color:#fff;}
+
+
+
+/*BIG BLACK BUTTON*/
+
+a.blackbutton-big {
+
+	background-color:#000000;color:#ffffff;padding-top:10px;padding-bottom:10px;padding-left:16px;padding-right:16px;font-size:16px; font-weight:bold;text-decoration:none;border:0px solid #ccc;text-decoration:none;margin-top:8px;margin-bottom:10px;
+
+/*radius*/-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px; /* future proofing */
+
+	/*gradient*/
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#000000'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#333333), to(#000000)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #333333,  #000000); /* for firefox 3.6+ */  
+
+}
+
+
+
+a.blackbutton-big:hover {
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#333333'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#333333)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #000000,  #333333); /* for firefox 3.6+ */ 
+
+	color:#fff; 
+
+}
+
+
+
+/*BIG GREY BUTTON*/
+
+a.greybutton-big {
+
+	background-color:#333333;color:#ffffff;padding-top:10px;padding-bottom:10px;padding-left:16px;padding-right:16px;font-weight:bold;			font-size:16px;text-decoration:none;border:0px solid #ccc;text-decoration:none;margin-top:8px;margin-bottom:10px;
+
+/*radius*/-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px; /* future proofing */
+
+	/*gradient*/
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#666666', endColorstr='#333333'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#666666), to(#333333)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #666666,  #333333); /* for firefox 3.6+ */ 
+
+}
+
+
+
+a.greybutton-big:hover {
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#666666'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#333333), to(#666666)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #333333,  #666666); /* for firefox 3.6+ */ 
+
+	color:#fff; 
+
+}
+
+
+
+/*BIG SILVER BUTTON*/
+
+a.silverbutton-big {
+
+	background-color:#666666;color:#ffffff;padding-top:10px;padding-bottom:10px;padding-left:16px;padding-right:16px;font-weight:bold;			font-size:16px;text-decoration:none;border:0px solid #ccc;text-decoration:none;margin-top:8px;margin-bottom:10px;
+
+/*radius*/-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px; /* future proofing */
+
+	/*gradient*/
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8e8e8e', endColorstr='#666666'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#8e8e8e), to(#666666)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #8e8e8e,  #666666); /* for firefox 3.6+ */ 
+
+}
+
+
+
+a.silverbutton-big:hover {
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#666666', endColorstr='#8e8e8e'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#666666), to(#8e8e8e)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #666666,  #8e8e8e); /* for firefox 3.6+ */ 
+
+	color:#fff; 
+
+}
+
+
+
+/*BIG YELLOW BUTTON*/
+
+a.yellowbutton-big {
+
+	background-color:#f7c015;color:#ffffff;padding-top:10px;padding-bottom:10px;padding-left:16px;padding-right:16px;font-weight:bold;			font-size:16px;text-decoration:none;border:0px solid #ccc;text-decoration:none;margin-top:8px;margin-bottom:10px;
+
+/*radius*/-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px; /* future proofing */
+
+	/*gradient*/
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7c015', endColorstr='#ecb712'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#f7c015), to(#ecb712)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #f7c015,  #ecb712); /* for firefox 3.6+ */ 
+
+}
+
+
+
+a.yellowbutton-big:hover {
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ecb712', endColorstr='#f7c015'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#ecb712), to(#f7c015)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #ecb712,  #f7c015); /* for firefox 3.6+ */ 
+
+	color:#fff; 
+
+}
+
+
+
+/*BIG pink BUTTON*/
+
+a.pinkbutton-big {
+
+	background-color:#ff6699;color:#ffffff;padding-top:10px;padding-bottom:10px;padding-left:16px;padding-right:16px;font-weight:bold;			font-size:16px;text-decoration:none;border:0px solid #ccc;text-decoration:none;margin-top:8px;margin-bottom:10px;
+
+/*radius*/-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px; /* future proofing */
+
+	/*gradient*/
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff6699', endColorstr='#cc3366'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#ff6699), to(#cc3366)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #ff6699,  #cc3366); /* for firefox 3.6+ */ 
+
+}
+
+
+
+a.pinkbutton-big:hover {
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc3366', endColorstr='#ff6699'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#cc3366), to(#ff6699)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #cc3366,  #ff6699); /* for firefox 3.6+ */ 
+
+	color:#fff; 
+
+}
+
+
+
+/*BIG BLUE BUTTON*/
+
+a.bluebutton-big {
+
+	background-color:#3399cc;color:#ffffff;padding-top:10px;padding-bottom:10px;padding-left:16px;padding-right:16px;font-weight:bold;			font-size:16px;text-decoration:none;border:0px solid #ccc;text-decoration:none;margin-top:8px;margin-bottom:10px;
+
+/*radius*/-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px; /* future proofing */
+
+	/*gradient*/
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3399cc', endColorstr='#247daa'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#3399cc), to(#247daa)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #3399cc,  #247daa); /* for firefox 3.6+ */ 
+
+}
+
+
+
+a.bluebutton-big:hover {
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#247daa', endColorstr='#3399cc'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#247daa), to(#3399cc)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #247daa,  #3399cc); /* for firefox 3.6+ */ 
+
+	color:#fff; 
+
+}
+
+/*BIG GREEN BUTTON*/
+
+a.greenbutton-big {
+
+	background-color:#59b42d;color:#ffffff;padding-top:10px;padding-bottom:10px;padding-left:16px;padding-right:16px;font-weight:bold;			font-size:16px;text-decoration:none;border:0px solid #ccc;text-decoration:none;margin-top:8px;margin-bottom:10px;
+
+/*radius*/-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px; /* future proofing */
+
+	/*gradient*/
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#59b42d', endColorstr='#4ea125'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#59b42d), to(#4ea125)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #59b42d,  #4ea125); /* for firefox 3.6+ */ 
+
+}
+
+
+
+a.greenbutton-big:hover {
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4ea125', endColorstr='#59b42d'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#4ea125), to(#59b42d)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #4ea125,  #59b42d); /* for firefox 3.6+ */ 
+
+	color:#fff; 
+
+}
+
+
+
+/*BIG ORANGE BUTTON*/
+
+a.orangebutton-big {
+
+	background-color:#ff6633;color:#ffffff;padding-top:10px;padding-bottom:10px;padding-left:16px;padding-right:16px;font-weight:bold;			font-size:16px;text-decoration:none;border:0px solid #ccc;text-decoration:none;margin-top:8px;margin-bottom:10px;
+
+/*radius*/-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px; /* future proofing */
+
+	/*gradient*/
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff6633', endColorstr='#e1582a'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#ff6633), to(#e1582a)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #ff6633,  #e1582a); /* for firefox 3.6+ */ 
+
+}
+
+
+
+a.orangebutton-big:hover {
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e1582a', endColorstr='#ff6633'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#e1582a), to(#ff6633)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #e1582a,  #ff6633); /* for firefox 3.6+ */ 
+
+	color:#fff; 
+
+}
+
+
+
+/*BIG PURPLE BUTTON*/
+
+a.purplebutton-big {
+
+	background-color:#a03391 ;color:#ffffff;padding-top:10px;padding-bottom:10px;padding-left:16px;padding-right:16px;font-weight:bold;			font-size:16px;text-decoration:none;border:0px solid #ccc;text-decoration:none;margin-top:8px;margin-bottom:10px;
+
+/*radius*/-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px; /* future proofing */
+
+	/*gradient*/
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a03391 ', endColorstr='#88297b'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#a03391 ), to(#88297b)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #a03391 ,  #88297b); /* for firefox 3.6+ */ 
+
+}
+
+
+
+a.purplebutton-big:hover {
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#88297b', endColorstr='#a03391 '); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#88297b), to(#a03391 )); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #88297b,  #a03391 ); /* for firefox 3.6+ */ 
+
+	color:#fff; 
+
+}
+
+
+
+/*BIG RED BUTTON*/
+
+a.redbutton-big {
+
+	background-color:#990000;color:#ffffff;padding-top:10px;padding-bottom:10px;padding-left:16px;padding-right:16px;font-weight:bold;			font-size:16px;text-decoration:none;border:0px solid #ccc;text-decoration:none;margin-top:8px;margin-bottom:10px;
+
+/*radius*/-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px; /* future proofing */
+
+	/*gradient*/
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#990000', endColorstr='#830101'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#990000), to(#830101)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #990000,  #830101); /* for firefox 3.6+ */ 
+
+}
+
+
+
+a.redbutton-big:hover {
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#830101', endColorstr='#990000'); /* for IE */
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#830101), to(#990000)); /* for webkit browsers */
+
+	background: -moz-linear-gradient(top,  #830101,  #990000); /* for firefox 3.6+ */ 
+
+	color:#fff; 
+
+}

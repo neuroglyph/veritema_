@@ -1,0 +1,125 @@
+div.rsmg_carousel_container ul.rsmg_slider {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+
+div.rsmg_carousel_container ul.rsmg_slider > li {
+	padding: 0 0 5px;
+	margin: 0px;
+	/*clear: left;
+	overflow: hidden;*/
+}
+
+.rsmg_clear_slide {
+	display: block;
+	clear: both;
+	width: 100%;
+	height: 1px;
+	font-size: 1px;
+	line-height: 1px;
+	margin: 0;
+	padding: 0;
+}
+
+div.rsmg_carousel_wrapper {
+	padding: 0 50px;
+	position: relative;
+	margin: 0 auto;
+}
+	
+div.rsmg_carousel_container {
+	width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	}
+	
+div.rsmg_carousel_container a:hover {
+	background: none;
+	}
+
+div.rsmg_carousel_wrapper a.bx-prev,
+div.rsmg_carousel_wrapper a.bx-next {
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 9px;
+	height: 13px;
+	display: block;
+	padding: 10px;	
+	font-size: 11px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	position: absolute;
+	top: 50%;
+	margin-top: -20px;
+}
+	
+div.rsmg_carousel_wrapper a.bx-prev {
+	background-image: url(../images/arrow-left.png);
+	left: 0px;
+	}
+	
+div.rsmg_carousel_wrapper a.bx-next {
+	background-image: url(../images/arrow-right.png);
+	right: 0px;
+	}	
+
+	
+div.rsmg_carousel_container .rsmg_carousel_image {
+	padding: 10px;	
+	font-size: 11px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	}
+
+div.rsmg_carousel_container .rsmg_carousel_image_no_borders {
+	border: 0px !important;
+	padding: 0px !important;
+	box-shadow: none !important;
+	border-radius: 0px !important;
+	-moz-border-radius: 0px !important;
+	-webkit-border-radius: 0px !important;
+}
+	
+div.rsmg_carousel_container p.rsmg_title {	
+	padding: 7px 0 14px 0;	
+	display: block;
+	font-weight: bold;	
+	font-size: 12px;
+	border-bottom: 1px dotted #cccccc;
+	clear: both;
+	}
+	
+div.rsmg_carousel_container p.rsmg_title a {
+	text-decoration: none;
+	}
+	
+div.rsmg_carousel_container p.rsmg_title a:hover {
+	background: none;
+	}
+	
+div.rsmg_carousel_container p {
+	font-size: 11px;
+	padding-top: 7px;
+	margin-top: 7px;
+	}
+
+div.rsmg_carousel_container div.rsmg_carousel_pager {
+	overflow: hidden;
+	padding: 10px 0;
+	width: 100%;
+	z-index: 9999;
+	}
+
+div.rsmg_carousel_container div.rsmg_carousel_pager a {
+	padding: 3px 6px;
+	margin: 0 5px;
+	text-decoration: none;
+	border-radius: 3px 3px 3px 3px;
+	font-size: 11px;     
+	}

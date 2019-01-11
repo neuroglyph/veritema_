@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="35bde215-7289-43bd-ba4b-1a76e2cdc916" ChangeDateTime="10/07/2016 03:49:06">
+    <Property Name="ElementName" Value="[v].[Person].[Image]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[v].[Person]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ImageUrl" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1475a44b-e66b-453a-8f11-5253cd9d74d1" ChangeDateTime="10/31/2016 00:55:42">
+    <Property Name="ElementName" Value="[v].[Event].[EventType]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[v].[Event]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Tyep" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="669e88dd-aecd-4c1d-8d6b-c360cdaf2bc0" ChangeDateTime="10/31/2016 00:55:47">
+    <Property Name="ElementName" Value="[v].[Event].[Tyep]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[v].[Event]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Type" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5f3d8dd3-5fac-4c62-8007-9d266cefb840" ChangeDateTime="11/06/2016 19:12:08">
+    <Property Name="ElementName" Value="[v].[Event].[Maximum]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[v].[Event]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="MaxAttendencies" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="21ff97f5-480f-4b03-a18b-3c691dafe08c" ChangeDateTime="11/06/2016 19:12:28">
+    <Property Name="ElementName" Value="[v].[Event].[MaxAttendencies]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[v].[Event]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="MaxParticipants" />
+  </Operation>
+</Operations>

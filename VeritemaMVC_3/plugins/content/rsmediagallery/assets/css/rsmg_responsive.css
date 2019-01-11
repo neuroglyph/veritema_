@@ -1,0 +1,253 @@
+.rsmg_gallery .row-fluid {
+  width: 100%;
+  *zoom: 1;
+}
+.rsmg_gallery .row-fluid:before,
+.rsmg_gallery .row-fluid:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.rsmg_gallery .row-fluid:after {
+  clear: both;
+}
+.rsmg_gallery .row-fluid [class*="span"] {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  margin-left: 2.127659574468085% !important;
+  *margin-left: 2.074468085106383%;
+}
+.rsmg_gallery .row-fluid [class*="span"]:first-child {
+  margin-left: 0;
+}
+.rsmg_gallery .row-fluid .span12 {
+  width: 100%;
+  *width: 99.94680851063829%;
+}
+.rsmg_gallery .row-fluid .span11 {
+  width: 91.48936170212765%;
+  *width: 91.43617021276594%;
+}
+.rsmg_gallery .row-fluid .span10 {
+  width: 82.97872340425532%;
+  *width: 82.92553191489361%;
+}
+.rsmg_gallery .row-fluid .span9 {
+  width: 74.46808510638297%;
+  *width: 74.41489361702126%;
+}
+.rsmg_gallery .row-fluid .span8 {
+  width: 65.95744680851064%;
+  *width: 65.90425531914893%;
+}
+.rsmg_gallery .row-fluid .span7 {
+  width: 57.44680851063829%;
+  *width: 57.39361702127659%;
+}
+.rsmg_gallery .row-fluid .span6 {
+  width: 48.93617021276595%;
+  *width: 48.88297872340425%;
+}
+.rsmg_gallery .row-fluid .span5 {
+  width: 40.42553191489362%;
+  *width: 40.37234042553192%;
+}
+.rsmg_gallery .row-fluid .span4 {
+  width: 31.914893617021278%;
+  *width: 31.861702127659576%;
+}
+.rsmg_gallery .row-fluid .span3 {
+  width: 23.404255319148934%;
+  *width: 23.351063829787233%;
+}
+.rsmg_gallery .row-fluid .span2 {
+  width: 14.893617021276595%;
+  *width: 14.840425531914894%;
+}
+.rsmg_gallery .row-fluid .span1 {
+  width: 6.382978723404255%;
+  *width: 6.329787234042553%;
+}
+
+@media (min-width: 1200px) {
+  .rsmg_gallery .row-fluid {
+	width: 100%;
+	*zoom: 1;
+  }
+  .rsmg_gallery .row-fluid:before,
+  .rsmg_gallery .row-fluid:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  .rsmg_gallery .row-fluid:after {
+    clear: both;
+  }
+  .rsmg_gallery .row-fluid [class*="span"] {
+    display: block;
+    width: 100%;
+    min-height: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    margin-left: 2.564102564102564% !important;
+    *margin-left: 2.5109110747408616%;
+  }
+  .rsmg_gallery .row-fluid [class*="span"]:first-child {
+    margin-left: 0;
+  }
+  .rsmg_gallery .row-fluid .span12 {
+    width: 100%;
+    *width: 99.94680851063829%;
+  }
+  .rsmg_gallery .row-fluid .span11 {
+    width: 91.45299145299145%;
+    *width: 91.39979996362975%;
+  }
+  .rsmg_gallery .row-fluid .span10 {
+    width: 82.90598290598291%;
+    *width: 82.8527914166212%;
+  }
+  .rsmg_gallery .row-fluid .span9 {
+    width: 74.35897435897436%;
+    *width: 74.30578286961266%;
+  }
+  .rsmg_gallery .row-fluid .span8 {
+    width: 65.81196581196582%;
+    *width: 65.75877432260411%;
+  }
+  .rsmg_gallery .row-fluid .span7 {
+    width: 57.26495726495726%;
+    *width: 57.21176577559556%;
+  }
+  .rsmg_gallery .row-fluid .span6 {
+    width: 48.717948717948715%;
+    *width: 48.664757228587014%;
+  }
+  .rsmg_gallery .row-fluid .span5 {
+    width: 40.17094017094017%;
+    *width: 40.11774868157847%;
+  }
+  .rsmg_gallery .row-fluid .span4 {
+    width: 31.623931623931625%;
+    *width: 31.570740134569924%;
+  }
+  .rsmg_gallery .row-fluid .span3 {
+    width: 23.076923076923077%;
+    *width: 23.023731587561375%;
+  }
+  .rsmg_gallery .row-fluid .span2 {
+    width: 14.52991452991453%;
+    *width: 14.476723040552828%;
+  }
+  .rsmg_gallery .row-fluid .span1 {
+    width: 5.982905982905983%;
+    *width: 5.929714493544281%;
+  }
+	
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+  .rsmg_gallery .row-fluid {
+    width: 100%;
+    *zoom: 1;
+  }
+  .rsmg_gallery .row-fluid:before,
+  .rsmg_gallery .row-fluid:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  .rsmg_gallery .row-fluid:after {
+    clear: both;
+  }
+  .rsmg_gallery .row-fluid [class*="span"] {
+    display: block;
+    width: 100%;
+    min-height: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    margin-left: 2.7624309392265194% !important;
+    *margin-left: 2.709239449864817%;
+  }
+  .rsmg_gallery .row-fluid [class*="span"]:first-child {
+    margin-left: 0;
+  }
+  .rsmg_gallery .row-fluid .span12 {
+    width: 100%;
+    *width: 99.94680851063829%;
+  }
+  .rsmg_gallery .row-fluid .span11 {
+    width: 91.43646408839778%;
+    *width: 91.38327259903608%;
+  }
+  .rsmg_gallery .row-fluid .span10 {
+    width: 82.87292817679558%;
+    *width: 82.81973668743387%;
+  }
+  .rsmg_gallery .row-fluid .span9 {
+    width: 74.30939226519337%;
+    *width: 74.25620077583166%;
+  }
+  .rsmg_gallery .row-fluid .span8 {
+    width: 65.74585635359117%;
+    *width: 65.69266486422946%;
+  }
+  .rsmg_gallery .row-fluid .span7 {
+    width: 57.18232044198895%;
+    *width: 57.12912895262725%;
+  }
+  .rsmg_gallery .row-fluid .span6 {
+    width: 48.61878453038674%;
+    *width: 48.56559304102504%;
+  }
+  .rsmg_gallery .row-fluid .span5 {
+    width: 40.05524861878453%;
+    *width: 40.00205712942283%;
+  }
+  .rsmg_gallery .row-fluid .span4 {
+    width: 31.491712707182323%;
+    *width: 31.43852121782062%;
+  }
+  .rsmg_gallery .row-fluid .span3 {
+    width: 22.92817679558011%;
+    *width: 22.87498530621841%;
+  }
+  .rsmg_gallery .row-fluid .span2 {
+    width: 14.3646408839779%;
+    *width: 14.311449394616199%;
+  }
+  .rsmg_gallery .row-fluid .span1 {
+    width: 5.801104972375691%;
+    *width: 5.747913483013988%;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .rsmg_gallery .row-fluid {
+    width: 100%;
+  }
+  .rsmg_gallery .row-fluid [class*="span"] {
+    float: none;
+    display: block;
+    width: auto;
+    margin-left: 0;
+  }
+  .rsmg_gallery .row-fluid .span12 {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+

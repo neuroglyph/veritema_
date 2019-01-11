@@ -1,0 +1,244 @@
+#rsmg_main {
+	color: #e6e6e6;
+}
+
+ul#rsmg_gallery li div.rsmg_item_container {
+	border: 1px solid #000;
+	background: #171717;
+	box-shadow: 5px 5px 0 #333333;
+}
+
+ul#rsmg_gallery li div.rsmg_item_container a {
+	color: #D36B03;
+}
+
+/* media gallery animated fitlers */
+ul#rsmg_gallery_filters li {
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+	background-color: #363636;
+	background-image: -moz-linear-gradient(top,#444,#222);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#444),to(#222));
+	background-image: -webkit-linear-gradient(top,#444,#222);
+	background-image: -o-linear-gradient(top,#444,#222);
+	background-image: linear-gradient(to bottom,#444,#222);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff444444', endColorstr='#ff222222', GradientType=0);
+	border-color: #222 #222 #000000;
+	border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+	*background-color: #222;
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+
+}
+ul#rsmg_gallery_filters li:hover,
+ul#rsmg_gallery_filters li:focus {
+	color: #fff;
+	background-color: #222;
+	*background-color: #151515;
+	text-decoration: none;
+	background-position: 0 -15px;
+	-webkit-transition: background-position .1s linear;
+	-moz-transition: background-position .1s linear;
+	-o-transition: background-position .1s linear;
+	transition: background-position .1s linear;
+}
+ul#rsmg_gallery_filters li:active,
+ul#rsmg_gallery_filters li.active,
+ul#rsmg_gallery_filters li.disabled,
+ul#rsmg_gallery_filters li[disabled] {
+	color: #fff;
+	background-color: #919191;
+	*background-color: #919191;
+	text-decoration: none;
+	background-position: 0 -40px;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	transition: none;
+}
+
+/* end filters */
+
+/* album style  */
+
+#rsmg_albums li div.rsmg_album_container a.rsmg_album_inner_container {
+	opacity:1;
+	background: #F5F5F5;
+}
+#rsmg_albums li div.rsmg_album_container a.rsmg_album_inner_container:hover,
+#rsmg_albums li div.rsmg_album_container a.rsmg_album_inner_container:focus {
+	opacity:0.7;
+}
+
+#rsmg_albums li div.rsmg_album_container a.rsmg_title {
+	border-bottom: 1px dotted #CCCCCC;
+	color: #D36B03;
+}
+#rsmg_albums li div.rsmg_album_container {
+	background: none repeat scroll 0 0 #171717;
+    border: 1px solid #000000;
+    box-shadow: 5px 5px 0 #333333;
+}
+#rsmg_albums li div.rsmg_album_container a.rsmg_album_inner_container {
+	border: 1px solid #D36B03;
+}
+
+/* buttons */
+
+#rsmg_albums li.rsmg_album_buttons a.rsmg_title {
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+	background-color: #363636;
+	background-image: -moz-linear-gradient(top,#444,#222);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#444),to(#222));
+	background-image: -webkit-linear-gradient(top,#444,#222);
+	background-image: -o-linear-gradient(top,#444,#222);
+	background-image: linear-gradient(to bottom,#444,#222);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff444444', endColorstr='#ff222222', GradientType=0);
+	border-color: #222 #222 #000000;
+	border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+	*background-color: #222;
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+#rsmg_albums li.rsmg_album_buttons a.rsmg_title:hover,
+#rsmg_albums li.rsmg_album_buttons a.rsmg_title:focus,
+#rsmg_albums li.rsmg_album_buttons a.rsmg_title:active,
+#rsmg_albums li.rsmg_album_buttons a.rsmg_title.active,
+#rsmg_albums li.rsmg_album_buttons a.rsmg_title.disabled,
+#rsmg_albums li.rsmg_album_buttons a.rsmg_title[disabled] {
+	color: #fff;
+	background-color: #222;
+	*background-color: #151515;
+	text-decoration: none;
+	background-position: 0 -15px;
+	-webkit-transition: background-position .1s linear;
+	-moz-transition: background-position .1s linear;
+	-o-transition: background-position .1s linear;
+	transition: background-position .1s linear;
+}
+#rsmg_albums li.rsmg_album_buttons a.rsmg_title:active,
+#rsmg_albums li.rsmg_album_buttons a.rsmg_title.active {
+	background-color: #090909 \9;
+}
+
+/* end album style  */
+
+#rsmg_main a.rsmg_big_button {
+	background: none repeat scroll 0 0 #171717;
+    border: 1px solid #000;
+	box-shadow: 0 0 1px 1px #333333 inset;
+    color: #E6E6E6;
+	text-shadow: 0 1px 0 #333333;
+}
+
+#rsmg_main a:hover.rsmg_big_button,
+#rsmg_main a:focus.rsmg_big_button,
+#rsmg_main a:active.rsmg_big_button
+{
+	background: none repeat scroll 0 0 #131313;
+    box-shadow: 0 0 1px 1px #282828 inset;
+    color: #fff;
+    cursor: pointer;
+}
+
+div#rsmg_image_container {
+	border: 1px solid #000;
+	background: #171717;
+	box-shadow: 5px 5px 0 #333333;
+}
+
+div#rsmg_image_container a {
+	color: #D36B03;
+}
+
+div#rsmg_image_container a:hover,
+div#rsmg_image_container a:focus,
+div#rsmg_image_container a:active
+{
+	color: #FB8A18;
+}
+
+ul#rsmg_gallery li div.rsmg_item_container a:hover,
+ul#rsmg_gallery li div.rsmg_item_container a:focus,
+ul#rsmg_gallery li div.rsmg_item_container a:active {
+	color: #FB8A18;
+}
+
+div#rsmg_thumb_container .rsmg_back {
+	background: #171717;
+	border: 1px solid #5C5C5C;
+}
+
+div#rsmg_thumb_container .rsmg_back a {
+	color: #e6e6e6;
+}
+
+#lightbox-image-details-caption .rsmg_toolbox,
+div#rsmg_thumb_container .rsmg_toolbox {
+	border: 1px solid #5C5C5C;
+	color: #e6e6e6;
+	background-color: #171717;
+}
+
+#lightbox-image-details-caption .rsmg_views,
+div#rsmg_thumb_container .rsmg_views {
+	background-image: url(../images/eye-dark.png);
+}
+
+#lightbox-image-details-caption .rsmg_download,
+div#rsmg_thumb_container .rsmg_download {
+	background-image: url(../images/download-dark.png);
+}
+
+#lightbox-image-details-caption .rsmg_download a,
+div#rsmg_thumb_container .rsmg_download a {
+	color: #D36B03;
+}
+
+p.rsmg_tags strong {
+	color: #D36B03;
+}
+
+/* lightbox */
+
+#jquery-overlay {
+	background: #c1c1c1;
+}
+
+#lightbox-nav-btnPrev, #lightbox-nav-btnNext {
+	background-color: #171717;
+	border: 1px solid #000000;
+	box-shadow: 2px 2px 0 #333333;
+}
+
+#lightbox-nav-btnPrev:hover, #lightbox-nav-btnNext:hover,
+#lightbox-nav-btnPrev:active, #lightbox-nav-btnNext:active,
+#lightbox-nav-btnPrev:focus, #lightbox-nav-btnNext:focus {
+	background-color: #000000;
+}
+
+#lightbox-container-image-box {
+	background-color: #171717;
+}
+
+#lightbox-container-image-data-box {
+	background-color: #171717;
+}
+
+#lightbox-container-image-data {
+	color: #E6E6E6;
+}
+
+#lightbox-loading {
+	background-image: url("../images/lightbox-loader-dark.gif");
+}
+
+#lightbox-btnClose {
+	background: none repeat scroll 0 0 #171717;
+	border: 1px solid #000000;
+}
+
+a#lightbox-secNav-btnClose {
+	color: #D36B03;
+}

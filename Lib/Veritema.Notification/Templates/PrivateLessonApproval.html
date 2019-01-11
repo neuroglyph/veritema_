@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8" />
+    <title>Private Lesson Request</title>
+    <style>
+        * {
+          font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+        }
+        .key {
+          font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://veritema.blob.core.windows.net/images/small_circle_hapkido_logo.png" />
+    <h1>Private Lesson</h1>
+    <para>
+        A request has been made for a private lesson.
+    </para>
+    <br />
+    <br />
+
+    <table>
+        <tr>
+            <td class="key">Requestor</td>
+            <td class="value"><a href="@ProfileLink">@Requestor</a></td>
+        </tr>
+        <tr>
+            <td class="key">Style</td>
+            <td class="value">@Style</td>
+        </tr>
+        <tr>
+            <td class="key">Date</td>
+            <td class="value">@Date</td>
+        </tr>
+        <tr>
+            <td class="key">Time</td>
+            <td class="value">@Start-@Finish @TZOffset</td>
+        </tr>
+    </table>
+    <br />
+    <br />
+    <para>
+        To accept click <a href="@accept">Looks Good to me</a> otherwise click <a href="@move">Move</a> to find a different time.
+    </para>
+</body>
+</html>

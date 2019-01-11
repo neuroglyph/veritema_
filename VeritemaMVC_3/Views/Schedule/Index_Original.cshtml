@@ -1,0 +1,292 @@
+﻿@{
+    ViewBag.Title = "Schedule";
+}
+
+
+@section JavaScript
+{
+    <script src="~/Scripts/dhtmlxscheduler/dhtmlxscheduler.js" type="text/javascript" charset="utf-8"></script>
+    <script src="~/Scripts/dhtmlxscheduler/ext/dhtmlxscheduler_quick_info.js" type="text/javascript" charset="utf-8"></script>
+    <script src="~/Scripts/dhtmlxscheduler/ext/dhtmlxscheduler_agenda_view.js" type="text/javascript" charset="utf-8"></script>
+    <script src="~/Scripts/dhtmlxscheduler/ext/dhtmlxscheduler_editors.js" type="text/javascript" charset="utf-8"></script>
+    <script src="~/Scripts/dhtmlxscheduler/ext/dhtmlxscheduler_limit.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="~/Scripts/dhtmlxscheduler/dhtmlxCombo/dhtmlxcombo.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+    <script src="~/Scripts/dhtmlxscheduler/dhtmlxCombo/dhtmlxcombo.js" type="text/javascript" charset="utf-8"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <link rel="stylesheet" href="~/css/Reset.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+    <link rel="stylesheet" href="~/Content/dhtmlxscheduler/dhtmlxscheduler_flat.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+
+
+    <style type="text/css" media="screen">
+        /*.dhx_scale_hour{
+            line-height:normal
+        }*/
+        /*
+        html, body {
+            height: 100%;
+            padding: 0px;
+            margin: 0px;
+        }
+            */
+        html, body {
+            margin: 0px;
+            padding: 0px;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #lightBoxDisplay {
+            position: absolute;
+            top: 100px;
+            left: 200px;
+            z-index: 10001;
+            display: none;
+            background-color: white;
+            border: 2px outset gray;
+            padding: 20px;
+            font-family: Tahoma;
+            font-size: 10pt;
+        }
+
+            #lightBoxDisplay label {
+                width: 200px;
+            }
+
+        .well {
+            text-align: right;
+        }
+
+        .container-fluid #scheduler_here {
+            height: 700px;
+            width: 100%;
+            border: 1px solid #cecece;
+        }
+
+        #scheduler_here {
+            border-radius: 4px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function initializeToastr() {
+            toastr.options = {
+                preventDuplicates: true
+            };
+        };
+        function initializeScheduler() {
+
+            var today = new Date();
+            scheduler.config.multi_day = false;
+            // set the event legnth to be an hour
+            scheduler.config.event_duration = 60;
+            scheduler.config.auto_end_date = true;
+
+            scheduler.config.lightbox.sections =
+            [
+            { name: "description", height: 50, map_to: "text", type: "textarea", focus: true },
+            { name: "location", height: 43, map_to: "event_location", type: "combo", image_path: "Scripts/dhtmlxscheduler/dhtmlxCombo/imgs/", script_path: "api/location/lookup" },
+            //{ name: "location", height: 50, map_to: "event_location.name", type: "textarea", focus: true },
+            { name: "time", height: 72, type: "time", map_to: "auto" }
+            ];
+
+            // console how the lightbox is displayed
+            scheduler.templates.lightbox_header = function (start, end, ev) {
+
+                var title = "";
+                if (ev.title) {
+                    title = ev.title;
+                }
+                return scheduler.templates.event_header(start, end, ev) + " " + title;
+            };
+
+            // set the period of working time
+            scheduler.config.first_hour = 9;
+            scheduler.config.last_hour = 21;
+            scheduler.config.show_loading = true;
+            scheduler.config.prevent_cache = true;
+            scheduler.config.readonly = true;
+
+
+            // set the appearence of the event once rendered
+            scheduler.attachEvent("onTemplatesReady", function () {
+                scheduler.templates.event_text = function (start, end, event) {
+                    return "<b>" + event.title + "</b> (<i>" + event.event_location.name + "</i>)";
+                }
+            });
+
+            scheduler.attachEvent("onEventCreated", function (id, e) {
+                var event = scheduler.getEvent(id);
+                event.details = event.text;
+            });
+
+            scheduler.init('scheduler_here', today, "week");
+
+            // handle progressive loading, 1 month at a time
+            scheduler.setLoadMode("month");
+
+            // prevent adding events via the month view
+            //scheduler.attachEvent("onLimitViolation", function (id, obj) {
+            //    toastr.error("Cannot add the event '" + obj.text + "' as the start time " + obj.start_date.getMonth() + "/" + obj.start_date.getDate() + "/" + obj.start_date.getFullYear() + " has already past.  Please select a new starting time in the future.");
+            //});
+
+            //scheduler.attachEvent("onLoadError", function (resp) {
+            //    toastr.error("Failed to retrieve the event information.  Please try again later.");
+
+            //});
+
+            //scheduler.attachEvent("onSaveError", function (resp) {
+            //    toastr.error("Failed to persist the event information.  Please try again later.");
+
+            //});
+
+            scheduler.attachEvent("onBeforeViewChange", function (old_mode, old_date, mode, date) {
+                if (old_mode != mode || +old_date != +date)
+                    scheduler.clearAll();
+                return true;
+            });
+
+            // grey out previous dates
+            //var lastYear = new Date(today.valueOf());
+            //lastYear.setDate(today.getDate() - 365);
+            //scheduler.addMarkedTimespan(
+            //    {
+            //        start_date: lastYear,
+            //        end_date: today,
+            //        type: "dhx_time_block"
+            //    });
+            //scheduler.updateView();
+
+            // setup message pump to handle schedule events
+            scheduler.load("api/schedule/events", "json");
+            var dp = new dataProcessor("/api/schedule/");
+            dp.init(scheduler);
+            dp.setTransactionMode({
+                mode: "REST",
+                headers: {
+                    "Authorization": "ak zJdsNijdiT9IbFVrMUAphcvcts7n2bfgCg9BYOAryUQ="
+                },
+                payload: {}
+            },false);
+
+        }
+        var html = function (id) { return document.getElementById(id); }; //just a helper
+
+        function save_form() {
+            var ev = scheduler.getEvent(scheduler.getState().lightbox_id);
+            ev.text = html("description").value;
+            ev.custom1 = html("custom1").value;
+            ev.custom2 = html("custom2").value;
+
+            scheduler.endLightbox(true, html("lightBoxDisplay"));
+        }
+        function close_form() {
+            scheduler.endLightbox(false, html("lightBoxDisplay"));
+        }
+
+        function delete_event() {
+            var event_id = scheduler.getState().lightbox_id;
+            scheduler.endLightbox(false, html("lightBoxDisplay"));
+            scheduler.deleteEvent(event_id);
+        }
+
+    </script>
+}
+
+
+@section OnDocumentReady
+{
+    scheduler.showLightbox();
+
+    scheduler.showLightbox = function(id) {
+    var ev = scheduler.getEvent(id);
+    scheduler.showLightbox = function (id) {
+    $.ajax({
+    type: "GET",
+    url: '/Schedule/Details/' + id,
+    success: function (response) {
+    var ev = scheduler.getEvent(id);
+
+    var lightBox = document.getElementById('lightBoxDisplay');
+    if (lightBox == null || typeof (lightBox) == 'undefined')
+    alert('could not find lightbox');
+
+    lightBox.innerHTML = response;
+
+    scheduler.startLightbox(id, lightBox);
+    //scheduler.hideCover();
+
+    // 10.27.2016 (RG): partial list for proof of concept. This manner will require setting these values either here
+    //                  or via the partial view. Need to pass in 'id' as parameter for this, I believe...
+    html('lightBoxTitle').innerText = ev.text;
+    //html('eventText').value = ev.text;
+    //html('eventTitle').value = ev.title;
+    html('startTime').value = ev.start_date;
+    html('endTime').value = ev.end_date; // not working for some weird reason. remove for now.
+    html('location').value  = ev.event_location.name;
+
+    // 10.28.2016 (RG): this is not recommended way to accomplish whether or not buttons are displayed.
+    //                  but presented as proof of concept.
+    //  need to parse as bool?
+    if (!ev.editable)
+    {
+    $('#editButtons').hide();
+    }
+    },
+    error: function (response) {
+    alert(response);
+    }
+    });
+    }
+    };
+
+
+
+    initializeToastr();
+    initializeScheduler();
+
+
+
+    $("#headerBreadCrumbs").text('');
+    $("#headerBreadCrumbs").append("<li><a href='/Home'>Home</a></li>");
+    $("#headerBreadCrumbs").append("<li class='active'>Schedule</li>");
+}
+
+<div class="pull-left">
+    <span class="pull-right hidden-sm hidden-xs">
+        <!--
+                <button id="btnEvents_lg" class="btn-md btn-primary">Add Event</button>
+        -->
+    </span>
+</div>
+<div class="container-fluid">
+    <div class="dhx_cal_container panel" id="scheduler_here">
+        <div class="dhx_cal_navline">
+            <div class="dhx_cal_prev_button">&nbsp;</div>
+            <div class="dhx_cal_next_button">&nbsp;</div>
+            <div class="dhx_cal_today_button"></div>
+            <div class="dhx_cal_date"></div>
+
+            <div class="dhx_cal_tab" name="agenda_tab"></div>
+            @*<div class="dhx_cal_tab" name="day_tab"></div>*@
+            <div class="dhx_cal_tab" name="week_tab"></div>
+            <div class="dhx_cal_tab" name="month_tab"></div>
+        </div>
+        <div class="dhx_cal_header"></div>
+        <div class="dhx_cal_data"></div>
+    </div>
+
+    <div class="well">
+        <div>
+            <p>Something pithy goes here</p>
+        </div>
+    </div>
+
+    <div id="lightBoxDisplay">
+    </div>
+
+
+</div>

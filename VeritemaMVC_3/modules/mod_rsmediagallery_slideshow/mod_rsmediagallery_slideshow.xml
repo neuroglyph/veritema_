@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" method="upgrade" client="site">
+	<name>RSMediaGallery! Slideshow Module</name>
+	<author>RSJoomla!</author>
+	<creationDate>January 2012</creationDate>
+	<copyright>(C) 2012 www.rsjoomla.com</copyright>
+	<license>GNU General Public License</license>
+	<authorEmail>support@rsjoomla.com</authorEmail>
+	<authorUrl>www.rsjoomla.com</authorUrl>
+	<version>1.0.0 R5</version>
+	<description><![CDATA[MOD_RSMEDIAGALLERY_SLIDESHOW_DESC]]></description>
+	<files>
+		<filename module="mod_rsmediagallery_slideshow">mod_rsmediagallery_slideshow.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+		<folder>tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_rsmediagallery_slideshow.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_rsmediagallery_slideshow.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_rsmediagallery/fields">
+				<field name="spacer0" type="spacer" class="text" label="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_WHAT_TO_SHOW" />
+				<field name="tags" type="tags" label="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_TAGS" description="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_TAGS_DESC" />
+				<field name="spacer2" type="spacer" class="text" label="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_SLIDESHOW_IMAGES" />
+				<field name="use_original" type="radio" class="btn-group" default="0" label="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_USE_ORIGINAL" description="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_USE_ORIGINAL_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="thumb_resolution" size="5"	type="resolution" class="input-small" default="w,280" label="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_THUMB_RESOLUTION" description="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_THUMB_RESOLUTION_DESC" />
+				<field name="ordering" type="list" class="input-medium" default="ordering" label="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_ORDERING" description="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_ORDERING_DESC">
+					<option value="ordering">MOD_RSMEDIAGALLERY_SLIDESHOW_FREE_ORDERING</option>
+					<option value="random">MOD_RSMEDIAGALLERY_SLIDESHOW_RANDOM</option>
+					<option value="title">MOD_RSMEDIAGALLERY_SLIDESHOW_TITLE</option>
+					<option value="description">MOD_RSMEDIAGALLERY_SLIDESHOW_DESC</option>
+					<option value="hits">MOD_RSMEDIAGALLERY_SLIDESHOW_HITS</option>
+					<option value="created">MOD_RSMEDIAGALLERY_SLIDESHOW_CREATED_DATE</option>
+					<option value="modified">MOD_RSMEDIAGALLERY_SLIDESHOW_MODIFIED_DATE</option>
+				</field>
+				<field name="direction" type="list" class="input-small" default="asc" label="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_DIRECTION" description="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_DIRECTION_DESC">
+					<option value="asc">MOD_RSMEDIAGALLERY_SLIDESHOW_ASCENDING</option>
+					<option value="desc">MOD_RSMEDIAGALLERY_SLIDESHOW_DESCENDING</option>
+				</field>
+				<field name="limit" size="10" type="text" class="input-small" default="5" label="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_LIMIT" description="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_LIMIT_DESC" />
+				<field name="open_in_new_page" type="radio" class="btn-group" default="0" label="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_OPEN_IMAGES_IN_NEW_PAGE" description="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_OPEN_IMAGES_IN_NEW_PAGE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="spacer4" type="spacer" class="text" label="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_SLIDESHOW_APPEARANCE" />
+				<field name="use_fixed_width" type="radio" class="btn-group" default="0" label="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_FIXED_WIDTH" description="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_FIXED_WIDTH_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="width" type="text" class="input-small" default="700" label="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_WRAPPER_WIDTH" description="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_WRAPPER_WIDTH_DESC" />
+				<field name="show_controls" type="radio" class="btn-group"  default="1" label="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_SHOW_CONTROLS" description="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_SHOW_CONTROLS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="show_pager" type="radio" class="btn-group" default="1" label="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_SHOW_PAGER" description="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_SHOW_PAGER_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="pager_position" type="list" class="input-medium" default="bottom-outside" label="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_PAGER_POSITION" description="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_PAGER_POSITION_DESC">
+					<option value="top-outside">MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_TOP_OUTSIDE</option>
+					<option value="top-inside">MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_TOP_INSIDE</option>
+					<option value="bottom-inside">MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_BOTTOM_INSIDE</option>
+					<option value="bottom-outside">MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_BOTTOM_OUTSIDE</option>
+				</field>
+				<field name="pager_text_position" type="list" class="input-small" default="center" label="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_PAGER_TEXT_POSITION" description="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_PAGER_TEXT_POSITION_DESC">
+					<option value="left">MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_LEFT</option>
+					<option value="center">MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_CENTER</option>
+					<option value="right">MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_RIGHT</option>
+				</field>
+				<field name="pager_type" type="list" class="input-small" default="full" label="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_PAGER_TYPE" description="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_PAGER_TYPE_DESC">
+					<option value="short">MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_SHORT</option>
+					<option value="full">MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_FULL</option>
+				</field>
+				<field name="spacer6" type="spacer" class="text" label="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_SLIDESHOW_SETTINGS" />
+				<field name="auto" type="radio" class="btn-group" default="1" label="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_AUTOSTART" description="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_AUTOSTART_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="auto_hover" type="radio" class="btn-group" default="1" label="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_AUTOHOVER" description="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_AUTOHOVER_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="random_slide" type="radio" class="btn-group" default="0" label="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_RANDOM_SLIDE" description="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_RANDOM_SLIDE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="infinite_loop" type="radio" class="btn-group" default="0" label="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_INFINITE_LOOP" description="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_INFINITE_LOOP_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="spacer5" type="spacer" class="text" label="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_SLIDESHOW_EFFECTS" />
+				<field name="mode" type="list" class="input-small" default="horizontal" label="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_MODE" description="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_MODE_DESC">
+					<option value="horizontal">MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_HORIZONTAL</option>
+					<option value="vertical">MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_VERTICAL</option>
+					<option value="fade">MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_FADE</option>
+				</field>
+				<field name="easing" type="list" class="input-medium" default="swing" label="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_EASING" description="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_EASING_DESC">
+					<option value="swing">swing</option>
+					<option value="easeInQuad">easeInQuad</option>
+					<option value="easeOutQuad">easeOutQuad</option>
+					<option value="easeInOutQuad">easeInOutQuad</option>
+					<option value="easeInCubic">easeInCubic</option>
+					<option value="easeOutCubic">easeOutCubic</option>
+					<option value="easeInOutCubic">easeInOutCubic</option>
+					<option value="easeInQuart">easeInQuart</option>
+					<option value="easeOutQuart">easeOutQuart</option>
+					<option value="easeInOutQuart">easeInOutQuart</option>
+					<option value="easeInQuint">easeInQuint</option>
+					<option value="easeOutQuint">easeOutQuint</option>
+					<option value="easeInOutQuint">easeInOutQuint</option>
+					<option value="easeInSine">easeInSine</option>
+					<option value="easeOutSine">easeOutSine</option>
+					<option value="easeInOutSine">easeInOutSine</option>
+					<option value="easeInExpo">easeInExpo</option>
+					<option value="easeOutExpo">easeOutExpo</option>
+					<option value="easeInOutExpo">easeInOutExpo</option>
+					<option value="easeInCirc">easeInCirc</option>
+					<option value="easeOutCirc">easeOutCirc</option>
+					<option value="easeInOutCirc">easeInOutCirc</option>
+					<option value="easeInElastic">easeInElastic</option>
+					<option value="easeOutElastic">easeOutElastic</option>
+					<option value="easeInOutElastic">easeInOutElastic</option>
+					<option value="easeInBack">easeInBack</option>
+					<option value="easeOutBack">easeOutBack</option>
+					<option value="easeInOutBack">easeInOutBack</option>
+					<option value="easeInBounce">easeInBounce</option>
+					<option value="easeOutBounce">easeOutBounce</option>
+					<option value="easeInOutBounce">easeInOutBounce</option>
+				</field>
+				<field name="speed" type="list" class="input-small" default="1500" label="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_SPEED" description="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_SPEED_DESC">
+					<option value="2500">MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_SLOW</option>
+					<option value="1500">MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_MEDIUM</option>
+					<option value="500">MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_FAST</option>
+				</field>
+				<field name="pause" type="list" class="input-small" default="3000" label="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_PAUSE" description="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_PAUSE_DESC">
+					<option value="5000">MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_SLOW</option>
+					<option value="3000">MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_MEDIUM</option>
+					<option value="1500">MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_FAST</option>
+				</field>
+				<field name="spacer3" type="spacer" class="text" label="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_SLIDE_APPEARANCE" />
+				<field name="image_position" type="list" class="input-small" default="left" label="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_IMAGE_POSITION" description="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_IMAGE_POSITION_DESC">
+					<option value="left">MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_LEFT</option>
+					<option value="center">MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_CENTER</option>
+					<option value="right">MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_RIGHT</option>
+				</field>
+				<field name="image_borders" type="radio" class="btn-group" default="1" label="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_IMAGE_BORDERS" description="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_IMAGE_BORDERS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="use_url" type="radio" class="btn-group" default="1" label="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_USE_URL" description="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_USE_URL_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="show_title" type="radio" class="btn-group" default="1" label="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_SHOW_TITLE" description="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_SHOW_TITLE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="show_description" type="radio" class="btn-group" default="1" label="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_SHOW_DESCRIPTION" description="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_SHOW_DESCRIPTION_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="spacer7" type="spacer" class="text" label="MOD_RSMEDIAGALLERY_SLIDESHOW_PARAM_OTHER" />
+				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_RSMEDIAGALLERY_DEFAULT_ALBUM_LAYOUT">
+		<message>
+			<![CDATA[COM_RSMEDIAGALLERY_DEFAULT_ALBUM_LAYOUT_DESC]]>
+		</message>
+	</layout>
+
+	<fields name="params">
+		<fieldset name="basic" addfieldpath="/administrator/components/com_rsmediagallery/fields">
+			<field name="tags" type="tags" label="COM_RSMEDIAGALLERY_PARAM_TAGS" description="COM_RSMEDIAGALLERY_PARAM_TAGS_DESC" />
+			<field name="responsive" type="radio" class="btn-group" default="0" label="COM_RSMEDIAGALLERY_PARAM_RESPONSIVE" description="COM_RSMEDIAGALLERY_PARAM_RESPONSIVE_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="itemsrow" type="list" class="input-small" default="3" label="COM_RSMEDIAGALLERY_PARAM_ITEMS_ROW" description="COM_RSMEDIAGALLERY_PARAM_ITEMS_ROW_DESC">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="6">6</option>
+			</field>
+		</fieldset>
+		<fieldset name="advanced" addfieldpath="/administrator/components/com_rsmediagallery/fields">
+			<field name="spacer1" type="spacer" class="text" label="COM_RSMEDIAGALLERY_PARAM_SEPARATOR_ALBUM_VIEW" />
+			
+			<field name="direction_album" type="list" class="input-medium" default="asc" label="COM_RSMEDIAGALLERY_PARAM_DIRECTION" description="COM_RSMEDIAGALLERY_PARAM_DIRECTION_DESC">
+				<option value="asc">COM_RSMEDIAGALLERY_ASCENDING</option>
+				<option value="desc">COM_RSMEDIAGALLERY_DESCENDING</option>
+			</field>
+			<field name="show_tags_album" type="radio" class="btn-group" default="1" label="COM_RSMEDIAGALLERY_PARAM_SHOW_TAGS_ALBUM" description="COM_RSMEDIAGALLERY_PARAM_SHOW_TAGS_ALBUM_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="display_preview_resolution" size="5" type="widthresolution" class="input-small" default="w,140" label="COM_RSMEDIAGALLERY_PARAM_ALBUM_PREVIEW_RESOLUTION" description="COM_RSMEDIAGALLERY_PARAM_ALBUM_PREVIEW_RESOLUTION_DESC" />
+			<field name="center_albums" type="radio" class="btn-group" default="0" label="COM_RSMEDIAGALLERY_PARAM_CENTER_ALBUMS" description="COM_RSMEDIAGALLERY_PARAM_CENTER_ALBUMS_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			
+			<field name="spacer2" type="spacer" class="text" label="COM_RSMEDIAGALLERY_PARAM_SEPARATOR_LIST_VIEW" />
+			<field name="thumb_resolution" size="5"	type="resolution" class="input-small" default="w,280" label="COM_RSMEDIAGALLERY_PARAM_THUMB_RESOLUTION" description="COM_RSMEDIAGALLERY_PARAM_THUMB_RESOLUTION_DESC" />
+			<field name="center_list" type="radio" class="btn-group" default="0" label="COM_RSMEDIAGALLERY_PARAM_CENTER_LIST" description="COM_RSMEDIAGALLERY_PARAM_CENTER_LIST_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="ordering" type="list" class="input-medium" default="ordering" label="COM_RSMEDIAGALLERY_PARAM_ORDERING" description="COM_RSMEDIAGALLERY_PARAM_ORDERING_DESC">
+				<option value="ordering">COM_RSMEDIAGALLERY_FREE_ORDERING</option>
+				<option value="title">COM_RSMEDIAGALLERY_TITLE</option>
+				<option value="description">COM_RSMEDIAGALLERY_DESC</option>
+				<option value="hits">COM_RSMEDIAGALLERY_HITS</option>
+				<option value="created">COM_RSMEDIAGALLERY_CREATED_DATE</option>
+				<option value="modified">COM_RSMEDIAGALLERY_MODIFIED_DATE</option>
+			</field>
+			<field name="direction" type="list" class="input-medium" default="asc" label="COM_RSMEDIAGALLERY_PARAM_DIRECTION" description="COM_RSMEDIAGALLERY_PARAM_DIRECTION_DESC">
+				<option value="asc">COM_RSMEDIAGALLERY_ASCENDING</option>
+				<option value="desc">COM_RSMEDIAGALLERY_DESCENDING</option>
+			</field>
+			<field name="limit" size="10" type="text" class="input-small" default="5" label="COM_RSMEDIAGALLERY_PARAM_LIMIT" description="COM_RSMEDIAGALLERY_PARAM_LIMIT_DESC" />
+			<field name="open_in" type="list" default="slideshow" label="COM_RSMEDIAGALLERY_PARAM_OPEN_IMAGES_IN" description="COM_RSMEDIAGALLERY_PARAM_OPEN_IMAGES_IN_DESC">
+				<option value="slideshow">COM_RSMEDIAGALLERY_PARAM_OPEN_SLIDESHOW</option>
+				<option value="detail">COM_RSMEDIAGALLERY_PARAM_OPEN_DETAIL_PAGE</option>
+				<option value="url">COM_RSMEDIAGALLERY_PARAM_OPEN_URL</option>
+			</field>
+			
+			<field name="open_in_new_page" type="radio" class="btn-group" default="0" label="COM_RSMEDIAGALLERY_PARAM_OPEN_IMAGES_IN_NEW_PAGE" description="COM_RSMEDIAGALLERY_PARAM_OPEN_IMAGES_IN_NEW_PAGE_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="show_title_list" type="radio" class="btn-group" default="1" label="COM_RSMEDIAGALLERY_PARAM_SHOW_TITLE" description="COM_RSMEDIAGALLERY_PARAM_SHOW_TITLE_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="show_description_list" type="radio" class="btn-group" default="1" label="COM_RSMEDIAGALLERY_PARAM_SHOW_DESCRIPTION" description="COM_RSMEDIAGALLERY_PARAM_SHOW_DESCRIPTION_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="spacer3" type="spacer" class="text" label="COM_RSMEDIAGALLERY_PARAM_SEPARATOR_DETAIL_VIEW" />
+			<field name="use_original" type="radio" default="0" class="btn-group" label="COM_RSMEDIAGALLERY_PARAM_USE_ORIGINAL" description="COM_RSMEDIAGALLERY_PARAM_USE_ORIGINAL_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="full_resolution"  size="5" type="resolution" class="input-small" default="w,800" label="COM_RSMEDIAGALLERY_PARAM_FULL_RESOLUTION"  description="COM_RSMEDIAGALLERY_PARAM_FULL_RESOLUTION_DESC"  />
+			<field name="download_original" type="radio" class="btn-group" default="1" label="COM_RSMEDIAGALLERY_PARAM_DOWNLOAD_ORIGINAL" description="COM_RSMEDIAGALLERY_PARAM_DOWNLOAD_ORIGINAL_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="show_title_detail" type="radio" class="btn-group" default="1" label="COM_RSMEDIAGALLERY_PARAM_SHOW_TITLE" description="COM_RSMEDIAGALLERY_PARAM_SHOW_TITLE_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="show_description_detail" type="radio" class="btn-group" default="1" label="COM_RSMEDIAGALLERY_PARAM_SHOW_DESCRIPTION" description="COM_RSMEDIAGALLERY_PARAM_SHOW_DESCRIPTION_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="show_hits" type="radio" class="btn-group" default="1" label="COM_RSMEDIAGALLERY_PARAM_SHOW_HITS" description="COM_RSMEDIAGALLERY_PARAM_SHOW_HITS_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="show_tags" type="radio" class="btn-group" default="1" label="COM_RSMEDIAGALLERY_PARAM_SHOW_TAGS" description="COM_RSMEDIAGALLERY_PARAM_SHOW_TAGS_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="show_created" type="radio" class="btn-group" default="1" label="COM_RSMEDIAGALLERY_PARAM_SHOW_CREATED" description="COM_RSMEDIAGALLERY_PARAM_SHOW_CREATED_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="show_modified" type="radio" class="btn-group" default="1" label="COM_RSMEDIAGALLERY_PARAM_SHOW_MODIFIED" description="COM_RSMEDIAGALLERY_PARAM_SHOW_MODIFIED_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="spacer4" type="spacer" class="text" label="COM_RSMEDIAGALLERY_PARAM_SUPPORT_US" />
+			<field name="show_credits" type="radio" class="btn-group" default="1" label="COM_RSMEDIAGALLERY_PARAM_SHOW_CREDITS" description="COM_RSMEDIAGALLERY_PARAM_SHOW_CREDITS_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+		</fieldset>
+	</fields>
+
+</metadata>

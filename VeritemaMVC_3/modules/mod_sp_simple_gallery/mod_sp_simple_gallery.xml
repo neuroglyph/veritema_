@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>Simple Image Gallery Module</name>
+	<author>JoomShaper.com</author>
+	<creationDate>May 2010</creationDate>
+	<copyright>Copyright (C) 2010 - 2012 JoomShaper.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@joomshaper.com</authorEmail>
+	<authorUrl>www.JoomShaper.com</authorUrl>
+	<version>2.7.0</version>
+	<description>JoomShaper Simple Image Gallery Module - This module will show image gallery using SLIMBOX</description>
+	<files>
+		<filename module="mod_sp_simple_gallery">mod_sp_simple_gallery.php</filename>
+		<filename>helper.php</filename>
+		<filename>class.spThumbnail.php</filename>
+		<filename>index.html</filename>
+		<folder>elements/</folder>
+		<folder>tmpl/</folder>
+		<folder>scripts/</folder>
+	</files>
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_sp_simple_gallery/elements">
+			<fieldset name="basic">
+				<field name="path" type="foldertree" default="" directory="images" filter="" label="Image directory" description="Select a image directory" />
+				<field name="thumbwidth" type="text" default="100" label="Thumbnail Width (in px)" description="Width of Thumbnail without px" />
+				<field name="thumbheight" type="text" default="100" label="Thumbnail Height (in px)" description="Height of Thumbnail without px" />
+				<field name="thumbratio" type="radio" default="1" label="Keep Aspect Ratio" description="">
+					<option value="0">No</option>
+					<option value="1">yes</option>
+				</field>
+				<field name="style" type="textarea" rows="10" cols="40" default="border:1px solid #DDD; margin:0 5px 10px 5px; padding:5px; background:#fff;" label="CSS" description="CSS" />
+				<field name="usefade" type="radio" default="1" label="Use Fade Effect" description="">
+					<option value="0">No</option>
+					<option value="1">yes</option>
+				</field>					
+				<field name="normal_opacity" type="text" default="0.5" label="Normal Opacity" description="Width of Thumbnail without px" />
+				<field name="hover_opacity" type="text" default="1" label="Hover Opacity" description="Height of Thumbnail without px" />			
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />
+				<field name="cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this module">
+					<option value="1">Use global</option>
+					<option value="0">No caching</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>System - KC Cufon</name>
+	<author>Laurelle Keashly (developed by Keashly.ca Consulting)</author>
+	<creationDate>January 2011 - updated June 2013</creationDate>
+	<copyright>(C) 2009-2013 Keashly.ca Consulting</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorUrl>www.keashly.ca</authorUrl>
+	<version>2.3.2</version>
+	<description>PLG_KC_CUFON_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="kc_cufon">kc_cufon.php</filename>
+		<filename>index.html</filename>
+		<filename>js/cufon-yui.js</filename>
+		<filename>js/index.html</filename>
+		<filename>fonts/Prociono_400.font.js</filename>
+		<filename>fonts/Gabrielle_400.font.js</filename>
+		<filename>fonts/Olde_English_400.font.js</filename>
+		<filename>fonts/index.html</filename>
+	</files>
+  <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.plg_system_kc_cufon.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_system_kc_cufon.sys.ini</language>
+        <language tag="en-ES">en-ES/en-ES.plg_system_kc_cufon.ini</language>
+        <language tag="en-ES">en-ES/en-ES.plg_system_kc_cufon.sys.ini</language>
+  </languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="loadmootools" type="radio" default="1" label="KC_LOADMOOTOOLS_LABEL" description="KC_LOADMOOTOOLS_DESC">
+					<option value="1">JYes</option>
+					<option value="0">JNo</option>
+				</field>
+				<field name="loading" type="radio" default="0" label="KC_LOADING_LABEL" description="KC_LOADING_DESC">
+					<option value="1">JYes</option>
+					<option value="0">JNo</option>
+				</field>
+				<field name="num_fonts" type="list" default="2" label="KC_NUM_FONT_LABEL" description="KC_NUM_FONT_DESC">
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+				</field>
+				<field name="spacer" type="spacer" default="" label="KC_FONT1" description="" />
+				<field name="font1" type="text" default="Gabrielle" label="KC_FONT_LABEL" description="KC_FONT_DESC" />
+				<field name="fontfile1" type="text" default="Gabrielle_400" label="KC_FONTFILE_LABEL" description="KC_FONTFILE_DESC" />
+				<field name="selector1" type="text" default="h1,p.fontsize" label="KC_SELECTOR_LABEL" description="KC_SELECTOR_DESC" />
+				<field name="font-size1" type="text" default="" label="KC_FONTSIZE_LABEL" description="KC_FONTSIZE_DESC" />
+				<field name="font-hover1" type="radio" default="0" label="KC_FONTHOVER_LABEL" description="KC_FONTHOVER_DESC">
+					<option value="1">JYes</option>
+					<option value="0">JNo</option>
+				</field>
+				<field name="hoverable1" type="text" default="" label="KC_HOVERABLE_LABEL" description="KC_HOVERABLE_DESC" />
+				<field name="textshadow1" type="text" default="" label="KC_TEXTSHADOW_LABEL" description="KC_TEXTSHADOW_DESC" />
+				<field name="gradient1" type="text" default="" label="KC_GRADIENT_LABEL" description="KC_GRADIENT_DESC" />
+
+				<field name="spacer2" type="spacer" default="" label="KC_FONT2" description="" />
+				<field name="font2" type="text" default="Prociono" label="KC_FONT_LABEL" description="KC_FONT_DESC" />
+				<field name="fontfile2" type="text" default="Prociono_400" label="KC_FONTFILE_LABEL" description="KC_FONTFILE_DESC" />
+				<field name="selector2" type="text" default="h2" label="KC_SELECTOR_LABEL" description="KC_SELECTOR_DESC" />
+				<field name="font-size2" type="text" default="" label="KC_FONTSIZE_LABEL" description="KC_FONTSIZE_DESC" />
+				<field name="font-hover2" type="radio" default="0" label="KC_FONTHOVER_LABEL" description="KC_FONTHOVER_DESC">
+					<option value="1">JYes</option>
+					<option value="0">JNo</option>
+				</field>
+				<field name="hoverable2" type="text" default="" label="KC_HOVERABLE_LABEL" description="KC_HOVERABLE_DESC" />
+				<field name="textshadow2" type="text" default="" label="KC_TEXTSHADOW_LABEL" description="KC_TEXTSHADOW_DESC" />
+				<field name="gradient2" type="text" default="" label="KC_GRADIENT_LABEL" description="KC_GRADIENT_DESC" />
+
+				<field name="spacer3" type="spacer" default="" label="KC_FONT3" description="" />
+				<field name="font3" type="text" default="" label="KC_FONT_LABEL" description="KC_FONT_DESC" />
+				<field name="fontfile3" type="text" default="" label="KC_FONTFILE_LABEL" description="KC_FONTFILE_DESC" />
+				<field name="selector3" type="text" default="" label="KC_SELECTOR_LABEL" description="KC_SELECTOR_DESC" />
+				<field name="font-size3" type="text" default="" label="KC_FONTSIZE_LABEL" description="KC_FONTSIZE_DESC" />
+				<field name="font-hover3" type="radio" default="0" label="KC_FONTHOVER_LABEL" description="KC_FONTHOVER_DESC">
+					<option value="1">JYes</option>
+					<option value="0">JNo</option>
+				</field>
+				<field name="hoverable3" type="text" default="" label="KC_HOVERABLE_LABEL" description="KC_HOVERABLE_DESC" />
+				<field name="textshadow3" type="text" default="" label="KC_TEXTSHADOW_LABEL" description="KC_TEXTSHADOW_DESC" />
+				<field name="gradient3" type="text" default="" label="KC_GRADIENT_LABEL" description="KC_GRADIENT_DESC" />
+
+				<field name="spacer4" type="spacer" default="" label="KC_FONT4" description="" />
+				<field name="font4" type="text" default="" label="KC_FONT_LABEL" description="KC_FONT_DESC" />
+				<field name="fontfile4" type="text" default="" label="KC_FONTFILE_LABEL" description="KC_FONTFILE_DESC" />
+				<field name="selector4" type="text" default="" label="KC_SELECTOR_LABEL" description="KC_SELECTOR_DESC" />
+				<field name="font-size4" type="text" default="" label="KC_FONTSIZE_LABEL" description="KC_FONTSIZE_DESC" />
+				<field name="font-hover4" type="radio" default="0" label="KC_FONTHOVER_LABEL" description="KC_FONTHOVER_DESC">
+					<option value="1">JYes</option>
+					<option value="0">JNo</option>
+				</field>
+				<field name="hoverable4" type="text" default="" label="KC_HOVERABLE_LABEL" description="KC_HOVERABLE_DESC" />
+				<field name="textshadow4" type="text" default="" label="KC_TEXTSHADOW_LABEL" description="KC_TEXTSHADOW_DESC" />
+				<field name="gradient4" type="text" default="" label="KC_GRADIENT_LABEL" description="KC_GRADIENT_DESC" />
+
+				<field name="spacer5" type="spacer" default="" label="KC_FONT5" description="" />
+				<field name="font5" type="text" default="" label="KC_FONT_LABEL" description="KC_FONT_DESC" />
+				<field name="fontfile5" type="text" default="" label="KC_FONTFILE_LABEL" description="KC_FONTFILE_DESC" />
+				<field name="selector5" type="text" default="" label="KC_SELECTOR_LABEL" description="KC_SELECTOR_DESC" />
+				<field name="font-size5" type="text" default="" label="KC_FONTSIZE_LABEL" description="KC_FONTSIZE_DESC" />
+				<field name="font-hover5" type="radio" default="0" label="KC_FONTHOVER_LABEL" description="KC_FONTHOVER_DESC">
+					<option value="1">JYes</option>
+					<option value="0">JNo</option>
+				</field>
+				<field name="hoverable5" type="text" default="" label="KC_HOVERABLE_LABEL" description="KC_HOVERABLE_DESC" />
+				<field name="textshadow5" type="text" default="" label="KC_TEXTSHADOW_LABEL" description="KC_TEXTSHADOW_DESC" />
+				<field name="gradient5" type="text" default="" label="KC_GRADIENT_LABEL" description="KC_GRADIENT_DESC" />
+
+				<field name="spacer6" type="spacer" default="" label="KC_FONT6" description="" />
+				<field name="font6" type="text" default="" label="KC_FONT_LABEL" description="KC_FONT_DESC" />
+				<field name="fontfile6" type="text" default="" label="KC_FONTFILE_LABEL" description="KC_FONTFILE_DESC" />
+				<field name="selector6" type="text" default="" label="KC_SELECTOR_LABEL" description="KC_SELECTOR_DESC" />
+				<field name="font-size6" type="text" default="" label="KC_FONTSIZE_LABEL" description="KC_FONTSIZE_DESC" />
+				<field name="font-hover6" type="radio" default="0" label="KC_FONTHOVER_LABEL" description="KC_FONTHOVER_DESC">
+					<option value="1">JYes</option>
+					<option value="0">JNo</option>
+				</field>
+				<field name="hoverable6" type="text" default="" label="KC_HOVERABLE_LABEL" description="KC_HOVERABLE_DESC" />
+				<field name="textshadow6" type="text" default="" label="KC_TEXTSHADOW_LABEL" description="KC_TEXTSHADOW_DESC" />
+				<field name="gradient6" type="text" default="" label="KC_GRADIENT_LABEL" description="KC_GRADIENT_DESC" />
+
+				<field name="spacer7" type="spacer" default="" label="KC_FONT7" description="" />
+				<field name="font7" type="text" default="" label="KC_FONT_LABEL" description="KC_FONT_DESC" />
+				<field name="fontfile7" type="text" default="" label="KC_FONTFILE_LABEL" description="KC_FONTFILE_DESC" />
+				<field name="selector7" type="text" default="" label="KC_SELECTOR_LABEL" description="KC_SELECTOR_DESC" />
+				<field name="font-size7" type="text" default="" label="KC_FONTSIZE_LABEL" description="KC_FONTSIZE_DESC" />
+				<field name="font-hover7" type="radio" default="0" label="KC_FONTHOVER_LABEL" description="KC_FONTHOVER_DESC">
+					<option value="1">JYes</option>
+					<option value="0">JNo</option>
+				</field>
+				<field name="hoverable7" type="text" default="" label="KC_HOVERABLE_LABEL" description="KC_HOVERABLE_DESC" />
+				<field name="textshadow7" type="text" default="" label="KC_TEXTSHADOW_LABEL" description="KC_TEXTSHADOW_DESC" />
+				<field name="gradient7" type="text" default="" label="KC_GRADIENT_LABEL" description="KC_GRADIENT_DESC" />
+
+				<field name="spacer8" type="spacer" default="" label="KC_FONT8" description="" />
+				<field name="font8" type="text" default="" label="KC_FONT_LABEL" description="KC_FONT_DESC" />
+				<field name="fontfile8" type="text" default="" label="KC_FONTFILE_LABEL" description="KC_FONTFILE_DESC" />
+				<field name="selector8" type="text" default="" label="KC_SELECTOR_LABEL" description="KC_SELECTOR_DESC" />
+				<field name="font-size8" type="text" default="" label="KC_FONTSIZE_LABEL" description="KC_FONTSIZE_DESC" />
+				<field name="font-hover8" type="radio" default="0" label="KC_FONTHOVER_LABEL" description="KC_FONTHOVER_DESC">
+					<option value="1">JYes</option>
+					<option value="0">JNo</option>
+				</field>
+			</fieldset>
+				<field name="hoverable8" type="text" default="" label="KC_HOVERABLE_LABEL" description="KC_HOVERABLE_DESC" />
+				<field name="textshadow8" type="text" default="" label="KC_TEXTSHADOW_LABEL" description="KC_TEXTSHADOW_DESC" />
+				<field name="gradient8" type="text" default="" label="KC_GRADIENT_LABEL" description="KC_GRADIENT_DESC" />
+
+
+		</fields>
+	</config>
+	
+	<!-- Extension Update Specification -->
+	<updateservers>
+		<server
+			type="extension"
+			priority="1"
+			name="Keashly.ca Consulting Updates">http://www.keashly.net/updates/kc_cufon.xml</server>
+	</updateservers>
+	
+</extension>

@@ -1,0 +1,251 @@
+<?php
+/**
+ * Abivia Super Table Plugin.
+ *
+ * @version $Id: abiviasupertable.php 2009-05-06  $
+ * @package AbiviaSuperTable
+ * @copyright (C) 2011 by Abivia Inc. All rights reserved.
+ * @license GNU/GPL
+ * @link http://www.abivia.net/
+ */
+
+// Check to ensure this file is included in Joomla!
+defined('_JEXEC') or die('Restricted access');
+
+jimport('joomla.plugin.plugin');
+
+$acpLib = dirname(__FILE__) . DS . 'abiviasupertable' . DS;
+require_once $acpLib . 'AstXml.php';
+require_once $acpLib . 'AstArticle.php';
+require_once $acpLib . 'AstCall.php';
+require_once $acpLib . 'AstCallTable.php';
+
+class plgSystemAbiviasupertable extends JPlugin {
+    /**
+     * The article we're triggering inside, if any.
+     * @var object
+     */
+    public $article = null;
+
+    protected $_debug;
+
+    protected $_debugInOutput = true;
+
+    protected $_debugText = '';
+    
+    protected $_doc = null;
+
+    /**
+     * @var int Recursion level on calls to _resolve, used for loops
+     */
+    protected $_loopLevel = 0;
+
+    /**
+     * @var array Context of the loop iterator at each nest level.
+     */
+    protected $_loopStack = array();
+
+    protected $_params;
+
+    protected $_postRender = false;
+
+    protected $_scriptList = array();
+
+    static protected $_styleGen = array();
+
+    protected $_styleList = array();
+
+    /**
+     * @var string Where the plugin lives (version dependent)
+     */
+    public $home;
+
+    public $name = '';
+    
+    public $version = '';
+    
+    function __construct(&$subject, $params) {
+        parent::__construct($subject, $params);
+    }
+
+    /**
+     * Perform content replacement on an arbitrary source text.
+     *
+     * @param string Text with ACP markup
+     * @return object Processed text in "text", ACP information in "astData".
+     */
+    protected function _core($text) {
+        $this -> _debugText = '';
+        // Get plugin info
+        $this -> _getInfo();
+        $this -> _getParams();
+        $triggers = $this -> getTriggers();
+        $article = new AstArticle($this, $this -> _params);
+        $article -> setDebug($this -> _debug);
+        $result = $article -> process($triggers, $text);
+        $this -> _debugText .= $result -> debugText;
+        return $result;
+    }
+
+    /**
+     * Format a variable dump in a comment safe way.
+     *
+     * @param mixed The variable
+     * @return string Dump with html entities escaped.
+     */
+    static protected function _dump($obj) {
+        return htmlentities(print_r($obj, true));
+    }
+
+    /**
+     * Load iformation from manifest.
+     */
+    protected function _getInfo() {
+        $xmlParse = new AstXml();
+        $xmlParse -> wrap = false;
+        $doc = $xmlParse -> process(dirname(__FILE__) . '/abiviasupertable.xml');
+        $this -> name = 'Abivia SuperTable';
+        $this -> version = 'version unknown';
+        if ($doc) {
+            $xpath = new DOMXpath($doc);
+            // Extract infromation from the manifest
+            $entries = $xpath -> query('//*/name');
+            $node = $entries -> item(0);
+            if ($node instanceof DOMElement) {
+                $this -> name = AstXml::extractXml($node);
+            }
+            $entries = $xpath -> query('//*/version');
+            $node = $entries -> item(0);
+            if ($node instanceof DOMElement) {
+                $this -> version = AstXml::extractXml($node);
+            }
+        }
+    }
+
+    /**
+     * Load parameters for this plugin.
+     */
+    protected function _getParams() {
+        $ver = new JVersion();
+        if ($ver -> RELEASE == '1.5') {
+            $this -> home = 'plugins/system/abiviasupertable/';
+            $plugin = JPluginHelper::getPlugin('system', 'abiviasupertable');
+            $this -> _params = new JParameter($plugin -> params);
+        } else {
+            $this -> home = 'plugins/system/abiviasupertable/abiviasupertable/';
+            $this -> _params = $this -> params;
+        }
+        $this -> _debug = $this -> _params -> get('debug', false);
+    }
+    
+    /**
+     * @param string The CSS file to be added.
+     */
+    function addCssFile($cssFile) {
+        if (trim($cssFile) == '') {
+            return;
+        }
+        // Track CSS by realpath to eliminate duplicates
+        $sig = realpath($cssFile);
+        if (!isset(self::$_styleGen[$sig])) {
+            if ($this -> _doc) {
+                $this -> _doc -> addStyleSheet($cssFile);
+            } else {
+                $this -> _styleList[] = $cssFile;
+            }
+            self::$_styleGen[$sig] = true;
+        }
+    }
+
+    /**
+     * @param string The script file to be added.
+     */
+    function addScriptFile($jsFile) {
+        if (trim($jsFile) == '') {
+            return;
+        }
+        if ($this -> _doc) {
+            $this -> _doc -> addScript($jsFile);
+        } else {
+            $this -> _scriptList[] = $css;
+        }
+    }
+
+    /**
+     * Get text generated by the debug system.
+     *
+     * @return string
+     */
+    function getDebugText() {
+        return $this -> _debugText;
+    }
+
+    /**
+     * Get the plugin trigger keywords.
+     *
+     * @return array The "article" element contains the trigger for articles.
+     */
+    function getTriggers() {
+        $triggers = array(
+            'article' => $this -> _params -> get('triggerWord'),
+        );
+        return $triggers;
+    }
+
+    function onAfterRender() {
+        $app = JFactory::getApplication();
+        if ($app -> isAdmin()) {
+            return;
+        }
+        $resolved = $this -> _core(JResponse::getBody());
+        if (!empty($this -> _styleList) || !empty($this -> _scriptList)) {
+            $css = '';
+            foreach ($this -> _scriptList as $jsFile) {
+                $css .= '<script src="' . $jsFile . '" type="text/javascript"></script>' . chr(10);
+            }
+            foreach ($this -> _styleList as $sheet) {
+                $css .= '<link rel="stylesheet" href="' . $sheet . '" type="text/css" />' . chr(10);
+            }
+            // A little brute force injection
+            $resolved -> text = str_replace(
+                '</head>',
+                $css . $resolved -> debugText . '</head>',
+                $resolved -> text
+            );
+        }
+
+        JResponse::setBody($resolved -> text);
+    }
+
+    /**
+     * The Joomla 1.6 event for article creation.
+     */
+    function onContentPrepare($context, &$row, &$params, $page = 0) {
+        $this -> _doc = JFactory::getDocument();
+        $this -> article = $row;
+        $resolved = $this -> _core($row -> text);
+        $row -> astData = $resolved -> astData;
+        $row -> text = ($this -> _debugInOutput ? $resolved -> debugText : '')
+            . $resolved -> text;
+    }
+
+    /**
+     * The Joomla 1.5 event for article creation.
+     */
+    function onPrepareContent(&$article, &$params, $limitstart) {
+        $this -> _doc = JFactory::getDocument();
+        $this -> article = $article;
+        $resolved = $this -> _core($article -> text);
+        $article -> astData = $resolved -> astData;
+        $article -> text = ($this -> _debugInOutput ? $resolved -> debugText : '')
+            . $resolved -> text;
+    }
+
+    function setDebug($level, $inOutput = null) {
+        $this -> _debug = $level;
+        if ($inOutput !== null) {
+            $this -> _debugInOutput = $inOutput;
+        }
+    }
+
+}
